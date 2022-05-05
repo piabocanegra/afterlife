@@ -1,6 +1,8 @@
 <script>
 	import Scroller from '@sveltejs/svelte-scroller';
-	import TitlePage from './TitlePage.svelte';
+	import TitlePage from './components/TitlePage.svelte';
+	import LineDrawingVis from './components/LineDrawingVis.svelte';
+
 	let top = 0.1;
 	let threshold = 0.5;
 	let bottom = 0.9;
@@ -8,12 +10,17 @@
 
 
 <main>
-			<TitlePage/>
-			<TitlePage/>
+		<TitlePage/>
+		<LineDrawingVis/>
 </main>
 
 
 <style>
+	main {
+		text-align: center;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
 	:global(h1, h3) {
 		padding: 1em;
     max-width: 50%;
@@ -22,9 +29,10 @@
 		font-weight: 400;
 		font-style: normal;
 	}
-	main {
+	:global(div) {
 		text-align: center;
-		max-width: 1000px;
-		margin: 0 auto;
+		background-color: #cdcdcd;
+		width: 100%;
+		min-height: 100vh;
 	}
 </style>
