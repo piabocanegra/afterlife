@@ -4,8 +4,9 @@
 
 <div id="page_1">
   <h1>Hell and Heaven: Who goes and what happens?</h1>
-  <h3>A look into what 6000+ U.S. adults think about the afterlife.</h3>
+  <h5>A look into what 6,000+ U.S. adults think about the afterlife</h5>
   <NavigationArrow link="#page_2"/>
+  <img src="/images/angels.png" alt="angels">
 </div>
 
 <style>
