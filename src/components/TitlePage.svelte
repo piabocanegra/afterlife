@@ -11,7 +11,7 @@
 <style>
   div {
     text-align: center;
-
+    position: relative;
     background-color: #cdcdcd;
     width: 100%;
     min-height:100vh;

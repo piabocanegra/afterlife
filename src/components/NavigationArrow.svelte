@@ -1,6 +1,6 @@
 <script>
   export let link;
-  // TODO: move scrolling logic to this class
+  // TODO: move scrolling logic to this class to hide link
 </script>
 
 <a href={link}>
@@ -11,7 +11,7 @@
   img {
     width: 50px;
     height: 50px;
-    position: fixed;
+    position: absolute;
     bottom: 5%;
   }
 </style>

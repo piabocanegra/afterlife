@@ -10,6 +10,16 @@
   <p transition:fade>Only hell</p>
   <p transition:fade>Neither heaven nor hell but I believe in an afterlife.</p>
   <p transition:fade>Neither heaven nor hell and I do not believe in an afterlife.</p>
-  <!-- <NavigationArrow link="#page_1"/> -->
+  <NavigationArrow link="#page_1"/>
 </div>
+
+<style>
+  div {
+    text-align: center;
+    position: relative;
+    background-color: #cdcdcd;
+    /* width: 100%; */
+    /* min-height:100vh; */
+  }
+</style>
 
