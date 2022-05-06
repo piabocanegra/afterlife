@@ -41,15 +41,4 @@
   .ConcordeRegular {
   font-family: "ConcordeRegular";
 
-  div#image_wrapper {
-    width: 100%;
-    position: absolute;
-    bottom: 0%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  img {
-    text-align: center;
-  }
 </style>
