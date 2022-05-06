@@ -3,7 +3,7 @@
     import NavigationArrow from './NavigationArrow.svelte';
 </script>
 
-<div id="page_2">
+<div class="page" id="page_2">
   <h1>I believe in...</h1>
   <p transition:fade>Heaven and hell</p>
   <p transition:fade>Only heaven</p>
@@ -17,7 +17,5 @@
   div {
     text-align: center;
     position: relative;
-    /* width: 100%; */
-    /* min-height:100vh; */
   }
 </style>

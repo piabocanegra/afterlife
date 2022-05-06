@@ -29,9 +29,8 @@
 		font-weight: 400;
 		font-style: normal;
 	}
-	:global(div) {
+	:global(div.page) {
 		text-align: center;
-		background-color: #cdcdcd;
 		width: 100%;
 		min-height: 100vh;
 	}
