@@ -3,7 +3,7 @@
 </script>
 
 <div id="page_1">
-  <h1 class="ConcordeRegular">Hell and Heaven: Who goes and what happens?</h1>
+  <h1>Hell and Heaven: Who goes and what happens?</h1>
 <div class="page" id="page_1">
   <h1>Hell and Heaven: Who goes and what happens?</h1>
   <h5>A look into what 6,000+ U.S. adults think about the afterlife</h5>
@@ -15,12 +15,11 @@
 
 <style>
   div {
-    font-family: ConcordeRegular
     text-align: center;
     position: relative;
     background-color: #DDC3B1;
     @font-face {
-      font-family: "TitleFont";
+      font-family: "ConcordeRegular";
     }
   }
   div#image_wrapper {
@@ -41,6 +40,7 @@
 
   .ConcordeRegular {
   font-family: "ConcordeRegular";
+
   div#image_wrapper {
     width: 100%;
     position: absolute;
@@ -48,6 +48,7 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   img {
     text-align: center;
   }
