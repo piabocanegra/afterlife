@@ -14,6 +14,10 @@
 <style>
   div {
     position: relative;
+    background-color: #DDC3B1;
+    @font-face {
+      font-family: "TitleFont";
+    }
   }
   div#image_wrapper {
     width: 100%;
