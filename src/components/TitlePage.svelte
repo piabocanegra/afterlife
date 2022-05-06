@@ -13,7 +13,20 @@
   div {
     text-align: center;
     position: relative;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    background-color: #DDC3B1;
+=======
+>>>>>>> 658e52ee0543298934fd97220081ae63a7f2a3d9
+>>>>>>> Stashed changes
     width: 100%;
     min-height:100vh;
+  }
+
+  @font-face {
+  font-family: "TitleFont";
+  src:
+
   }
 </style>
