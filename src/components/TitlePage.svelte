@@ -2,8 +2,6 @@
   import NavigationArrow from "./NavigationArrow.svelte";
 </script>
 
-<div id="page_1">
-  <h1>Hell and Heaven: Who goes and what happens?</h1>
 <div class="page" id="page_1">
   <h1>Hell and Heaven: Who goes and what happens?</h1>
   <h5>A look into what 6,000+ U.S. adults think about the afterlife</h5>
