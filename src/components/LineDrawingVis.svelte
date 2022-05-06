@@ -18,4 +18,23 @@
     text-align: center;
     position: relative;
   }
+
+  @font-face {
+  font-family: "Concorde";
+  src: url("/fonts/ConcordeRegular.ttf") format('ttf');
+  }
+
+  @font-face {
+  font-family: "Founders";
+  src: url("/fonts/FoundersGroteskLight.otf") format('otf');
+  }
+
+  h1 {
+  font-family: Concorde
+  }
+
+  p {
+  font-family: Founders
+  }
+
 </style>
