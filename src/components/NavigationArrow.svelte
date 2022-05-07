@@ -5,11 +5,11 @@
   // TODO: move scrolling logic to this class to hide link
 </script>
 
-<a href={link}>
-  <div style="bottom: {bottomPercent}">
+<div style="bottom: {bottomPercent}">
+  <a href={link}>
     <img src="/images/chevron.png" alt="arrow">
-  </div>
-</a>
+  </a>
+</div>
 
 <style>
   img {

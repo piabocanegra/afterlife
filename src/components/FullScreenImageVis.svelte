@@ -1,4 +1,5 @@
 <script>
+  import FunFactBubble from "./FunFactBubble.svelte";
   import NavigationArrow from "./NavigationArrow.svelte";
 </script>
 
@@ -6,6 +7,8 @@
   <img src="/images/late_penitents_celestial_rose.jpg" alt="late penitents and celestial rose"/>
   <h3>So what does heaven and hell look like?</h3>
   <p>Let's find out!</p>
+  <FunFactBubble bubbleId="1"/>
+  <FunFactBubble bubbleId="2"/>
   <NavigationArrow link="#page_1" isAtBottom={true} />
 </div>
 
