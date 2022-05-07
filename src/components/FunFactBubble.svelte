@@ -39,12 +39,11 @@
 
   function handleMouseOut() {
     tooltipVisibility = false;
-    console.log("mouseout");
   }
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-  <!-- TODO: change image to question mark -->
+<!-- TODO: change image to question mark -->
 <img style="--top: {top}; --left: {left}; --translate: {translateString}"   
   on:mouseover={handleMouseOver}
   on:mouseout={handleMouseOut}

@@ -1,6 +1,6 @@
 <script>
   	import { fade } from 'svelte/transition';
-    import NavigationArrow from './NavigationArrow.svelte';
+    import NavigationArrow from '../components/NavigationArrow.svelte';
 </script>
 
 <div class="page" id="page_2">

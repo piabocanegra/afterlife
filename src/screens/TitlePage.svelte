@@ -1,5 +1,5 @@
 <script>
-  import NavigationArrow from "./NavigationArrow.svelte";
+  import NavigationArrow from '../components/NavigationArrow.svelte';
 </script>
 
 <div class="page" id="page_1">

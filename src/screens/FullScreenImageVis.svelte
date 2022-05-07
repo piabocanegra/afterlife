@@ -1,6 +1,6 @@
 <script>
-  import FunFactBubble from "./FunFactBubble.svelte";
-  import NavigationArrow from "./NavigationArrow.svelte";
+  import FunFactBubble from "../components/FunFactBubble.svelte";
+  import NavigationArrow from "../components/NavigationArrow.svelte";
 </script>
 
 <div class="page" id="page_3">

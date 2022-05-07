@@ -1,8 +1,8 @@
 <script>
 	import Scroller from '@sveltejs/svelte-scroller';
-	import TitlePage from './components/TitlePage.svelte';
-	import LineDrawingVis from './components/LineDrawingVis.svelte';
-	import FullScreenImageVis from './components/FullScreenImageVis.svelte';
+	import TitlePage from './screens/TitlePage.svelte';
+	import LineDrawingVis from './screens/LineDrawingVis.svelte';
+	import FullScreenImageVis from './screens/FullScreenImageVis.svelte';
 
 	let top = 0.1;
 	let threshold = 0.5;
