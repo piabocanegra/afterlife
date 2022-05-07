@@ -7,7 +7,7 @@
   <img src="/images/respondent_souls.jpg" alt="respondent souls"/>
   <h3>Welcome to heaven!</h3>
   <FunFactBubble bubbleId="4"/>
-  <NavigationArrow link="#page_1" isAtBottom={true} />
+  <NavigationArrow link="#page_1" isAtBottom={true} arrowType="2"/>
 </div>
 
 <style>

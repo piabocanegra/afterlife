@@ -9,7 +9,7 @@
   <p>Let's find out!</p>
   <FunFactBubble bubbleId="1"/>
   <FunFactBubble bubbleId="2"/>
-  <NavigationArrow link="#page_4" isAtBottom={true} />
+  <NavigationArrow link="#page_4" isAtBottom={true} arrowType="2"/>
 </div>
 
 <style>

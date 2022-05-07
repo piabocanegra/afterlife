@@ -8,7 +8,7 @@
   <div id="image_wrapper">
     <img src="/images/angels.png" alt="angels">
   </div>
-  <NavigationArrow link="#page_2" isAtBottom={false} />
+  <NavigationArrow link="#page_2" isAtBottom={false} arrowType="1"/>
 </div>
 
 <style>
