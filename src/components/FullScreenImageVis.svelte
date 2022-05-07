@@ -38,7 +38,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    font-family: Concorde;
+    font-family: Founders Grotesk Light;
     color: #9B795F
   }
   img {
@@ -52,6 +52,11 @@
   @font-face {
   font-family: "Concorde";
   src: url("/fonts/ConcordeRegular.ttf") format('ttf');
+  }
+
+  @font-face {
+    font-family: "Founders Grotesk Light";
+    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
   }
 
 </style>

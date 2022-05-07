@@ -37,7 +37,7 @@
   }
 
   @font-face {
-    font-family: "Founders";
+    font-family: "Founders Grotesk Light";
     src: url("/fonts/FoundersGroteskLight.otf") format('otf');
   }
 
@@ -46,7 +46,7 @@
   }
 
   p {
-    font-family: Founders;
+    font-family: Founders Grotesk Light;
   }
 
 </style>

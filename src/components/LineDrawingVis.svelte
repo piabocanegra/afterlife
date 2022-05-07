@@ -25,8 +25,8 @@
   }
 
   @font-face {
-  font-family: "Founders";
-  src: url("/fonts/FoundersGroteskLight.otf") format('otf');
+    font-family: "Founders Grotesk Light";
+    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
   }
 
   h1 {
@@ -34,7 +34,7 @@
   }
 
   p {
-  font-family: Founders
+  font-family: Founders Grotesk Light
   }
 
 </style>
