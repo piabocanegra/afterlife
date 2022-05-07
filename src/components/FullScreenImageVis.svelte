@@ -1,0 +1,44 @@
+<script>
+  import NavigationArrow from "./NavigationArrow.svelte";
+</script>
+
+<div class="page" id="page_3">
+  <img src="/images/late_penitents_celestial_rose.jpg" alt="late penitents and celestial rose"/>
+  <h3>So what does heaven and hell look like?</h3>
+  <p>Let's find out!</p>
+  <NavigationArrow link="#page_1" isAtBottom={true} />
+</div>
+
+<style>
+  div {
+    text-align: center;
+    position: relative;
+  }
+  h3 {
+    max-width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+  p {
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+  img {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+</style>

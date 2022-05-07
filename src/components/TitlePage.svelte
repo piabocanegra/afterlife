@@ -4,7 +4,7 @@
 
 <div class="page" id="page_1">
   <h1>Hell and Heaven: Who goes and what happens?</h1>
-  <h4>A look into what 6,000+ U.S. adults think about the afterlife</h4>
+  <p>A look into what 6,000+ U.S. adults think about the afterlife</p>
   <div id="image_wrapper">
     <img src="/images/angels.png" alt="angels">
   </div>
@@ -12,12 +12,14 @@
 </div>
 
 <style>
+  h1 {
+    font-weight: 400;
+  }
   div {
     text-align: center;
     position: relative;
     background-color: #DDC3B1;
   }
-
   div#image_wrapper {
     width: 100%;
     position: absolute;
@@ -25,27 +27,26 @@
     margin-left: auto;
     margin-right: auto;
   }
-
   img {
     text-align: center;
   }
 
   @font-face {
-  font-family: "Concorde";
-  src: url("/fonts/ConcordeRegular.ttf") format('ttf');
+    font-family: "Concorde";
+    src: url("/fonts/ConcordeRegular.ttf") format('ttf');
   }
 
   @font-face {
-  font-family: "Founders";
-  src: url("/fonts/FoundersGroteskLight.otf") format('otf');
+    font-family: "Founders";
+    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
   }
 
   h1 {
-  font-family: Concorde
+    font-family: Concorde;
   }
 
-  h4 {
-  font-family: Founders
+  p {
+    font-family: Founders;
   }
 
 </style>
