@@ -15,13 +15,10 @@
   img {
     width: 50px;
     height: 50px;
-    text-align: center;
   }
   div {
-    width: 100%;
+    left: 50%;
+    margin-left: -25px;
     position: absolute;
-    /* bottom: var(--bottomPercent); */
-    margin-left: auto;
-    margin-right: auto;
   }
 </style>
