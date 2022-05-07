@@ -24,6 +24,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
+    font-family: Concorde;
+    color: #9B795F
   }
   p {
     font-size: 20px;
@@ -36,6 +38,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
+    font-family: Concorde;
+    color: #9B795F
   }
   img {
     height: 100vh;
@@ -44,4 +48,10 @@
     background-repeat: no-repeat;
     object-fit: cover;
   }
+
+  @font-face {
+  font-family: "Concorde";
+  src: url("/fonts/ConcordeRegular.ttf") format('ttf');
+  }
+
 </style>
