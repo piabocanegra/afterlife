@@ -1,0 +1,62 @@
+<script>
+  import FunFactBubble from "../components/FunFactBubble.svelte";
+  import NavigationArrow from "../components/NavigationArrow.svelte";
+</script>
+
+<div class="page" id="page_3">
+  <img src="/images/late_penitents_celestial_rose.jpg" alt="late penitents and celestial rose"/>
+  <h3>So what does heaven and hell look like?</h3>
+  <p>Let's find out!</p>
+  <FunFactBubble bubbleId="1"/>
+  <FunFactBubble bubbleId="2"/>
+  <NavigationArrow link="#page_4" isAtBottom={true} />
+</div>
+
+<style>
+  div {
+    text-align: center;
+    position: relative;
+  }
+  h3 {
+    max-width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    font-family: Concorde;
+    color: #9B795F
+  }
+  p {
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    font-family: Founders Grotesk Light;
+    color: #9B795F
+  }
+  img {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+
+  @font-face {
+  font-family: "Concorde";
+  src: url("/fonts/ConcordeRegular.ttf") format('ttf');
+  }
+
+  @font-face {
+    font-family: "Founders Grotesk Light";
+    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
+  }
+
+</style>

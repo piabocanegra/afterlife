@@ -2,7 +2,9 @@
 	import Scroller from '@sveltejs/svelte-scroller';
 	import TitlePage from './screens/TitlePage.svelte';
 	import LineDrawingVis from './screens/LineDrawingVis.svelte';
-	import FullScreenImageVis from './screens/FullScreenImageVis.svelte';
+	import HeavenHellFunFactVis from './screens/HeavenHellFunFactVis.svelte';
+	import WelcomeToHellFunFactVis from './screens/WelcomeToHellFunFactVis.svelte';
+	import WelcomeToHeavenFunFactVis from './screens/WelcomeToHeavenFunFactVis.svelte';
 
 	let top = 0.1;
 	let threshold = 0.5;
@@ -13,7 +15,9 @@
 <main>
 		<TitlePage/>
 		<LineDrawingVis/>
-		<FullScreenImageVis/>
+		<HeavenHellFunFactVis/>
+		<WelcomeToHellFunFactVis/>
+		<WelcomeToHeavenFunFactVis/>
 </main>
 
 
