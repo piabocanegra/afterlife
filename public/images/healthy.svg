@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450px" height="450px" viewBox="0 0 450 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>healthy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="healthy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M234.275545,101 C281.731086,101 351.592094,260.972897 329.186627,310.407241 C306.781159,359.841585 163.585761,363.847945 139.364463,310.407241 C115.143166,256.966536 186.820004,101 234.275545,101 Z" id="Triangle" stroke="#9B795F" stroke-width="10"></path>
+        <g id="Group-2" transform="translate(67.000000, 37.000000)" stroke="#9B795F" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+            <path d="M166.5,0.5 L166.5,33.5" id="Line-12"></path>
+            <path d="M321.5,66 L321.5,99" id="Line-12" transform="translate(321.500000, 82.500000) rotate(45.000000) translate(-321.500000, -82.500000) "></path>
+            <path d="M12.5,66 L12.5,99" id="Line-12" transform="translate(12.500000, 82.500000) scale(-1, 1) rotate(45.000000) translate(-12.500000, -82.500000) "></path>
+        </g>
+        <path d="M59,208.5 L59,241.5" id="Line-12" stroke="#9B795F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" transform="translate(59.000000, 225.000000) rotate(90.000000) translate(-59.000000, -225.000000) "></path>
+        <path d="M409.5,208.5 L409.5,241.5" id="Line-12" stroke="#9B795F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" transform="translate(409.500000, 225.000000) rotate(90.000000) translate(-409.500000, -225.000000) "></path>
+        <g id="Group" transform="translate(234.000000, 367.500000) scale(-1, -1) translate(-234.000000, -367.500000) translate(67.000000, 320.000000)" stroke="#9B795F" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+            <path d="M166.5,0.5 L166.5,33.5" id="Line-12"></path>
+            <path d="M321.5,66 L321.5,99" id="Line-12" transform="translate(321.500000, 82.500000) rotate(45.000000) translate(-321.500000, -82.500000) "></path>
+            <path d="M12.5,66 L12.5,99" id="Line-12" transform="translate(12.500000, 82.500000) scale(-1, 1) rotate(45.000000) translate(-12.500000, -82.500000) "></path>
+        </g>
+    </g>
+</svg>

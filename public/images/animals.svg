@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450px" height="450px" viewBox="0 0 450 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>animals</title>
+    <desc>Created with Sketch.</desc>
+    <g id="animals" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M121.113541,174 C140.668086,174 169.455034,239.795304 160.22263,260.127172 C150.990227,280.459039 91.9850873,282.106816 82.0044522,260.127172 C72.023817,238.147527 101.558997,174 121.113541,174 Z" id="Triangle" stroke="#9B795F" stroke-width="10"></path>
+        <rect id="Rectangle" stroke="#9B795F" stroke-width="10" x="187" y="174" width="82" height="48" rx="24"></rect>
+        <rect id="Rectangle" stroke="#9B795F" stroke-width="10" x="228" y="243" width="82" height="70" rx="24"></rect>
+        <rect id="Rectangle" stroke="#9B795F" stroke-width="10" x="334" y="241" width="59" height="48" rx="24"></rect>
+        <rect id="Rectangle" stroke="#9B795F" stroke-width="10" x="304" y="198" width="82" height="24" rx="12"></rect>
+    </g>
+</svg>
