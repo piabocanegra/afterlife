@@ -1,10 +1,11 @@
 <script>
+	import * as d3 from 'd3';
 	import Scroller from '@sveltejs/svelte-scroller';
 	import TitlePage from './screens/TitlePage.svelte';
-	import LineDrawingVis from './screens/LineDrawingVis.svelte';
 	import HeavenHellFunFactVis from './screens/HeavenHellFunFactVis.svelte';
 	import WelcomeToHellFunFactVis from './screens/WelcomeToHellFunFactVis.svelte';
 	import WelcomeToHeavenFunFactVis from './screens/WelcomeToHeavenFunFactVis.svelte';
+	import SelectBeliefVis from './screens/SelectBeliefVis.svelte';
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -16,13 +17,11 @@
 
 <main>
 <Scroller top={top} bottom={bottom} threshold={threshold} bind:index bind:count>
-	<div slot="background">
-		<p>current section: <strong>{index + 1}/{count}</strong></p>
-	 </div>
+	<div slot="background"></div>
 
 	<div slot="foreground">
 		<section><TitlePage/></section>
-		<section><LineDrawingVis currIndex={index+1}/></section>
+		<section><SelectBeliefVis currIndex={index+1}/></section>
 		<section><HeavenHellFunFactVis/></section>
 		<section><WelcomeToHellFunFactVis/></section>
 		<section><WelcomeToHeavenFunFactVis/></section>
