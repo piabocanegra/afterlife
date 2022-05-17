@@ -6,20 +6,29 @@
 	import WelcomeToHellFunFactVis from './screens/WelcomeToHellFunFactVis.svelte';
 	import WelcomeToHeavenFunFactVis from './screens/WelcomeToHeavenFunFactVis.svelte';
 
-	let top = 0.1;
-	let threshold = 0.5;
-	let bottom = 0.9;
+	// variables for tracking scrolling progress
+	let top = 0;
+	let threshold = 0.05;
+	let bottom = 1;
+	let index;
+	let count;
 </script>
 
-
 <main>
-		<TitlePage/>
-		<LineDrawingVis/>
-		<HeavenHellFunFactVis/>
-		<WelcomeToHellFunFactVis/>
-		<WelcomeToHeavenFunFactVis/>
-</main>
+<Scroller top={top} bottom={bottom} threshold={threshold} bind:index bind:count>
+	<div slot="background">
+		<p>current section: <strong>{index + 1}/{count}</strong></p>
+	 </div>
 
+	<div slot="foreground">
+		<section><TitlePage/></section>
+		<section><LineDrawingVis currIndex={index+1}/></section>
+		<section><HeavenHellFunFactVis/></section>
+		<section><WelcomeToHellFunFactVis/></section>
+		<section><WelcomeToHeavenFunFactVis/></section>
+	</div>
+</Scroller>
+</main>
 
 <style>
 	main {

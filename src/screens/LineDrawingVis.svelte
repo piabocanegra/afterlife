@@ -1,6 +1,9 @@
 <script>
   	import { fade } from 'svelte/transition';
     import NavigationArrow from '../components/NavigationArrow.svelte';
+
+    export let currIndex;
+    console.log(currIndex);
 </script>
 
 <div class="page" id="page_2">
