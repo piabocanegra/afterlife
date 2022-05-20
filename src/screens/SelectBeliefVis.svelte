@@ -7,7 +7,7 @@
     function handleMouseOver() {
       let resultId = "#r_" + this.getAttribute("i");
       let lastOpacity = d3.select("#o_5").style("opacity");
-      
+
       if (currIndex >= 2 && lastOpacity == 1) {
         d3.select(resultId).style("opacity", "100");
       }
@@ -26,15 +26,15 @@
   <h1>I believe in...</h1>
   {#if currIndex >= 2}
     <p i="1" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 600 }}>Heaven and hell</p>
-    <p id="r_1" class="result">You picked this. xx% of adults have the same belief!</p>
+    <p id="r_1" class="result">Click here to select this belief.</p>
     <p i="2" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 1200 }}>Only heaven</p>
-    <p id="r_2" class="result">You picked this. xx% of adults have the same belief!</p>
+    <p id="r_2" class="result">Click here to select this belief.</p>
     <p i="3" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 1800 }}>Only hell</p>
-    <p id="r_3" class="result">You picked this. xx% of adults have the same belief!</p>
+    <p id="r_3" class="result">Click here to select this belief.</p>
     <p i="4" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 2400 }}>Neither heaven nor hell but I believe in an afterlife</p>
-    <p id="r_4" class="result">You picked this. xx% of adults have the same belief!</p>
+    <p id="r_4" class="result">Click here to select this belief.</p>
     <p i="5" id="o_5" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 3000 }}>Neither heaven nor hell and I do not believe in an afterlife</p>
-    <p id="r_5" class="result">You picked this. xx% of adults have the same belief!</p>
+    <p id="r_5" class="result">Click here to select this belief.</p>
     <NavigationArrow link="#page_3" isAtBottom={true} arrowType="3"/>
   {/if}
 </div>
@@ -72,4 +72,25 @@
   .option {
     cursor: pointer;
   }
+
+  #r_1 {
+  color: #c95033
+  }
+
+  #r_2 {
+  color: #c95033
+  }
+
+  #r_3 {
+  color: #c95033
+  }
+
+  #r_4 {
+  color: #c95033
+  }
+
+  #r_5 {
+  color: #c95033
+  }
+
 </style>
