@@ -7,13 +7,12 @@
   let delayInterval = 650;
 
   // hardcoded values
-  // TODO switch out values
   let imageList = [
-    "../images/psychological.svg",
-    "../images/psychological.svg",
-    "../images/psychological.svg",
-    "../images/psychological.svg",
-    "../images/psychological.svg"
+    "../images/spirit.svg",
+    "../images/reincarnation.svg",
+    "../images/free_spirit.svg",
+    "../images/rejoin.svg",
+    "../images/growth.svg"
   ];
 
   let percentList = ["21%","17%", "11%", "8%", "4%"];
