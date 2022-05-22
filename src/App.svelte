@@ -9,6 +9,7 @@
 	import SelectBeliefVis from './screens/hovervis/SelectBeliefVis.svelte';
 	import PeopleDoNotBelieveInGodVis from './screens/hovervis/PeopleDoNotBelieveInGodVis.svelte';
 	import HellPercentVis from './screens/percentvis/HellPercentVis.svelte';
+	import HeavenPercentVis from './screens/percentvis/HeavenPercentVis.svelte';
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -43,15 +44,16 @@
 		<section><WelcomeToHellFunFactVis index={6}/></section>
 		<section><HellPercentVis index={7} currIndex={index+1}/></section>
 
-		<section><WelcomeToHeavenFunFactVis index={7}/></section>
-		<!-- TODO: percentage chart  -->
+		<section><WelcomeToHeavenFunFactVis index={8}/></section>
+		<section><HeavenPercentVis index={9} currIndex={index+1}/></section>
 
-		<section><ChapterTitlePage chapterTitle={heavenChapter} index={8}></ChapterTitlePage></section>
-		<section><PeopleDoNotBelieveInGodVis index={9} currIndex={index+1}/></section>
+
+		<section><ChapterTitlePage chapterTitle={heavenChapter} index={10}></ChapterTitlePage></section>
+		<section><PeopleDoNotBelieveInGodVis index={11} currIndex={index+1}/></section>
 		<!-- TODO: line chart  -->
 		<!-- TODO: sunray chart  -->
 
-		<section><ChapterTitlePage chapterTitle={earthChapter} index={10}></ChapterTitlePage></section>
+		<section><ChapterTitlePage chapterTitle={earthChapter} index={12}></ChapterTitlePage></section>
 		<!-- TODO: percentage chart  -->
 		<!-- TODO: static infograph -->
 		<!-- TODO: final summary page  -->
