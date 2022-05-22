@@ -3,8 +3,9 @@
     import NavigationArrow from '../components/NavigationArrow.svelte';
 
     export let currIndex;
+    export let index;
     let hasUserSelectedText = false;
-    let selectedIndex = -1;
+    let
 
     // hardcoded text
     let beliefText = [
@@ -26,7 +27,7 @@
       let resultId = "#r_" + this.getAttribute("i");
       let lastOpacity = d3.select("#o_4").style("opacity");
 
-      if (currIndex >= 2 && lastOpacity == 1 && !hasUserSelectedText) {
+      if (currIndex >= {index} && lastOpacity == 1 && !hasUserSelectedText) {
         d3.select(resultId).style("opacity", "100");
       }
     }
@@ -46,7 +47,6 @@
       if (!hasUserSelectedText) {
         let i = this.getAttribute("i");
         hasUserSelectedText = true;
-        selectedIndex = i;
         d3.select("#r_" + i).style("opacity", "1");
         d3.select("#r_" + i).text(getMouseoverText(i, false));
 
@@ -58,9 +58,9 @@
 
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<div class="page" id="page_2">
+<div class="page" id={"page_"+index}>
   <h1>I believe in...</h1>
-  {#if currIndex >= 2}
+  {#if currIndex >= index}
     {#each [0, 1, 2, 3, 4] as index}
       <p i={index} 
         id={"o_" + index} 
@@ -74,7 +74,7 @@
       <p id={"r_" + index} class="result">{getMouseoverText(index, true)}</p>
     {/each}
    
-    <NavigationArrow link="#page_3" isAtBottom={true} arrowType="3"/>
+    <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="3"/>
   {/if}
 </div>
 

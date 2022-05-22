@@ -1,14 +1,16 @@
 <script>
   import NavigationArrow from '../components/NavigationArrow.svelte';
+
+  export let index;
 </script>
 
-<div class="page" id="page_1">
+<div class="page" id={"page_"+index}>
   <h1>Hell and Heaven: Who goes and what happens?</h1>
   <p>A look into what 6,000+ U.S. adults think about the afterlife</p>
   <div id="image_wrapper">
     <img src="/images/angels.png" alt="angels">
   </div>
-  <NavigationArrow link="#page_2" isAtBottom={false} arrowType="1"/>
+  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="1"/>
 </div>
 
 <style>

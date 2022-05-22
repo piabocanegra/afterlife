@@ -1,13 +1,15 @@
 <script>
   import FunFactBubble from "../components/FunFactBubble.svelte";
   import NavigationArrow from "../components/NavigationArrow.svelte";
+
+  export let index;
 </script>
 
-<div class="page" id="page_4">
+<div class="page" id={"page_"+index}>
   <img src="/images/satan.jpeg" alt="satan"/>
   <h3>Welcome to hell!</h3>
   <FunFactBubble bubbleId="3"/>
-  <NavigationArrow link="#page_5" isAtBottom={true} arrowType="2"/>
+  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="2"/>
 </div>
 
 <style>
