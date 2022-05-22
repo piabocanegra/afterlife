@@ -5,7 +5,6 @@
 
   export let currIndex;
   export let index;
-  let delayInterval = 650;
   let imageSize = 120;
 
   $: yScale = scaleLinear()

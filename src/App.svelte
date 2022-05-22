@@ -12,6 +12,7 @@
 	import HeavenPercentVis from './screens/percentvis/HeavenPercentVis.svelte';
 	import AfterlifePercentVis from './screens/percentvis/AfterlifePercentVis.svelte';
 	import SunrayVis from './screens/SunrayVis.svelte';
+	import ReligionLineVis from './screens/ReligiouslyUnaffiliatedLineVis.svelte';
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -40,22 +41,22 @@
 		<section><IntroPage index={2} paragraph1={intro1} paragraph2={intro2}/></section>
 		<section><IntroPage index={3} paragraph1={intro3} paragraph2={intro4}/></section>
 		<section><SelectBeliefVis index={4} currIndex={index+1}/></section>
-		<!-- TODO: line chart -->
+		<section><ReligionLineVis index={5} currIndex={index+1}/></section>
 
-		<section><HeavenHellFunFactVis index={5}/></section>
-		<section><WelcomeToHellFunFactVis index={6}/></section>
-		<section><HellPercentVis index={7} currIndex={index+1}/></section>
+		<section><HeavenHellFunFactVis index={6}/></section>
+		<section><WelcomeToHellFunFactVis index={7}/></section>
+		<section><HellPercentVis index={8} currIndex={index+1}/></section>
 
-		<section><WelcomeToHeavenFunFactVis index={8}/></section>
-		<section><HeavenPercentVis index={9} currIndex={index+1}/></section>
+		<section><WelcomeToHeavenFunFactVis index={9}/></section>
+		<section><HeavenPercentVis index={10} currIndex={index+1}/></section>
 
-		<section><ChapterTitlePage chapterTitle={heavenChapter} index={10}></ChapterTitlePage></section>
-		<section><PeopleDoNotBelieveInGodVis index={11} currIndex={index+1}/></section>
+		<section><ChapterTitlePage chapterTitle={heavenChapter} index={11}></ChapterTitlePage></section>
+		<section><PeopleDoNotBelieveInGodVis index={12} currIndex={index+1}/></section>
 		<!-- TODO: line chart  -->
-		<section><SunrayVis currIndex={index+1} index={12}/></section>
+		<section><SunrayVis currIndex={index+1} index={13}/></section>
 
-		<section><ChapterTitlePage chapterTitle={earthChapter} index={13}></ChapterTitlePage></section>
-		<section><AfterlifePercentVis index={14} currIndex={index+1}/></section>
+		<section><ChapterTitlePage chapterTitle={earthChapter} index={14}></ChapterTitlePage></section>
+		<section><AfterlifePercentVis index={15} currIndex={index+1}/></section>
 		<!-- TODO: static infograph -->
 		<!-- TODO: final summary page  -->
 	</div>
