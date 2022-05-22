@@ -24,7 +24,8 @@
     let resultId = "#b_" + this.getAttribute("i");
     let lastOpacity = d3.select("#op_3").style("opacity");
 
-    if (currIndex >= {index} && lastOpacity == 1 && !hasUserSelectedText) {
+    if (currIndex >= index && lastOpacity == 1 && !hasUserSelectedText) {
+      console.log("test")
       d3.select(resultId).style("opacity", "100");
     }
   }
@@ -71,7 +72,7 @@
     <p id={"b_" + index} class="result">{getMouseoverText(index, true)}</p>
   {/each}
  
-  <NavigationArrow link="#page_1" isAtBottom={true} arrowType="3"/>
+  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="3"/>
 {/if}
 </div>
 

@@ -1,6 +1,8 @@
 <script>
 	import Scroller from '@sveltejs/svelte-scroller';
 	import TitlePage from './screens/TitlePage.svelte';
+	import ChapterTitlePage from './screens/ChapterTitlePage.svelte';
+	import IntroPage from './screens/IntroPage.svelte';
 	import HeavenHellFunFactVis from './screens/HeavenHellFunFactVis.svelte';
 	import WelcomeToHellFunFactVis from './screens/WelcomeToHellFunFactVis.svelte';
 	import WelcomeToHeavenFunFactVis from './screens/WelcomeToHeavenFunFactVis.svelte';
@@ -9,10 +11,20 @@
 
 	// variables for tracking scrolling progress
 	let top = 0;
-	let threshold = 0.05;
+	let threshold = 0.1;
 	let bottom = 1;
 	let index;
 	let count;
+
+	// chapter titles
+	let heavenChapter = "But, who is in heaven?";
+	let earthChapter = "Let's return to earth!";
+
+	// intro paragraph text
+	let intro1 = "Do our lives extend beyond the grave?";
+	let intro2 = "Many of us have views on this very question, but they are rarely expressed.";
+	let intro3 = "Pew Research Center surveyed 6,485 American adults in September 2021 about the afterlife, specifically their views on heaven, hell, reincarnation, fate, prayer, and other metaphysical matters."
+	let intro4 = "tbd";
 </script>
 
 <main>
@@ -21,11 +33,26 @@
 
 	<div slot="foreground">
 		<section><TitlePage index={1}/></section>
-		<section><SelectBeliefVis index={2} currIndex={index+1}/></section>
-		<section><HeavenHellFunFactVis index={3}/></section>
-		<section><WelcomeToHellFunFactVis index={4}/></section>
-		<section><WelcomeToHeavenFunFactVis index={5}/></section>
-		<section><PeopleDoNotBelieveInGodVis index={6} currIndex={index+1}/></section>
+		<section><IntroPage index={2} paragraph1={intro1} paragraph2={intro2}/></section>
+		<section><IntroPage index={3} paragraph1={intro3} paragraph2={intro4}/></section>
+		<section><SelectBeliefVis index={4} currIndex={index+1}/></section>
+		<!-- TODO: line chart -->
+
+		<section><HeavenHellFunFactVis index={5}/></section>
+		<section><WelcomeToHellFunFactVis index={6}/></section>
+		<!-- TODO: percentage chart  -->
+
+		<section><WelcomeToHeavenFunFactVis index={7}/></section>
+		<!-- TODO: percentage chart  -->
+
+		<section><ChapterTitlePage chapterTitle={heavenChapter} index={8}></ChapterTitlePage></section>
+		<section><PeopleDoNotBelieveInGodVis index={9} currIndex={index+1}/></section>
+		<!-- TODO: horizontal line chart  -->
+		<!-- TODO: sunray chart  -->
+
+		<section><ChapterTitlePage chapterTitle={earthChapter} index={10}></ChapterTitlePage></section>
+		<!-- TODO: percentage chart  -->
+		<!-- TODO: final summary page  -->
 	</div>
 </Scroller>
 </main>

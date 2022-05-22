@@ -5,7 +5,6 @@
     export let currIndex;
     export let index;
     let hasUserSelectedText = false;
-    let
 
     // hardcoded text
     let beliefText = [
@@ -14,7 +13,7 @@
       "Only hell",
       "Neither heaven nor hell but I believe in an afterlife",
       "Neither heaven nor hell and I do not believe in an afterlife"
-    ]
+    ];
     let mouseoverText = [
       "You picked this. 00% of adults have the same belief!",
       "You picked this. 11% of adults have the same belief!",
@@ -27,7 +26,7 @@
       let resultId = "#r_" + this.getAttribute("i");
       let lastOpacity = d3.select("#o_4").style("opacity");
 
-      if (currIndex >= {index} && lastOpacity == 1 && !hasUserSelectedText) {
+      if (currIndex >= index && lastOpacity == 1 && !hasUserSelectedText) {
         d3.select(resultId).style("opacity", "100");
       }
     }
