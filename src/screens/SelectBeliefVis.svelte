@@ -3,21 +3,57 @@
     import NavigationArrow from '../components/NavigationArrow.svelte';
 
     export let currIndex;
+    let hasUserSelectedText = false;
+    let selectedIndex = -1;
+
+    // hardcoded text
+    let beliefText = [
+      "Heaven and hell",
+      "Only heaven",
+      "Only hell",
+      "Neither heaven nor hell but I believe in an afterlife",
+      "Neither heaven nor hell and I do not believe in an afterlife"
+    ]
+    let mouseoverText = [
+      "You picked this. 00% of adults have the same belief!",
+      "You picked this. 11% of adults have the same belief!",
+      "You picked this. 22% of adults have the same belief!",
+      "You picked this. 33% of adults have the same belief!",
+      "You picked this. 44% of adults have the same belief!"
+    ];
 
     function handleMouseOver() {
       let resultId = "#r_" + this.getAttribute("i");
-      let lastOpacity = d3.select("#o_5").style("opacity");
+      let lastOpacity = d3.select("#o_4").style("opacity");
 
-      if (currIndex >= 2 && lastOpacity == 1) {
+      if (currIndex >= 2 && lastOpacity == 1 && !hasUserSelectedText) {
         d3.select(resultId).style("opacity", "100");
       }
     }
 
-    function handleMouseOut(e) {
+    function handleMouseOut() {
       let resultId = "#r_" + this.getAttribute("i");
-      //TODO: add slow fade-out
-      d3.select(resultId).style("opacity", "0");
+      if (!hasUserSelectedText) {
+        d3.select(resultId).style("opacity", "0");
+      }
     }
+
+    function getMouseoverText(index, isHardcoded) {
+      return (isHardcoded) ? "Click here to select this belief." : mouseoverText[index];
+    }
+
+    function handleOnClick() {
+      if (!hasUserSelectedText) {
+        let i = this.getAttribute("i");
+        hasUserSelectedText = true;
+        selectedIndex = i;
+        d3.select("#r_" + i).style("opacity", "1");
+        d3.select("#r_" + i).text(getMouseoverText(i, false));
+
+        d3.selectAll(".option").style("cursor", "initial");
+      }
+    }
+    
 </script>
 
 
@@ -25,16 +61,19 @@
 <div class="page" id="page_2">
   <h1>I believe in...</h1>
   {#if currIndex >= 2}
-    <p i="1" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 600 }}>Heaven and hell</p>
-    <p id="r_1" class="result">Click here to select this belief.</p>
-    <p i="2" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 1200 }}>Only heaven</p>
-    <p id="r_2" class="result">Click here to select this belief.</p>
-    <p i="3" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 1800 }}>Only hell</p>
-    <p id="r_3" class="result">Click here to select this belief.</p>
-    <p i="4" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 2400 }}>Neither heaven nor hell but I believe in an afterlife</p>
-    <p id="r_4" class="result">Click here to select this belief.</p>
-    <p i="5" id="o_5" class="option" on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} transition:fade={{ delay: 3000 }}>Neither heaven nor hell and I do not believe in an afterlife</p>
-    <p id="r_5" class="result">Click here to select this belief.</p>
+    {#each [0, 1, 2, 3, 4] as index}
+      <p i={index} 
+        id={"o_" + index} 
+        class="option" 
+        on:click={handleOnClick} 
+        on:mouseover={handleMouseOver} 
+        on:mouseout={handleMouseOut} 
+        transition:fade={{ delay: 600*(index+1) }}>
+        {beliefText[index]}
+      </p>
+      <p id={"r_" + index} class="result">{getMouseoverText(index, true)}</p>
+    {/each}
+   
     <NavigationArrow link="#page_3" isAtBottom={true} arrowType="3"/>
   {/if}
 </div>
@@ -66,31 +105,11 @@
 
   .result {
     opacity: 0;
-    color: red;
+    color: #c95033
   }
 
   .option {
     cursor: pointer;
-  }
-
-  #r_1 {
-  color: #c95033
-  }
-
-  #r_2 {
-  color: #c95033
-  }
-
-  #r_3 {
-  color: #c95033
-  }
-
-  #r_4 {
-  color: #c95033
-  }
-
-  #r_5 {
-  color: #c95033
   }
 
 </style>
