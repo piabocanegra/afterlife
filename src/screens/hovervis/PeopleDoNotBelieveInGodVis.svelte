@@ -1,6 +1,6 @@
 <script>
   import { fade } from 'svelte/transition';
-  import NavigationArrow from '../components/NavigationArrow.svelte';
+  import NavigationArrow from '../../components/NavigationArrow.svelte';
 
   export let currIndex;
   export let index;
@@ -25,7 +25,6 @@
     let lastOpacity = d3.select("#op_3").style("opacity");
 
     if (currIndex >= index && lastOpacity == 1 && !hasUserSelectedText) {
-      console.log("test")
       d3.select(resultId).style("opacity", "100");
     }
   }

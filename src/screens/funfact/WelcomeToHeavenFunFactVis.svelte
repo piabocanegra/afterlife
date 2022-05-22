@@ -1,16 +1,14 @@
 <script>
-  import FunFactBubble from "../components/FunFactBubble.svelte";
-  import NavigationArrow from "../components/NavigationArrow.svelte";
+  import FunFactBubble from "../../components/FunFactBubble.svelte";
+  import NavigationArrow from "../../components/NavigationArrow.svelte";
 
   export let index;
 </script>
 
 <div class="page" id={"page_"+index}>
-  <img src="/images/late_penitents_celestial_rose.jpg" alt="late penitents and celestial rose"/>
-  <h3>So what does heaven and hell look like?</h3>
-  <p>Let's find out!</p>
-  <FunFactBubble bubbleId="1"/>
-  <FunFactBubble bubbleId="2"/>
+  <img src="/images/respondent_souls.jpg" alt="respondent souls"/>
+  <h3>Welcome to heaven!</h3>
+  <FunFactBubble bubbleId="4"/>
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="2"/>
 </div>
 
@@ -20,27 +18,17 @@
     position: relative;
   }
   h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 75px;
     max-width: 30%;
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
     font-family: Concorde;
-    color: #9B795F
-  }
-  p {
-    font-size: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    font-family: Founders Grotesk Light;
     color: #9B795F
   }
   img {

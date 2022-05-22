@@ -3,11 +3,12 @@
 	import TitlePage from './screens/TitlePage.svelte';
 	import ChapterTitlePage from './screens/ChapterTitlePage.svelte';
 	import IntroPage from './screens/IntroPage.svelte';
-	import HeavenHellFunFactVis from './screens/HeavenHellFunFactVis.svelte';
-	import WelcomeToHellFunFactVis from './screens/WelcomeToHellFunFactVis.svelte';
-	import WelcomeToHeavenFunFactVis from './screens/WelcomeToHeavenFunFactVis.svelte';
-	import SelectBeliefVis from './screens/SelectBeliefVis.svelte';
-	import PeopleDoNotBelieveInGodVis from './screens/PeopleDoNotBelieveInGodVis.svelte';
+	import HeavenHellFunFactVis from './screens/funfact/HeavenHellFunFactVis.svelte';
+	import WelcomeToHellFunFactVis from './screens/funfact/WelcomeToHellFunFactVis.svelte';
+	import WelcomeToHeavenFunFactVis from './screens/funfact/WelcomeToHeavenFunFactVis.svelte';
+	import SelectBeliefVis from './screens/hovervis/SelectBeliefVis.svelte';
+	import PeopleDoNotBelieveInGodVis from './screens/hovervis/PeopleDoNotBelieveInGodVis.svelte';
+	import HellPercentVis from './screens/percentvis/HellPercentVis.svelte';
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -18,7 +19,7 @@
 
 	// chapter titles
 	let heavenChapter = "But, who is in heaven?";
-	let earthChapter = "Let's return to earth!";
+	let earthChapter = "Let's visit the afterlife!";
 
 	// intro paragraph text
 	let intro1 = "Do our lives extend beyond the grave?";
@@ -40,18 +41,19 @@
 
 		<section><HeavenHellFunFactVis index={5}/></section>
 		<section><WelcomeToHellFunFactVis index={6}/></section>
-		<!-- TODO: percentage chart  -->
+		<section><HellPercentVis index={7} currIndex={index+1}/></section>
 
 		<section><WelcomeToHeavenFunFactVis index={7}/></section>
 		<!-- TODO: percentage chart  -->
 
 		<section><ChapterTitlePage chapterTitle={heavenChapter} index={8}></ChapterTitlePage></section>
 		<section><PeopleDoNotBelieveInGodVis index={9} currIndex={index+1}/></section>
-		<!-- TODO: horizontal line chart  -->
+		<!-- TODO: line chart  -->
 		<!-- TODO: sunray chart  -->
 
 		<section><ChapterTitlePage chapterTitle={earthChapter} index={10}></ChapterTitlePage></section>
 		<!-- TODO: percentage chart  -->
+		<!-- TODO: static infograph -->
 		<!-- TODO: final summary page  -->
 	</div>
 </Scroller>

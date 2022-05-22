@@ -1,6 +1,6 @@
 <script>
   	import { fade } from 'svelte/transition';
-    import NavigationArrow from '../components/NavigationArrow.svelte';
+    import NavigationArrow from '../../components/NavigationArrow.svelte';
 
     export let currIndex;
     export let index;
