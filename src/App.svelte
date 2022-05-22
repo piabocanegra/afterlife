@@ -10,6 +10,7 @@
 	import PeopleDoNotBelieveInGodVis from './screens/hovervis/PeopleDoNotBelieveInGodVis.svelte';
 	import HellPercentVis from './screens/percentvis/HellPercentVis.svelte';
 	import HeavenPercentVis from './screens/percentvis/HeavenPercentVis.svelte';
+	import AfterlifePercentVis from './screens/percentvis/AfterlifePercentVis.svelte';
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -47,14 +48,13 @@
 		<section><WelcomeToHeavenFunFactVis index={8}/></section>
 		<section><HeavenPercentVis index={9} currIndex={index+1}/></section>
 
-
 		<section><ChapterTitlePage chapterTitle={heavenChapter} index={10}></ChapterTitlePage></section>
 		<section><PeopleDoNotBelieveInGodVis index={11} currIndex={index+1}/></section>
 		<!-- TODO: line chart  -->
 		<!-- TODO: sunray chart  -->
 
 		<section><ChapterTitlePage chapterTitle={earthChapter} index={12}></ChapterTitlePage></section>
-		<!-- TODO: percentage chart  -->
+		<section><AfterlifePercentVis index={13} currIndex={index+1}/></section>
 		<!-- TODO: static infograph -->
 		<!-- TODO: final summary page  -->
 	</div>
