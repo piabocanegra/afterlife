@@ -44,9 +44,7 @@
         </g>
       {/each}
       
-      <g transition:fade={{delay: delayInterval*6}}>
-        <line in:draw={{duraton: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
-      </g>
+      <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
 
       <g transition:fade={{delay: delayInterval*7}}>
         <text id="bottomTooltip" x=20 y=410>**Survey participants had the option to</text>
