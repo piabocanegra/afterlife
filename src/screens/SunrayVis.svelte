@@ -9,7 +9,7 @@
 
   $: yScale = scaleLinear()
 		.domain([0, 100])
-		.range([350, 20]); 
+		.range([350, 20]);
 </script>
 
 <div class="page" id={"page_"+index}>
@@ -35,7 +35,7 @@
       <text x=550 y=400>My religion is the one</text>
       <text x=550 y=420>true faith.</text>
       <line in:draw={{duration: 1500}} x1=550 x2=550 y2={yScale(0)} y1={yScale(31)+imageSize*0.2}/>
-    
+
     </svg>
   {/if}
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>
@@ -45,6 +45,10 @@
   div {
     text-align: center;
     position: relative;
+  }
+
+  background {
+  color: #FFF4EC;
   }
 
   @font-face {
