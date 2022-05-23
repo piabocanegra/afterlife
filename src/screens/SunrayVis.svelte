@@ -47,8 +47,8 @@
     position: relative;
   }
 
-  background {
-  color: #FFF4EC;
+  body {
+  background-color: #FFF4EC;
   }
 
   @font-face {
