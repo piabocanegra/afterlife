@@ -47,10 +47,6 @@
     position: relative;
   }
 
-  body {
-  background-color: #FFF4EC;
-  }
-
   @font-face {
     font-family: "Concorde";
     src: url("/fonts/ConcordeRegular.ttf") format('ttf');
