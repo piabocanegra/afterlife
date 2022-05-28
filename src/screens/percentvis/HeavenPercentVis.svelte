@@ -44,7 +44,7 @@
           <text x={170*(i+1)-25} y=370>{labelList[i][1]}</text>
         </g>
       {/each}
-      
+
       <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
 
       <g transition:fade={{delay: delayInterval*7}}>
@@ -57,7 +57,7 @@
         <text class="tooltip" x={50+170*3} y=50>looks like (compared to hell)!</text>
       </g>
       <path in:draw={{delay: delayInterval*8, duration: 1500}} d="M 550 38 H 480 V 80"/>
-      
+
     </svg>
   {/if}
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>
@@ -91,19 +91,21 @@
     font-size: 14px;
     text-anchor: middle;
   }
-  
+
   #bold {
     font-weight: bold;
     font-size: 16px;
   }
-  
+
   .tooltip {
     text-anchor: start;
     font-size: 12px;
+    font-family: "Founders Grotesk Light"
   }
 
   #topTooltip {
     font-style: italic;
+    font-family: "Founders Grotesk Light"
   }
 
   line {

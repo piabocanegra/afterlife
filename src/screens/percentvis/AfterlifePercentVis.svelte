@@ -43,7 +43,7 @@
           <text x={170*(i+1)-25} y=350>{labelList[i][0]}</text>
         </g>
       {/each}
-      
+
       <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
 
       <g transition:fade={{delay: delayInterval*7}}>
@@ -84,7 +84,7 @@
     font-size: 14px;
     text-anchor: middle;
   }
-  
+
   #bold {
     font-weight: bold;
     font-size: 16px;
@@ -94,11 +94,13 @@
     text-anchor: start;
     font-size: 12px;
     font-style: italic;
+    font-family: "Founders Grotesk Light"
   }
 
   #bottomTooltip {
     text-anchor: start;
     font-size: 12px;
+    font-family: "Founders Grotesk Light"
   }
 
   line {
