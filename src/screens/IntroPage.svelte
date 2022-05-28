@@ -35,6 +35,6 @@
   }
 
   h3 {
-    font-family: Concorde;
+    font-family: Founders Grotesk Light;
   }
 </style>
