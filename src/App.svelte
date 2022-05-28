@@ -29,7 +29,7 @@
 	let intro1 = "Do our lives extend beyond the grave?";
 	let intro2 = "Many of us have views on this very question, but they are rarely expressed.";
 	let intro3 = "Pew Research Center surveyed 6,485 American adults in September 2021 about the afterlife, specifically their views on heaven, hell, reincarnation, fate, prayer, and other metaphysical matters."
-	let intro4 = "tbd";
+	let intro4 = "66% of the sample were Christians.";
 </script>
 
 <main>

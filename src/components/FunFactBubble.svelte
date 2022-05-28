@@ -17,7 +17,7 @@
   }
   // map of ids to hardcoded text for fun facts
   let funFactTextMap = {
-    "1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "1": "Gustave Doré Celestial Rose (1868)",
     "2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
