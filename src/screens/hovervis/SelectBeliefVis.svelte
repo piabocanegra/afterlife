@@ -12,6 +12,7 @@
       "Only heaven",
       "Only hell",
       "Neither heaven nor hell but I believe in an afterlife",
+      "Neither heaven nor hell and I do not believe in an afterlife",
       "I don't have an answer"
     ];
     let mouseoverText = [
