@@ -7,16 +7,12 @@
 </script>
 
 <div class="page" id={"page_"+index}>
-  <h3>{paragraph1}</h3>
-  <h3>{paragraph2}</h3>
+  <p>{paragraph1}</p>
+  <p>{paragraph2}</p>
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="3"/>
 </div>
 
 <style>
-  h3 {
-    font-weight: 400;
-  }
-
   div {
     padding-top: 150px;
     text-align: center;
@@ -34,7 +30,8 @@
     src: url("/fonts/FoundersGroteskLight.otf") format('otf');
   }
 
-  h3 {
+  p {
     font-family: Founders Grotesk Light;
+    font-size: 18pt;
   }
 </style>
