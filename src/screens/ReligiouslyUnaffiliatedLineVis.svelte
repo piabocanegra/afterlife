@@ -10,9 +10,9 @@
 
   $: yScale = scaleLinear()
 		.domain([0, 100])
-		.range([340, 100]); 
+		.range([340, 100]);
 
-  // hardcoded values 
+  // hardcoded values
   let percentList = [
     [92, 79],
     [50, 39],
@@ -45,7 +45,7 @@
         <image x={200*(i+1)+50-120-imageSize/2} y={yScale(percentList[i][1])-55} width={imageSize} height={imageSize} href="/images/hell.svg"/>
         <line x1={200*(i+1)-120-0.5} x2={200*(i+1)-120-0.5} y2={yScale(0)} y1={yScale(percentList[i][0])}/>
         <line x1={200*(i+1)+50-120-0.5} x2={200*(i+1)+50-120-0.5} y2={yScale(0)} y1={yScale(percentList[i][1])}/>
-        
+
         <text x={200*(i+1)-100} y=370>{labelList[i][0]}</text>
         <text x={200*(i+1)-100} y=385>{labelList[i][1]}</text>
       {/each}
@@ -108,7 +108,7 @@
   }
 
   rect {
-    fill: grey;
+    fill: #C8AD9A;
     opacity: 0.3;
   }
 
