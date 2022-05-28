@@ -20,7 +20,7 @@
 
       <text id="bold" x=250 y={yScale(58)-75}>58%</text>
       <!-- TODO change svg to beige color -->
-      <image x={250-imageSize*0.45} y={yScale(58)-imageSize/2} width={imageSize} height={imageSize} href="../images/white-sun.svg"/>
+      <image x={250-imageSize*0.45} y={yScale(58)-imageSize/2} width={imageSize} height={imageSize} href="../images/gold-sun.svg"/>
       <text x=250 y=400>Many religions can lead</text>
       <text x=250 y=420>to eternal life in heaven.</text>
       <line in:draw={{duration: 1500}} x1=250 x2=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
@@ -84,7 +84,7 @@
   #bold {
     font-weight: bold;
     font-size: 16px;
-    font-family: "Founders Grotesk Light"
+    font-family: "Concorde"
   }
 
 </style>
