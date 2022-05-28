@@ -27,7 +27,7 @@
   let top = funFactPositionMap[bubbleId][0] + "%";
   let left = funFactPositionMap[bubbleId][1] + "%";
   let translateString = "translate(-"+ top + ", -" + left + ")";
-  
+
   // variables for tooltip text
   let tooltipText = funFactTextMap[bubbleId];
   let tooltipTop = 0;
@@ -51,10 +51,10 @@
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <!-- TODO: change image to question mark -->
-<img style="--top: {top}; --left: {left}; --translate: {translateString}"   
+<img style="--top: {top}; --left: {left}; --translate: {translateString}"
   on:mouseover={handleMouseOver}
   on:mouseout={handleMouseOut}
-  src="/images/fact.png" alt="question mark"/>
+  src="/images/fact.svg" alt="question mark"/>
 
 {#if tooltipVisibility}
 <div id="tooltip" style="--tooltipTop: {tooltipTop}; --tooltipLeft: {tooltipLeft}; --tooltipTranslate: {tooltipTranslate}">

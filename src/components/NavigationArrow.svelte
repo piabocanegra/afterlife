@@ -6,7 +6,7 @@
 
   let imgSrc = {
     "1": "/images/chevron-black-nofill.svg",
-    "2": "/images/chevron-gold.svg",
+    "2": "/images/chevron-gold-whitefill.svg",
     "3": "/images/chevron-black-border.svg",
     "4": "/images/chevron-gold-nofill.svg"
   }
