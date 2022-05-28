@@ -13,13 +13,15 @@
       "Only hell",
       "Neither heaven nor hell but I believe in an afterlife",
       "Neither heaven nor hell and I do not believe in an afterlife"
+      "I don't have an answer"
     ];
     let mouseoverText = [
-      "You picked this. 00% of adults have the same belief!",
-      "You picked this. 11% of adults have the same belief!",
-      "You picked this. 22% of adults have the same belief!",
-      "You picked this. 33% of adults have the same belief!",
-      "You picked this. 44% of adults have the same belief!"
+      "You picked this. 61% of adults have the same belief!",
+      "You picked this. 13% of adults have the same belief!",
+      "You picked this. 1% of adults have the same belief!",
+      "You picked this. 7% of adults have the same belief!",
+      "You picked this. 17% of adults have the same belief!",
+      "You picked this. 1% of adults have the same belief!"
     ];
 
     function handleMouseOver() {
@@ -52,7 +54,7 @@
         d3.selectAll(".option").style("cursor", "initial");
       }
     }
-    
+
 </script>
 
 
@@ -61,18 +63,18 @@
   <h1>I believe in...</h1>
   {#if currIndex >= index}
     {#each [0, 1, 2, 3, 4] as index}
-      <p i={index} 
-        id={"o_" + index} 
-        class="option" 
-        on:click={handleOnClick} 
-        on:mouseover={handleMouseOver} 
-        on:mouseout={handleMouseOut} 
+      <p i={index}
+        id={"o_" + index}
+        class="option"
+        on:click={handleOnClick}
+        on:mouseover={handleMouseOver}
+        on:mouseout={handleMouseOut}
         transition:fade={{ delay: 600*(index+1) }}>
         {beliefText[index]}
       </p>
       <p id={"r_" + index} class="result">{getMouseoverText(index, true)}</p>
     {/each}
-   
+
     <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="3"/>
   {/if}
 </div>

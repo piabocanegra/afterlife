@@ -14,10 +14,10 @@
     "I don't believe in heaven"
   ]
   let mouseoverText = [
-    "You picked this. 00% agree with you.",
-    "You picked this. 11% agree with you.",
-    "You picked this. 22% agree with you.",
-    "You picked this. 33% agree with you."
+    "You picked this. 39% agree with you.",
+    "You picked this. 32% agree with you.",
+    "You picked this. 2% agree with you.",
+    "You picked this. 27% agree with you."
   ];
 
   function handleMouseOver() {
@@ -50,7 +50,7 @@
       d3.selectAll(".option_god").style("cursor", "initial");
     }
   }
-  
+
 </script>
 
 
@@ -59,18 +59,18 @@
 <h1>People who do not believe in God...</h1>
 {#if currIndex >= index}
   {#each [0, 1, 2, 3] as index}
-    <p i={index} 
-      id={"op_" + index} 
-      class="option_god" 
-      on:click={handleOnClick} 
-      on:mouseover={handleMouseOver} 
-      on:mouseout={handleMouseOut} 
+    <p i={index}
+      id={"op_" + index}
+      class="option_god"
+      on:click={handleOnClick}
+      on:mouseover={handleMouseOver}
+      on:mouseout={handleMouseOut}
       transition:fade={{ delay: 600*(index+1) }}>
       {beliefText[index]}
     </p>
     <p id={"b_" + index} class="result">{getMouseoverText(index, true)}</p>
   {/each}
- 
+
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="3"/>
 {/if}
 </div>
