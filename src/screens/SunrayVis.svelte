@@ -30,8 +30,7 @@
       <line in:draw={{duration: 1500}} x2=270 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
 
       <text id="bold" x=550 y={yScale(31)-75}>31%</text>
-      <!-- TODO change svg to beige color -->
-      <image x={550-imageSize*0.45} y={yScale(31)-imageSize/2} width={imageSize} height={imageSize} href="../images/white-sun.svg"/>
+      <image x={550-imageSize*0.45} y={yScale(31)-imageSize/2} width={imageSize} height={imageSize} href="../images/gold-sun.svg"/>
       <text x=550 y=400>My religion is the one</text>
       <text x=550 y=420>true faith.</text>
       <line in:draw={{duration: 1500}} x1=550 x2=550 y2={yScale(0)} y1={yScale(31)+imageSize*0.2}/>
@@ -68,12 +67,14 @@
   text {
     font-size: 14px;
     text-anchor: middle;
+    font-family: "Founders Grotesk Light"
   }
 
   #topTooltip {
     text-anchor: start;
     font-size: 12px;
     font-style: italic;
+    font-family: "Founders Grotesk Light"
   }
 
   line {
@@ -83,6 +84,7 @@
   #bold {
     font-weight: bold;
     font-size: 16px;
+    font-family: "Founders Grotesk Light"
   }
 
 </style>
