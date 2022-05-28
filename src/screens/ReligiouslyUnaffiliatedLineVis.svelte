@@ -109,7 +109,7 @@
 
   rect {
     fill: #C8AD9A;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
 </style>
