@@ -3,7 +3,7 @@
   // map of ids to fixed positions of fun fact bubbles
   let funFactPositionMap = {
     "1": [80, 90],
-    "2": [85, 8],
+    "2": [10, 8],
     "3": [65, 30],
     "4": [70, 55]
   }
@@ -11,16 +11,16 @@
   // map of tooltip offsets
   let offsetMap = {
     "1": [5, -5],
-    "2": [-5, 16],
-    "3": [8, 15],
-    "4": [10, 15]
+    "2": [0, 6],
+    "3": [8, 8],
+    "4": [10, 12]
   }
   // map of ids to hardcoded text for fun facts
   let funFactTextMap = {
-    "1": "Gustave Doré Celestial Rose (1868)",
-    "2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "1": "<b>Gustave Doré</b> </br><i>Late Penitents (1868)</i> </br></br><b>Did you know?</b></br>These illustrations are wood engraved.",
+    "2": "<b>Gustave Doré</b> </br><i>Celestial Rose (1868)</i> </br></br><b>Did you know?</b></br>Gustave Doré was a French artist, best known for his engravings that depict Dante Alighien's epic poem the Divine Comedy.",
+    "3": "<b>Gustave Doré</b> </br><i>Satan (1890)</i>",
+    "4": "<b>Gustave Doré</b> </br><i>Resplendent Souls (1868)</i>"
   }
 
   // variables for image bubble
@@ -58,23 +58,23 @@
 
 {#if tooltipVisibility}
 <div id="tooltip" style="--tooltipTop: {tooltipTop}; --tooltipLeft: {tooltipLeft}; --tooltipTranslate: {tooltipTranslate}">
-  {tooltipText}
+  {@html tooltipText}
 </div>
 {/if}
 
 <style>
   div#tooltip {
+    color: #9B795F;
     font-size: 16px;
     position: absolute;
     z-index: 10;
     white-space: pre-line;
     /* TODO change color */
     background-color: beige;
-    border-radius: 5px;
-    border: 1px solid #cdcdcd;
+    border-radius: 7px;
     text-align: left;
     max-width: 250px;
-    padding: 10px;
+    padding: 15px;
     top: var(--tooltipTop);
     left: var(--tooltipLeft);
     transform: var(--tooltipTranslate);
