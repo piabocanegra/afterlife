@@ -71,7 +71,7 @@
     <p id={"b_" + index} class="result">{getMouseoverText(index, true)}</p>
   {/each}
 
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="3"/>
+  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>
 {/if}
 </div>
 

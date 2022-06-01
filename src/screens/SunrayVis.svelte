@@ -78,7 +78,8 @@
   }
 
   line {
-    stroke: black;
+    stroke: #9B795F;
+    stroke-width: 0.75px;
   }
 
   #bold {

@@ -66,7 +66,7 @@
       <line x1=50 x2=780 y1=340 y2=340 stroke="black"/>
 
     </svg>
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>
+  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="1"/>
 </div>
 
 <style>

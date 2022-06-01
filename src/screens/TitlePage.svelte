@@ -7,10 +7,11 @@
 <div class="page" id={"page_"+index}>
   <h1>Hell and Heaven: Who goes and what happens?</h1>
   <p>A look into what 6,000+ U.S. adults think about the afterlife</p>
-  <div id="image_wrapper">
-    <img src="/images/angels.png" alt="angels">
-  </div>
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="1"/>
+  <img id="sun" src="/images/white-sun.svg" alt="white sun"/>
+  <!-- <div id="image_wrapper"> -->
+  <img id="angels" src="/images/angels.png" alt="angels"/>
+  <!-- </div> -->
+  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="3"/>
 </div>
 
 <style>
@@ -22,15 +23,12 @@
     position: relative;
     background-color: #DDC3B1;
   }
-  div#image_wrapper {
-    width: 100%;
+  #angels {
     position: absolute;
     bottom: 0%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  img {
-    text-align: center;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
   }
 
   @font-face {
@@ -49,6 +47,15 @@
 
   p {
     font-family: Founders Grotesk Light;
+  }
+
+  #sun {
+    left: 50%;
+    margin-left: -157px;
+    margin-bottom: -155px;
+    bottom: 35%;
+    position: absolute;
+    width: 350px;
   }
 
 </style>

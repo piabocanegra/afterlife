@@ -9,7 +9,7 @@
 <div class="page" id={"page_"+index}>
   <p>{paragraph1}</p>
   <p>{paragraph2}</p>
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="3"/>
+  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="1"/>
 </div>
 
 <style>

@@ -7,7 +7,7 @@
 
 <div class="page" id={"page_"+index}>
   <h2>{chapterTitle}</h2>
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="3"/>
+  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="4"/>
 </div>
 
 <style>
