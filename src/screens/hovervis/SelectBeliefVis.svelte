@@ -26,7 +26,7 @@
 
     function handleMouseOver() {
       let resultId = "#r_" + this.getAttribute("i");
-      let lastOpacity = d3.select("#o_4").style("opacity");
+      let lastOpacity = d3.select("#o_5").style("opacity");
 
       if (currIndex >= index && lastOpacity == 1 && !hasUserSelectedText) {
         d3.select(resultId).style("opacity", "100");
@@ -62,7 +62,7 @@
 <div class="page" id={"page_"+index}>
   <h1>I believe in...</h1>
   {#if currIndex >= index}
-    {#each [0, 1, 2, 3, 4] as index}
+    {#each [0, 1, 2, 3, 4, 5] as index}
       <p i={index}
         id={"o_" + index}
         class="option"
