@@ -3,10 +3,14 @@
 
   export let index;
   export let chapterTitle;
+  export let showSubtitles = false;
 </script>
 
 <div class="page" id={"page_"+index}>
   <h2>{chapterTitle}</h2>
+  {#if showSubtitles}
+    <p>(that's not heaven or hell)</p>
+  {/if}
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="4"/>
 </div>
 
@@ -33,5 +37,11 @@
 
   h2 {
     font-family: Concorde;
+    margin: 0px;
+  }
+
+  p {
+    font-family: Founders Grotesk Light;
+    font-size: 20px;
   }
 </style>

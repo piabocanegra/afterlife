@@ -13,6 +13,7 @@
 	import AfterlifePercentVis from './screens/percentvis/AfterlifePercentVis.svelte';
 	import SunrayVis from './screens/SunrayVis.svelte';
 	import ReligionLineVis from './screens/ReligiouslyUnaffiliatedLineVis.svelte';
+	import Takeaways from './screens/TakeawayPage.svelte';
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -55,10 +56,10 @@
 		<!-- TODO: line chart  -->
 		<section><SunrayVis currIndex={index+1} index={13}/></section>
 
-		<section><ChapterTitlePage chapterTitle={earthChapter} index={14}></ChapterTitlePage></section>
+		<section><ChapterTitlePage chapterTitle={earthChapter} index={14} showSubtitles={true}></ChapterTitlePage></section>
 		<section><AfterlifePercentVis index={15} currIndex={index+1}/></section>
 		<!-- TODO: static infograph -->
-		<!-- TODO: final summary page  -->
+		<section><Takeaways index={16}/></section>
 	</div>
 </Scroller>
 </main>
