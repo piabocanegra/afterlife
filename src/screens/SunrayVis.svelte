@@ -44,6 +44,7 @@
   div {
     text-align: center;
     position: relative;
+    background-color: #FFF4EC;
   }
 
   @font-face {
@@ -57,17 +58,15 @@
   }
 
   h1 {
-    font-family: Concorde
+    font-family: Concorde;
+    color: #9B795F;
   }
-
-  /* svg {
-    border: 1px solid black;
-  } */
 
   text {
     font-size: 14px;
     text-anchor: middle;
-    font-family: "Founders Grotesk Light"
+    font-family: "Founders Grotesk Light";
+    fill: #9B795F;
   }
 
   #topTooltip {

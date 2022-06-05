@@ -59,6 +59,7 @@
   div {
     text-align: center;
     position: relative;
+    background-color: #313B33;
   }
 
   @font-face {
@@ -74,6 +75,7 @@
   h1 {
     font-family: Concorde;
     max-width: 63%;
+    color: #9B795F;
   }
 
   /* svg {
@@ -83,6 +85,8 @@
   text {
     font-size: 14px;
     text-anchor: middle;
+    fill: #9B795F;
+
   }
 
   #bold {
@@ -105,6 +109,7 @@
 
   line {
     stroke-width: 0.75px;
+    stroke: #9B795F;
   }
 
 </style>

@@ -79,6 +79,7 @@
 div {
   text-align: center;
   position: relative;
+  background-color: #FFF4EC;
 }
 
 @font-face {
@@ -92,12 +93,14 @@ src: url("/fonts/ConcordeRegular.ttf") format('ttf');
 }
 
 h1 {
-font-family: Concorde
+  font-family: Concorde;
+  color: #9B795F;
 }
 
 p {
   font-family: Founders Grotesk Light;
   font-size: 18px;
+  color: #9B795F;
 }
 
 .result {

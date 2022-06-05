@@ -69,7 +69,7 @@
       <g transition:fade={{delay: delayInterval*(10)}}>
         <text id="tooltipItalic" x=20 y=10>% who say people who do not believe in God can go to heaven...</text>
       </g>
-      
+
       {#each [0, 1, 2, 3, 4, 5, 6, 7] as i}
         <g transition:fade={{delay: delayInterval*(i+1)}}>
           <text id="bold" x={getXPos(i)} y={yScale(percentList[i])-60}>{percentList[i] + "%"}</text>
@@ -114,6 +114,7 @@
   div {
     text-align: center;
     position: relative;
+    background-color: #FFF4EC;
   }
 
   @font-face {
@@ -127,12 +128,14 @@
   }
 
   h1 {
-    font-family: Concorde
+    font-family: Concorde;
+    color: #9B795F;
   }
 
   text {
     font-size: 14px;
     text-anchor: middle;
+    fill: #9B795F;
   }
 
   #tooltipItalic {

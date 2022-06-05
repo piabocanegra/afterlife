@@ -80,6 +80,7 @@
     text-align: center;
     position: relative;
     flex-direction: column;
+    background-color: #313B33;
   }
 
   .horizontal {
@@ -111,11 +112,13 @@
   }
 
   h1 {
-    font-family: Concorde
+    font-family: Concorde;
+    color: #9B795F;
   }
 
   p {
     font-size: 14pt;
+    color: #9B795F;
   }
 
   img {

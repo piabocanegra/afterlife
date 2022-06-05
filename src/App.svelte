@@ -78,11 +78,13 @@
 		font-family: minion-pro-caption, serif;
 		font-weight: 400;
 		font-style: normal;
+		color: #000000;
 	}
 	:global(div.page) {
 		text-align: center;
 		width: 100%;
 		min-height: 100vh;
 		max-height: 100vh;
+		background-color: #DDC3B1;
 	}
 </style>

@@ -14,11 +14,15 @@
 </div>
 
 <style>
+  body {
+    background-color: #313B33;
+  }
   div {
     text-align: left;
     position: relative;
     max-width: 1200px;
     margin: auto;
+    background-color: #313B33;
   }
 
   @font-face {
@@ -33,10 +37,12 @@
 
   h5 {
     font-family: Concorde;
+    color: #9B795F;
   }
 
   p {
     font-family: Founders Grotesk Light;
     font-size: 14pt;
+    color: #9B795F;
   }
 </style>
