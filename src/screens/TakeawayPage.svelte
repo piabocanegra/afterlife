@@ -3,7 +3,7 @@
 </script>
 
 <div class="page" id={"page_"+index}>
-  <h1>Hell and Hell: Key Takeaways</h1>
+  <h1>Heaven and Hell: Key Takeaways</h1>
   <h5>Who goes?</h5>
   <p>Most Americans believe in heaven but there are differing views on who gets to be in heaven, specifically among Protestants and Catholics.</p>
   <h5>And what happens?</h5>

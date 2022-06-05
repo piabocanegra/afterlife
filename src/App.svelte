@@ -15,6 +15,7 @@
 	import ReligionLineVis from './screens/ReligiouslyUnaffiliatedLineVis.svelte';
 	import Takeaways from './screens/TakeawayPage.svelte';
 	import MetaphysicalSelectVis from './screens/MetaphysicalSelectVis.svelte';
+	import NonBelieversLineVis from './screens/NonbelieversLineVis.svelte';
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -54,13 +55,13 @@
 
 		<section><ChapterTitlePage chapterTitle={heavenChapter} index={11}></ChapterTitlePage></section>
 		<section><PeopleDoNotBelieveInGodVis index={12} currIndex={index+1}/></section>
-		<!-- TODO: line chart  -->
-		<section><SunrayVis currIndex={index+1} index={13}/></section>
+		<section><NonBelieversLineVis index={13} currIndex={index+1}/></section>
+		<section><SunrayVis currIndex={index+1} index={14}/></section>
 
-		<section><ChapterTitlePage chapterTitle={earthChapter} index={14} showSubtitles={true}></ChapterTitlePage></section>
-		<section><AfterlifePercentVis index={15} currIndex={index+1}/></section>
-		<section><MetaphysicalSelectVis index={16}/></section>
-		<section><Takeaways index={17}/></section>
+		<section><ChapterTitlePage chapterTitle={earthChapter} index={15} showSubtitles={true}></ChapterTitlePage></section>
+		<section><AfterlifePercentVis index={16} currIndex={index+1}/></section>
+		<section><MetaphysicalSelectVis index={17}/></section>
+		<section><Takeaways index={18}/></section>
 	</div>
 </Scroller>
 </main>

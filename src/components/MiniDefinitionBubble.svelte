@@ -1,7 +1,7 @@
 <script>
   export let position;
   export let text;
-  export let tooltipOffset;
+  export let isOffsetted;
 
   // variables for image bubble
   let x = position[0];
@@ -9,9 +9,6 @@
 
   // variables for tooltip text
   let tooltipText = text;
-  let tooltipTop = 0;
-  let tooltipLeft = 0;
-  let tooltipTranslate = "";
   let tooltipVisibility = false;
 
   function handleMouseOver() {
@@ -22,6 +19,17 @@
     tooltipVisibility = false;
   }
 
+  function getTooltipXPos(x, isOffsetted) {
+    return (isOffsetted) ? x-125 : x-93;
+  }
+
+  function getTextXPos(x, isOffsetted) {
+    return (isOffsetted) ? x-30 : x;
+  }
+
+  function getRectPadding(i) {
+    return (i > 2) ? i*20 : i*23;
+  }
  
 </script>
 
@@ -29,9 +37,9 @@
 <image x={x} y={y} width=20 height=20 on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} href="/images/definition.svg" />
 
 {#if tooltipVisibility}
-  <rect x={x-125} y={y+30} width=190 height={tooltipText.length*20} rx=5 ry=5/>
+  <rect x={getTooltipXPos(x, isOffsetted)} y={y+30} width=190 height={getRectPadding(tooltipText.length)} rx=5 ry=5/>
   {#each tooltipText as txt, i}
-    <text x={x-30} y={y+50+i*15}>{txt}</text>
+    <text x={getTextXPos(x, isOffsetted)} y={y+50+i*15}>{txt}</text>
   {/each}
 {/if}
 

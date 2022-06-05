@@ -1,9 +1,7 @@
 <script>
-  import { draw } from 'svelte/transition';
   import { scaleLinear } from 'd3-scale';
   import NavigationArrow from '../components/NavigationArrow.svelte';
   import DefinitionBubble from '../components/MiniDefinitionBubble.svelte';
-  import FunFactBubble from '../components/FunFactBubble.svelte';
 
   export let currIndex;
   export let index;
@@ -49,6 +47,7 @@
       {#each [0, 1, 2, 3] as i}
         <text id="bold" x={200*(i+1)-120} y={yScale(percentList[i][0])-55}>{percentList[i][0] + "%"}</text>
         <text id="bold" x={200*(i+1)+50-120} y={yScale(percentList[i][1])-55}>{percentList[i][1] + "%"}</text>
+        
         <image x={200*(i+1)-120-imageSize/2} y={yScale(percentList[i][0])-55} width={imageSize} height={imageSize} href="/images/heaven.svg"/>
         <image x={200*(i+1)+50-120-imageSize/2} y={yScale(percentList[i][1])-55} width={imageSize} height={imageSize} href="/images/hell.svg"/>
         <line id="yellow" x1={200*(i+1)-120-4} x2={200*(i+1)-120-4} y2={yScale(0)} y1={yScale(percentList[i][0])}/>
@@ -58,7 +57,7 @@
         <text x={200*(i+1)-100} y=385>{labelList[i][1]}</text>
 
         {#if i != 1}
-        <DefinitionBubble position = {[200*(i+1)-100+35, 355]} tooltipOffset = {[20, 20]} text = {tooltipText[i]}/>
+        <DefinitionBubble position = {[200*(i+1)-100+35, 355]} isOffsetted={true} text = {tooltipText[i]}/>
         {/if}
       {/each}
 
@@ -87,10 +86,6 @@
   h1 {
     font-family: Concorde
   }
-
-  /* svg {
-    border: 1px solid black;
-  } */
 
   text {
     font-size: 14px;
