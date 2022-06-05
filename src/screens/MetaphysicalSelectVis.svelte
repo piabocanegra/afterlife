@@ -121,6 +121,12 @@
     color: #9B795F;
   }
 
+  option, select {
+    color: #9B795F;
+    font-size: 12pt;
+    background-color: #313B33;
+  }
+
   img {
     width: 120px;
   }
