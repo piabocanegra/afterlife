@@ -40,7 +40,7 @@
     "/images/18-29.svg",
     "/images/30-49.svg",
     "/images/50-64.svg",
-    "/images/65+.svg",
+    "/images/65.svg",
     "/images/democrat.svg",
     "/images/republican.svg",
   ];
