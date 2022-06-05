@@ -9,6 +9,8 @@
     <p>Most Americans believe in heaven but there are differing views on who gets to be in heaven, specifically among Protestants and Catholics.</p>
     <h5>And what happens?</h5>
     <p>There is more agreement on what heaven is like compared to hell. Among people who do not believe in heaven and hell but do believe in the afterlife, there is not much consensus on what it's like.</p>
+    <br>
+    <br>
     <p id="credits"><i>Credits: Pia Bocanegra, Lesley Huang</i></p>
   </div>
 </div>
