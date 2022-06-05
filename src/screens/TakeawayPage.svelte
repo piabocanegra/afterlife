@@ -4,13 +4,12 @@
 
 <div class="page" id={"page_"+index}>
   <div id="page_padding">
-    <h1>Heaven and Hell: Key Takeaways</h1>
+    <h1>Heaven and Hell:<br> Key Takeaways</h1>
     <h5>Who goes?</h5>
     <p>Most Americans believe in heaven but there are differing views on who gets to be in heaven, specifically among Protestants and Catholics.</p>
     <h5>And what happens?</h5>
     <p>There is more agreement on what heaven is like compared to hell. Among people who do not believe in heaven and hell but do believe in the afterlife, there is not much consensus on what it's like.</p>
-    <h5>Credits</h5>
-    <p><i>Pia Bocanegra & Lesley Huang</i></p>
+    <p id="credits"><i>Credits: Pia Bocanegra, Lesley Huang</i></p>
   </div>
 </div>
 
@@ -48,5 +47,9 @@
     font-family: Founders Grotesk Light;
     font-size: 14pt;
     color: #9B795F;
+  }
+
+  #credits {
+  font-size: 10pt;
   }
 </style>
