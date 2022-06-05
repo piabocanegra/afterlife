@@ -3,26 +3,26 @@
 </script>
 
 <div class="page" id={"page_"+index}>
-  <h1>Heaven and Hell: Key Takeaways</h1>
-  <h5>Who goes?</h5>
-  <p>Most Americans believe in heaven but there are differing views on who gets to be in heaven, specifically among Protestants and Catholics.</p>
-  <h5>And what happens?</h5>
-  <p>There is more agreement on what heaven is like compared to hell. Among people who do not believe in heaven and hell but do believe in the afterlife, there is not much consensus on what it's like.</p>
-  <h5>Credits</h5>
-  <p><i>Pia Bocanegra & Lesley Huang</i></p>
-
+  <div id="page_padding">
+    <h1>Heaven and Hell: Key Takeaways</h1>
+    <h5>Who goes?</h5>
+    <p>Most Americans believe in heaven but there are differing views on who gets to be in heaven, specifically among Protestants and Catholics.</p>
+    <h5>And what happens?</h5>
+    <p>There is more agreement on what heaven is like compared to hell. Among people who do not believe in heaven and hell but do believe in the afterlife, there is not much consensus on what it's like.</p>
+    <h5>Credits</h5>
+    <p><i>Pia Bocanegra & Lesley Huang</i></p>
+  </div>
 </div>
 
 <style>
-  body {
-    background-color: #313B33;
-  }
-  div {
+  div.page {
     text-align: left;
     position: relative;
+    background-color: #313B33;
+  }
+  div#page_padding {
     max-width: 1200px;
     margin: auto;
-    background-color: #313B33;
   }
 
   @font-face {
@@ -35,7 +35,7 @@
     src: url("/fonts/FoundersGroteskLight.otf") format('otf');
   }
 
-  h5 {
+  h1, h5 {
     font-family: Concorde;
     color: #9B795F;
   }

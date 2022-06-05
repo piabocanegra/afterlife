@@ -38,7 +38,7 @@
       button.onclick = function() {
         showButton = true;
         buttonText = "Check my answers";
-        button.style.color = "black";
+        button.style.color = "#9B795F";
         button.style.textDecoration = "none";
       }
       button.style.cursor = "pointer";

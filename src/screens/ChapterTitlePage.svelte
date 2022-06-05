@@ -17,12 +17,14 @@
 <style>
   h2 {
     font-weight: 400;
+    color: #9B795F;
   }
+
   div {
     padding-top: 250px;
     text-align: center;
     position: relative;
-    background-color: #DDC3B1;
+    background-color: #FFF4EC;
   }
 
   @font-face {
@@ -38,10 +40,12 @@
   h2 {
     font-family: Concorde;
     margin: 0px;
+    color: #9B795F;
   }
 
   p {
     font-family: Founders Grotesk Light;
     font-size: 20px;
+    color: #9B795F;
   }
 </style>
