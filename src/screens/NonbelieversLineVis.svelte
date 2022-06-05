@@ -145,6 +145,11 @@
 
   #tooltip {
     font-size: 12px;
+    font-family: "Founders Grotesk Light";
+  }
+
+  #subtitle {
+  font-family: "Founders Grotesk Light";
   }
 
   #rectText {
