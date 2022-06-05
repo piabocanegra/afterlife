@@ -40,6 +40,10 @@
     color: #9B795F;
   }
 
+  h1 {
+  text-align: center;
+  }
+
   p {
     font-family: Founders Grotesk Light;
     font-size: 14pt;
