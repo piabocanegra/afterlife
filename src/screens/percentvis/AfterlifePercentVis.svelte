@@ -78,32 +78,27 @@
     color: #9B795F;
   }
 
-  /* svg {
-    border: 1px solid black;
-  } */
-
   text {
-    font-size: 14px;
+    font-size: 12pt;
     text-anchor: middle;
     fill: #9B795F;
-
   }
 
   #bold {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12pt;
   }
 
   #topTooltip {
     text-anchor: start;
-    font-size: 12px;
+    font-size: 12pt;
     font-style: italic;
     font-family: "Founders Grotesk Light"
   }
 
   #bottomTooltip {
     text-anchor: start;
-    font-size: 12px;
+    font-size: 12pt;
     font-family: "Founders Grotesk Light"
   }
 

@@ -63,7 +63,7 @@
   }
 
   text {
-    font-size: 14px;
+    font-size: 12pt;
     text-anchor: middle;
     font-family: "Founders Grotesk Light";
     fill: #9B795F;
@@ -71,7 +71,7 @@
 
   #topTooltip {
     text-anchor: start;
-    font-size: 12px;
+    font-size: 12pt;
     font-style: italic;
     font-family: "Founders Grotesk Light"
   }
@@ -83,7 +83,7 @@
 
   #bold {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12pt;
     font-family: "Concorde"
   }
 

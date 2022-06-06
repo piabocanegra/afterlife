@@ -86,25 +86,26 @@
   }
 
   text {
-    font-size: 14px;
+    font-size: 12pt;
     text-anchor: middle;
     fill: #9B795F;
   }
 
   #bold {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12pt;
   }
 
   .tooltip {
     text-anchor: start;
-    font-size: 12px;
+    font-size: 12pt;
     font-family: "Founders Grotesk Light"
   }
 
   #topTooltip {
     font-style: italic;
-    font-family: "Founders Grotesk Light"
+    font-family: "Founders Grotesk Light";
+    font-size: 12pt;
   }
 
   line {
@@ -115,7 +116,6 @@
   path {
     fill: none;
     stroke: #9B795F;
-;
   }
 
 </style>

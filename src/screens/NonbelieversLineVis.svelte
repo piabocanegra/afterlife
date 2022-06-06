@@ -66,7 +66,7 @@
   {#if currIndex >= index}
     <svg width=1000 height=500>
       <g transition:fade={{delay: delayInterval*(10)}}>
-        <text id="tooltipItalic" x=20 y=10>% who say people who do not believe in God can go to heaven...</text>
+        <text id="tooltipItalic" x=20 y=12>% who say people who do not believe in God can go to heaven...</text>
       </g>
 
       {#each [0, 1, 2, 3, 4, 5, 6, 7] as i}
@@ -132,34 +132,35 @@
   }
 
   text {
-    font-size: 14px;
+    font-size: 12pt;
     text-anchor: middle;
     fill: #9B795F;
   }
 
   #tooltipItalic {
     text-anchor: start;
-    font-size: 12px;
+    font-size: 12pt;
     font-style: italic;
   }
 
   #tooltip {
-    font-size: 12px;
+    font-size: 12pt;
     font-family: "Founders Grotesk Light";
   }
 
   #subtitle {
     font-family: "Founders Grotesk Light";
+    font-size: 12pt;
   }
 
   #rectText {
     text-anchor: start;
-    font-size: 12px;
+    font-size: 12pt;
   }
 
   #bold {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12pt;
   }
 
   line {
