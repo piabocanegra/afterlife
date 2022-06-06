@@ -16,6 +16,7 @@
 	import Takeaways from './screens/TakeawayPage.svelte';
 	import MetaphysicalSelectVis from './screens/MetaphysicalSelectVis.svelte';
 	import NonBelieversLineVis from './screens/NonbelieversLineVis.svelte';
+	import ProgressBar from './components/ProgressBar.svelte';
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -40,6 +41,7 @@
 	<div slot="background"></div>
 
 	<div slot="foreground">
+		
 		<section><TitlePage index={1}/></section>
 		<section><IntroPage index={2} paragraph1={intro1} paragraph2={intro2}/></section>
 		<section><IntroPage index={3} paragraph1={intro3} paragraph2={intro4}/></section>
@@ -62,6 +64,7 @@
 		<section><AfterlifePercentVis index={16} currIndex={index+1}/></section>
 		<section><MetaphysicalSelectVis index={17}/></section>
 		<section><Takeaways index={18}/></section>
+		<ProgressBar total={18} index={index}/>
 	</div>
 </Scroller>
 </main>
