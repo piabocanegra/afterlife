@@ -7,6 +7,7 @@
   export let index;
   let delayInterval = 650;
   let imageSize = 70;
+  let graphTooltipText = "";
 
   $: yScale = scaleLinear()
 		.domain([0, 100])
@@ -33,6 +34,29 @@
     ["A person who believes", "that nothing is known or", "can be known of the", "existence or nature of God"],
     ["A person who doesn't", "believe in the existence", "of God(s)"]
   ];
+
+  function handleMouseOver1(e) {
+    let tooltip = document.getElementById("graph_tooltip");
+    tooltip.style.visibility = "visible";
+    tooltip.style.left = e.clientX + "px";
+    tooltip.style.top = (e.clientY-40) + "px";
+
+    graphTooltipText = "% of Christians who <br/>believe in heaven: 92%";
+  }
+
+  function handleMouseOver2(e) {
+    let tooltip = document.getElementById("graph_tooltip");
+    tooltip.style.visibility = "visible";
+    tooltip.style.left = e.clientX + "px";
+    tooltip.style.top = (e.clientY-40) + "px";
+
+    graphTooltipText = "% of Christians who <br/>believe in hell: 79%";
+  }
+
+  function handleMouseOut() {
+    let tooltip = document.getElementById("graph_tooltip");
+    tooltip.style.visibility = "hidden";
+  }
 </script>
 
 <div class="page" id={"page_"+index}>
@@ -63,7 +87,13 @@
 
       <line x1=50 x2=780 y1=340 y2=340 stroke="black"/>
 
+      <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+      <rect id="hover" x={50} y={yScale(120)} width={60} height={yScale(0)-yScale(120)} on:mousemove={handleMouseOver1} on:mouseout={handleMouseOut}/>
+      <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+      <rect id="hover" x={110} y={yScale(110)} width={60} height={yScale(0)-yScale(110)} on:mousemove={handleMouseOver2} on:mouseout={handleMouseOut}/>
     </svg>
+    <div id="graph_tooltip">{@html graphTooltipText}</div>
+
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="1"/>
 </div>
 
@@ -124,6 +154,24 @@
 
   #red {
     stroke: #C95033;
+  }
+
+  #hover {
+    opacity: 0;
+  }
+
+  div#graph_tooltip {
+    color: #9B795F;
+    font-size: 16px;
+    position: absolute;
+    z-index: 10;
+    white-space: pre-line;
+    background-color: white;
+    border-radius: 7px;
+    text-align: left;
+    max-width: 250px;
+    padding: 15px;
+    font-family: "Founders Grotesk Light";
   }
 
 </style>
