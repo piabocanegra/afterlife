@@ -76,7 +76,7 @@
           <image x={getXPos(i)-imageSize/2} y={yScale(percentList[i])-55} width={imageSize} height={imageSize} href={imageList[i]}/>
           <line x1={getXPos(i)+0.25} x2={getXPos(i)+0.25} y2={yScale(0)} y1={yScale(percentList[i])}/>
 
-          <text x={getXPos(i)} y={yScale(-7)}>{labelList[i]}</text>
+          <text id="bold_font" x={getXPos(i)} y={yScale(-7)}>{labelList[i]}</text>
 
           {#if i < 2}
             <DefinitionBubble position = {[getXPos(i)-10, yScale(-13)]} isOffsetted={false} text = {tooltipText[i]}/>
@@ -171,6 +171,10 @@
   line {
     stroke: #9B795F;
     stroke-width: 1.5;
+  }
+
+  #bold_font {
+    font-family: "Founders Grotesk Regular";
   }
 
 
