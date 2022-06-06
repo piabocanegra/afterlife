@@ -40,8 +40,8 @@
         <g transition:fade={{delay: delayInterval*(i+1)}}>
           <text id="bold" x={170*(i+1)-25} y=110>{percentList[i]}</text>
           <image x={170*(i+1)-25-85} y={220-85} width=170 height=170 href={imageList[i]}/>
-          <text x={170*(i+1)-25} y=350>{labelList[i][0]}</text>
-          <text x={170*(i+1)-25} y=370>{labelList[i][1]}</text>
+          <text id="bold_font" x={170*(i+1)-25} y=350>{labelList[i][0]}</text>
+          <text id="bold_font" x={170*(i+1)-25} y=370>{labelList[i][1]}</text>
         </g>
       {/each}
 
@@ -72,6 +72,11 @@
   @font-face {
     font-family: "Founders Grotesk Light";
     src: url("/fonts/FoundersGroteskLight.otf") format('otf');
+  }
+
+  @font-face {
+    font-family: "Founders Grotesk Regular";
+    src: url("/fonts/FoundersGroteskRegular.otf") format('otf');
   }
 
   h1 {
@@ -109,6 +114,10 @@
   line {
     stroke-width: 0.75px;
     stroke: #9B795F;
+  }
+
+  #bold_font {
+    font-family: "Founders Grotesk Regular";
   }
 
 </style>
