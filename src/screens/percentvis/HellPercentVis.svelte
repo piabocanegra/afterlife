@@ -61,7 +61,7 @@
   div {
     text-align: center;
     position: relative;
-    background-color: #313B33;
+    background-color: #1E1E1E;
   }
 
   @font-face {

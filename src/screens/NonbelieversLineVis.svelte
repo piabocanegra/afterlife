@@ -19,7 +19,7 @@
   // hardcoded values
   let percentList = [
     68, 35,
-    40, 39, 38, 40, 
+    40, 39, 38, 40,
     41, 39
   ];
 
@@ -33,15 +33,14 @@
     ["Democrat"],
     ["Republican"],
   ];
-  
-  // TODO: find image for 30-49
+
   let imageList = [
     "/images/catholic.svg",
     "/images/protestant.svg",
     "/images/18-29.svg",
-    "/images/18-29.svg",
+    "/images/30-49.svg",
     "/images/50-64.svg",
-    "/images/65+.svg",
+    "/images/65.svg",
     "/images/democrat.svg",
     "/images/republican.svg",
   ];
@@ -73,7 +72,7 @@
       {#each [0, 1, 2, 3, 4, 5, 6, 7] as i}
         <g transition:fade={{delay: delayInterval*(i+1)}}>
           <text id="bold" x={getXPos(i)} y={yScale(percentList[i])-60}>{percentList[i] + "%"}</text>
-          
+
           <image x={getXPos(i)-imageSize/2} y={yScale(percentList[i])-55} width={imageSize} height={imageSize} href={imageList[i]}/>
           <line x1={getXPos(i)+0.25} x2={getXPos(i)+0.25} y2={yScale(0)} y1={yScale(percentList[i])}/>
 
@@ -146,6 +145,11 @@
 
   #tooltip {
     font-size: 12px;
+    font-family: "Founders Grotesk Light";
+  }
+
+  #subtitle {
+  font-family: "Founders Grotesk Light";
   }
 
   #rectText {
