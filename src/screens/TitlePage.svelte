@@ -5,7 +5,7 @@
 </script>
 
 <div class="page" id={"page_"+index}>
-  <h1>Hell and Heaven: Who goes and what happens?</h1>
+  <h1>Heaven and Hell: Who goes and what happens?</h1>
   <p>A look into what 6,000+ U.S. adults think about the afterlife</p>
   <img id="sun" src="/images/white-sun.svg" alt="white sun"/>
   <!-- <div id="image_wrapper"> -->
