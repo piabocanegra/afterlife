@@ -123,26 +123,26 @@
   }
 
   text {
-    font-size: 14px;
+    font-size: 12pt;
     text-anchor: middle;
     font-family: "Founders Grotesk Regular"
   }
 
   #topTooltip {
     text-anchor: start;
-    font-size: 12px;
+    font-size: 12pt;
     font-style: italic;
     color: black;
   }
 
   #rectText {
     text-anchor: start;
-    font-size: 12px;
+    font-size: 12pt;
   }
 
   #bold {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12pt;
   }
 
   line {
@@ -168,8 +168,8 @@
   }
 
   div#graph_tooltip {
-    color: #9B795F;
-    font-size: 16px;
+    color: black;
+    font-size: 12pt;
     position: absolute;
     z-index: 10;
     white-space: pre-line;
