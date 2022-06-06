@@ -77,8 +77,8 @@
         <line id="yellow" x1={200*(i+1)-120-4} x2={200*(i+1)-120-4} y2={yScale(0)} y1={yScale(percentList[i][0])}/>
         <line id="red" x1={200*(i+1)+50-120-0.5} x2={200*(i+1)+50-120-0.5} y2={yScale(0)} y1={yScale(percentList[i][1])}/>
 
-        <text x={200*(i+1)-100} y=370>{labelList[i][0]}</text>
-        <text x={200*(i+1)-100} y=385>{labelList[i][1]}</text>
+        <text id="bold_font" x={200*(i+1)-100} y=370>{labelList[i][0]}</text>
+        <text id="bold_font" x={200*(i+1)-100} y=385>{labelList[i][1]}</text>
 
         {#if i != 1}
         <DefinitionBubble position = {[200*(i+1)-100+35, 355]} isOffsetted={true} text = {tooltipText[i]}/>
@@ -111,6 +111,11 @@
   @font-face {
     font-family: "Founders Grotesk Light";
     src: url("/fonts/FoundersGroteskLight.otf") format('otf');
+  }
+
+  @font-face {
+    font-family: "Founders Grotesk Regular";
+    src: url("/fonts/FoundersGroteskRegular.otf") format('otf');
   }
 
   h1 {
@@ -173,5 +178,10 @@
     padding: 15px;
     font-family: "Founders Grotesk Light";
   }
+
+  #bold_font {
+    font-family: "Founders Grotesk Regular";
+  }
+
 
 </style>
