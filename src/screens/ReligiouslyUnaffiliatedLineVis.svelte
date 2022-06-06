@@ -38,7 +38,7 @@
   function handleMouseOver1(e) {
     let tooltip = document.getElementById("graph_tooltip");
     tooltip.style.visibility = "visible";
-    tooltip.style.left = e.clientX + "px";
+    tooltip.style.left = (e.clientX+15) + "px";
     tooltip.style.top = (e.clientY-40) + "px";
 
     graphTooltipText = "% of Christians who <br/>believe in heaven: 92%";
@@ -47,7 +47,7 @@
   function handleMouseOver2(e) {
     let tooltip = document.getElementById("graph_tooltip");
     tooltip.style.visibility = "visible";
-    tooltip.style.left = e.clientX + "px";
+    tooltip.style.left = (e.clientX+15) + "px";
     tooltip.style.top = (e.clientY-40) + "px";
 
     graphTooltipText = "% of Christians who <br/>believe in hell: 79%";
@@ -114,7 +114,7 @@
   }
 
   h1 {
-    font-family: Concorde
+    font-family: Concorde;
   }
 
   text {
