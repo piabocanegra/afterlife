@@ -125,6 +125,7 @@
     color: #9B795F;
     font-size: 12pt;
     background-color: #313B33;
+    font-family: "Founders Grotesk Light";
   }
 
   img {

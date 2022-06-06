@@ -149,7 +149,7 @@
   }
 
   #subtitle {
-  font-family: "Founders Grotesk Light";
+    font-family: "Founders Grotesk Light";
   }
 
   #rectText {
