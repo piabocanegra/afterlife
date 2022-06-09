@@ -98,7 +98,7 @@
         <line x1={(getXPos(0)+getXPos(1))/2} x2={(getXPos(0)+getXPos(1))/2} y1=80 y2=110/>
 
         <text id="tooltip" x={(getXPos(3)+getXPos(7))/2} y=50>There is not much variation across different</text>
-        <text id="tooltip" x={(getXPos(3)+getXPos(7))/2} y=65>age groups and political orientations.</text>
+        <text id="tooltip" x={(getXPos(3)+getXPos(7))/2} y=65>age groups and political orientations</text>
         <line x1={(getXPos(2)+getXPos(5))/2} x2={(getXPos(2)+getXPos(5))/2} y1=100 y2=110/>
         <line x1={(getXPos(7)+getXPos(6))/2} x2={(getXPos(6)+getXPos(7))/2} y1=100 y2=110/>
         <line x1={(getXPos(7)+getXPos(3))/2} x2={(getXPos(3)+getXPos(7))/2} y1=80 y2=100/>
