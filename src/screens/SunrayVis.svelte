@@ -57,6 +57,11 @@
     src: url("/fonts/FoundersGroteskLight.otf") format('otf');
   }
 
+  @font-face {
+    font-family: "Founders Grotesk Regular";
+    src: url("/fonts/FoundersGroteskRegular.otf") format('otf');
+  }
+
   h1 {
     font-family: Concorde;
     color: #9B795F;
@@ -65,7 +70,7 @@
   text {
     font-size: 12pt;
     text-anchor: middle;
-    font-family: "Founders Grotesk Light";
+    font-family: "Founders Grotesk Regular";
     fill: #9B795F;
   }
 

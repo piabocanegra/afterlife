@@ -60,7 +60,7 @@
 </script>
 
 <div class="page" id={"page_"+index}>
-  <h1>Belief in heaven and hell is less common among religiously unaffiliated Americans</h1>
+  <h1>Who believes in heaven and hell?</h1>
     <svg width=800 height=500>
       <text id="topTooltip" x=20 y=10>% who say they believe in</text>
       <text id="topTooltip" x=20 y=25>heaven and hell...</text>
