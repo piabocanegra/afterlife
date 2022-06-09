@@ -133,6 +133,7 @@
     font-size: 12pt;
     font-style: italic;
     color: black;
+    font-family: "Founders Grotesk Light"
   }
 
   #rectText {
@@ -143,6 +144,7 @@
   #bold {
     font-weight: bold;
     font-size: 12pt;
+    font-family: "Concorde";
   }
 
   line {
