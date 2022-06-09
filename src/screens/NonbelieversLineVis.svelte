@@ -146,7 +146,7 @@
     text-anchor: start;
     font-size: 12pt;
     font-style: italic;
-    font-family:"Founds Grotesk Light";
+    font-family:"Founders Grotesk Light";
   }
 
   #tooltip {
