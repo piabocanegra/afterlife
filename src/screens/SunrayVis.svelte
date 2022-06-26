@@ -15,14 +15,13 @@
 <div class="page" id={"page_"+index}>
   <h1>Do Christians believe multiple religions lead to eternal life in heaven?</h1>
   {#if currIndex >= index}
-    <svg width=800 height=450>
+    <svg width=800 height=460>
       <text id="topTooltip" x=20 y=20>% of US Christians who say...</text>
 
       <text id="bold" x=250 y={yScale(58)-75}>58%</text>
-      <!-- TODO change svg to beige color -->
       <image x={250-imageSize*0.45} y={yScale(58)-imageSize/2} width={imageSize} height={imageSize} href="../images/gold-sun.svg"/>
-      <text x=250 y=400>Many religions can lead</text>
-      <text x=250 y=420>to eternal life in heaven.</text>
+      <text x=250 y=380>Many religions can lead</text>
+      <text x=250 y=400>to eternal life in heaven.</text>
       <line in:draw={{duration: 1500}} x1=250 x2=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
       <line in:draw={{duration: 1500}} x2=240 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
       <line in:draw={{duration: 1500}} x2=260 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
@@ -31,10 +30,11 @@
 
       <text id="bold" x=550 y={yScale(31)-75}>31%</text>
       <image x={550-imageSize*0.45} y={yScale(31)-imageSize/2} width={imageSize} height={imageSize} href="../images/gold-sun.svg"/>
-      <text x=550 y=400>My religion is the one</text>
-      <text x=550 y=420>true faith.</text>
+      <text x=550 y=380>My religion is the one</text>
+      <text x=550 y=400>true faith.</text>
       <line in:draw={{duration: 1500}} x1=550 x2=550 y2={yScale(0)} y1={yScale(31)+imageSize*0.2}/>
 
+      <text id="noteTooltip" x=20 y=430>*This graph doesn't include results from Christians who don't believe in heaven or didn't have an answer.</text>
     </svg>
   {/if}
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>
@@ -90,6 +90,13 @@
     font-weight: bold;
     font-size: 12pt;
     font-family: "Concorde"
+  }
+
+  #noteTooltip {
+    text-anchor: start;
+    font-size: 10pt;
+    font-style: italic;
+    font-family: "Founders Grotesk Light"
   }
 
 </style>
