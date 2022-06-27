@@ -1,5 +1,6 @@
 <script>
   import { fade } from 'svelte/transition';
+  import { afterUpdate } from 'svelte';
   import NavigationArrow from '../../components/NavigationArrow.svelte';
 
   export let currIndex;
@@ -51,6 +52,18 @@
     }
   }
 
+  // run animations once
+  $: animationAlreadyRan = false;
+  $: delayInterval = !animationAlreadyRan ? 600 : 0;
+
+  afterUpdate(() => {
+    document.addEventListener('scroll', function() {
+      if (document.getElementById("page_"+index).getBoundingClientRect().bottom - 20 <= window.innerHeight) {
+        animationAlreadyRan = true;
+      }
+    });
+  });
+
 </script>
 
 
@@ -65,7 +78,7 @@
       on:click={handleOnClick}
       on:mouseover={handleMouseOver}
       on:mouseout={handleMouseOut}
-      transition:fade={{ delay: 600*(index+1) }}>
+      in:fade={{ delay: delayInterval*(index+1) }}>
       {beliefText[index]}
     </p>
     <p id={"b_" + index} class="result">{getMouseoverText(index, true)}</p>

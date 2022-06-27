@@ -10,6 +10,19 @@
   $: yScale = scaleLinear()
 		.domain([0, 100])
 		.range([350, 20]);
+
+  // run animations once
+  $: animationAlreadyRan = false;
+  $: duration = !animationAlreadyRan ? 1500 : 0;
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('scroll', function() {
+      if (document.getElementById("page_"+index).getBoundingClientRect().bottom - 10 <= window.innerHeight) {
+        animationAlreadyRan = true;
+      }
+    });
+  });
+
 </script>
 
 <div class="page" id={"page_"+index}>
@@ -22,19 +35,20 @@
       <image x={250-imageSize*0.45} y={yScale(58)-imageSize/2} width={imageSize} height={imageSize} href="../images/gold-sun.svg"/>
       <text x=250 y=380>Many religions can lead</text>
       <text x=250 y=400>to eternal life in heaven.</text>
-      <line in:draw={{duration: 1500}} x1=250 x2=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
-      <line in:draw={{duration: 1500}} x2=240 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
-      <line in:draw={{duration: 1500}} x2=260 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
-      <line in:draw={{duration: 1500}} x2=230 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
-      <line in:draw={{duration: 1500}} x2=270 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
+      <line in:draw={{duration: duration}} x1=250 x2=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
+      <line in:draw={{duration: duration}} x2=240 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
+      <line in:draw={{duration: duration}} x2=260 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
+      <line in:draw={{duration: duration}} x2=230 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
+      <line in:draw={{duration: duration}} x2=270 x1=250 y2={yScale(0)} y1={yScale(58)+imageSize*0.2}/>
 
       <text id="bold" x=550 y={yScale(31)-75}>31%</text>
       <image x={550-imageSize*0.45} y={yScale(31)-imageSize/2} width={imageSize} height={imageSize} href="../images/gold-sun.svg"/>
       <text x=550 y=380>My religion is the one</text>
       <text x=550 y=400>true faith.</text>
-      <line in:draw={{duration: 1500}} x1=550 x2=550 y2={yScale(0)} y1={yScale(31)+imageSize*0.2}/>
+      <line in:draw={{duration: duration}} x1=550 x2=550 y2={yScale(0)} y1={yScale(31)+imageSize*0.2}/>
 
-      <text id="noteTooltip" x=20 y=430>*This graph doesn't include results from Christians who don't believe in heaven or didn't have an answer.</text>
+      <!-- <text id="noteTooltip" x=20 y=430>*This graph doesn't include results from Christians who don't believe in heaven or didn't have an answer.</text> -->
+      <text id="noteTooltip" x=20 y=430>{duration}</text>
     </svg>
   {/if}
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>

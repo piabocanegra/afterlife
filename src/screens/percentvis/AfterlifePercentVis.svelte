@@ -1,10 +1,10 @@
 <script>
   import { fade, draw } from 'svelte/transition';
+  import { afterUpdate } from 'svelte';
   import NavigationArrow from '../../components/NavigationArrow.svelte';
 
   export let currIndex;
   export let index;
-  let delayInterval = 650;
 
   // hardcoded values
   let imageList = [
@@ -24,6 +24,18 @@
     ["Rejoin universe"],
     ["Learning or growth"]
   ];
+
+  // run animations once
+  $: animationAlreadyRan = false;
+  $: delayInterval = !animationAlreadyRan ? 650 : 0;
+
+  afterUpdate(() => {
+  document.addEventListener('scroll', function() {
+   if (document.getElementById("page_"+index).getBoundingClientRect().bottom - 20 <= window.innerHeight) {
+        animationAlreadyRan = true;
+      }
+    });
+  });
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -31,13 +43,13 @@
   <h1>Among the people do not believe in heaven/hell but do believe in the afterlife, what does it look like?</h1>
   {#if currIndex >= index}
     <svg width=1000 height=450>
-      <g transition:fade={{delay: delayInterval*7}}>
+      <g in:fade={{delay: delayInterval*7}}>
         <text id="topTooltip" x=20 y=20>Out of the US adults who believe in an afterlife,</text>
         <text id="topTooltip" x=20 y=35>they (%) said that the afterlife is where you are**...</text>
       </g>
 
       {#each [0, 1, 2, 3, 4] as i}
-        <g transition:fade={{delay: delayInterval*(i+1)}}>
+        <g in:fade={{delay: delayInterval*(i+1)}}>
           <text id="bold" x={170*(i+1)-25} y=110>{percentList[i]}</text>
           <image x={170*(i+1)-25-85} y={220-85} width=170 height=170 href={imageList[i]}/>
           <text id="bold_font" x={170*(i+1)-25} y=350>{labelList[i][0]}</text>
@@ -46,7 +58,7 @@
 
       <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
 
-      <g transition:fade={{delay: delayInterval*7}}>
+      <g in:fade={{delay: delayInterval*7}}>
         <text id="bottomTooltip" x=20 y=410>**Survey participants had the option to</text>
         <text id="bottomTooltip" x=20 y=425>select several characteristics</text>
       </g>

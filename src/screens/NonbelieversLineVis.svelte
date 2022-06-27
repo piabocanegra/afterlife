@@ -1,13 +1,13 @@
 <script>
   import { scaleLinear } from 'd3-scale';
   import { fade, draw } from 'svelte/transition';
+  import { afterUpdate  } from 'svelte';
 
   import NavigationArrow from '../components/NavigationArrow.svelte';
   import DefinitionBubble from '../components/MiniDefinitionBubble.svelte';
 
   export let index;
   export let currIndex;
-  let delayInterval = 650;
   let imageSize = 70;
 
   let gapBtwLines = 75;
@@ -59,18 +59,30 @@
     }
     return 75+gapBtwLines*(index+1)+extraGap;
   }
+
+  // run animations once
+  $: animationAlreadyRan = false;
+  $: delayInterval = !animationAlreadyRan ? 650 : 0;
+
+  afterUpdate(() => {
+  document.addEventListener('scroll', function() {
+    if (document.getElementById("page_"+index).getBoundingClientRect().bottom - 20 <= window.innerHeight) {
+        animationAlreadyRan = true;
+      }
+    });
+  });
 </script>
 
 <div class="page" id={"page_"+index}>
   <h1>Who believes non-believers can go to heaven?</h1>
   {#if currIndex >= index}
     <svg width=1000 height=500>
-      <g transition:fade={{delay: delayInterval*(10)}}>
+      <g in:fade={{delay: delayInterval*(10)}}>
         <text id="tooltipItalic" x=20 y=12>% who say people who do not believe in God can go to heaven...</text>
       </g>
 
       {#each [0, 1, 2, 3, 4, 5, 6, 7] as i}
-        <g transition:fade={{delay: delayInterval*(i+1)}}>
+        <g in:fade={{delay: delayInterval*(i+1)}}>
           <text id="bold" x={getXPos(i)} y={yScale(percentList[i])-60}>{percentList[i] + "%"}</text>
 
           <image x={getXPos(i)-imageSize/2} y={yScale(percentList[i])-55} width={imageSize} height={imageSize} href={imageList[i]}/>
@@ -84,14 +96,14 @@
         </g>
       {/each}
 
-      <g transition:fade={{delay: delayInterval*(9)}}>
+      <g in:fade={{delay: delayInterval*(9)}}>
         <text id="subtitle" x={(getXPos(0)+getXPos(1))/2} y=130>RELIGION</text>
         <text id="subtitle" x={(getXPos(2)+getXPos(5))/2} y=130>AGE</text>
         <text id="subtitle" x={(getXPos(6)+getXPos(7))/2} y=130>POLITICAL</text>
         <text id="subtitle" x={(getXPos(6)+getXPos(7))/2} y=150>ORIENTATION</text>
       </g>
 
-      <g transition:fade={{delay: delayInterval*(10)}}>
+      <g in:fade={{delay: delayInterval*(10)}}>
         <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=40>Catholics are 2x as likely as</text>
         <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=55>Protestants to say that non-believers</text>
         <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=70>can go to heaven</text>

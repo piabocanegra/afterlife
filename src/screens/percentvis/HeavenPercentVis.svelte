@@ -1,10 +1,10 @@
 <script>
   import { fade, draw } from 'svelte/transition';
+  import { afterUpdate } from 'svelte';
   import NavigationArrow from '../../components/NavigationArrow.svelte';
 
   export let currIndex;
   export let index;
-  let delayInterval = 650;
 
   // hardcoded values
   let imageList = [
@@ -24,6 +24,18 @@
     ["Have perfectly", "healthy bodies"],
     ["Reunited with pets or", "animals they knew on Earth"]
   ];
+
+  // run animations once
+  $: animationAlreadyRan = false;
+  $: delayInterval = !animationAlreadyRan ? 650 : 0;
+
+  afterUpdate(() => {
+  document.addEventListener('scroll', function() {
+    if (document.getElementById("page_"+index).getBoundingClientRect().bottom - 20 <= window.innerHeight) {
+        animationAlreadyRan = true;
+      }
+    });
+  });
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -31,13 +43,13 @@
   <h1>You are in heaven.</h1>
   {#if currIndex >= index}
     <svg width=1000 height=450>
-      <g transition:fade={{delay: delayInterval*7}}>
+      <g in:fade={{delay: delayInterval*7}}>
         <text class="tooltip" id="topTooltip" x=20 y=20>Out of the US adults who believe in heaven, they</text>
         <text class="tooltip" id="topTooltip" x=20 y=35>(%) said that heaven is where you are**...</text>
       </g>
 
       {#each [0, 1, 2, 3, 4] as i}
-        <g transition:fade={{delay: delayInterval*(i+1)}}>
+        <g in:fade={{delay: delayInterval*(i+1)}}>
           <text id="bold" x={170*(i+1)-25} y=110>{percentList[i]}</text>
           <image x={170*(i+1)-25-85} y={220-85} width=170 height=170 href={imageList[i]}/>
           <text id="bold_font" x={170*(i+1)-25} y=350>{labelList[i][0]}</text>
@@ -47,12 +59,12 @@
 
       <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
 
-      <g transition:fade={{delay: delayInterval*7}}>
+      <g in:fade={{delay: delayInterval*7}}>
         <text class="tooltip" x=20 y=430>**Survey participants had the option to</text>
         <text class="tooltip" x=20 y=445>select several characteristics</text>
       </g>
 
-      <g transition:fade={{delay: delayInterval*8}}>
+      <g in:fade={{delay: delayInterval*8}}>
         <text class="tooltip" x={50+170*3} y=35>There is more agreement on what heaven</text>
         <text class="tooltip" x={50+170*3} y=50>looks like (compared to hell)!</text>
       </g>

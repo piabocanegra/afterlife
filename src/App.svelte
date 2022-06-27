@@ -20,7 +20,7 @@
 
 	// variables for tracking scrolling progress
 	let top = 0;
-	let threshold = 0.1;
+	let threshold = 0.5;
 	let bottom = 1;
 	let index;
 	let count;
@@ -34,6 +34,10 @@
 	let intro2 = "Many of us have views on this very question, but they are rarely expressed.";
 	let intro3 = "Pew Research Center surveyed 6,485 American adults in September 2021 about the afterlife, specifically their views on heaven, hell, reincarnation, fate, prayer, and other metaphysical matters."
 	let intro4 = "This study focuses on Christians and religiously unaffiliated individuals. 66% of the sample were Christians, split between Protestants and Catholics which are the two main denominations of Christianity.";
+
+	// disable scrolling with mouse
+	window.addEventListener("wheel", e => e.preventDefault(), { passive:false })
+
 </script>
 
 <main>

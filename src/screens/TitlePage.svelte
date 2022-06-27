@@ -8,9 +8,7 @@
   <h1>Heaven and Hell: Who goes and what happens?</h1>
   <p>A look into what 6,000+ U.S. adults think about the afterlife</p>
   <img id="sun" src="/images/white-sun.svg" alt="white sun"/>
-  <!-- <div id="image_wrapper"> -->
   <img id="angels" src="/images/angels.png" alt="angels"/>
-  <!-- </div> -->
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="3"/>
 </div>
 

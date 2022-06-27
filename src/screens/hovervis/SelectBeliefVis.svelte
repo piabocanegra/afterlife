@@ -1,59 +1,72 @@
 <script>
-  	import { fade } from 'svelte/transition';
-    import NavigationArrow from '../../components/NavigationArrow.svelte';
+  import { fade } from 'svelte/transition';
+  import { afterUpdate } from 'svelte';
+  import NavigationArrow from '../../components/NavigationArrow.svelte';
 
-    export let currIndex;
-    export let index;
-    let hasUserSelectedText = false;
+  export let currIndex;
+  export let index;
+  let hasUserSelectedText = false;
 
-    // hardcoded text
-    let beliefText = [
-      "Heaven and hell",
-      "Only heaven",
-      "Only hell",
-      "Neither heaven nor hell but I believe in an afterlife",
-      "Neither heaven nor hell and I do not believe in an afterlife",
-      "I don't have an answer"
-    ];
-    let mouseoverText = [
-      "You picked this. 61% of adults have the same belief!",
-      "You picked this. 13% of adults have the same belief!",
-      "You picked this. 1% of adults have the same belief!",
-      "You picked this. 7% of adults have the same belief!",
-      "You picked this. 17% of adults have the same belief!",
-      "You picked this. 1% of adults have the same belief!"
-    ];
+  // hardcoded text
+  let beliefText = [
+    "Heaven and hell",
+    "Only heaven",
+    "Only hell",
+    "Neither heaven nor hell but I believe in an afterlife",
+    "Neither heaven nor hell and I do not believe in an afterlife",
+    "I don't have an answer"
+  ];
+  let mouseoverText = [
+    "You picked this. 61% of adults have the same belief!",
+    "You picked this. 13% of adults have the same belief!",
+    "You picked this. 1% of adults have the same belief!",
+    "You picked this. 7% of adults have the same belief!",
+    "You picked this. 17% of adults have the same belief!",
+    "You picked this. 1% of adults have the same belief!"
+  ];
 
-    function handleMouseOver() {
-      let resultId = "#r_" + this.getAttribute("i");
-      let lastOpacity = d3.select("#o_5").style("opacity");
+  function handleMouseOver() {
+    let resultId = "#r_" + this.getAttribute("i");
+    let lastOpacity = d3.select("#o_5").style("opacity");
 
-      if (currIndex >= index && lastOpacity == 1 && !hasUserSelectedText) {
-        d3.select(resultId).style("opacity", "100");
+    if (currIndex >= index && lastOpacity == 1 && !hasUserSelectedText) {
+      d3.select(resultId).style("opacity", "100");
+    }
+  }
+
+  function handleMouseOut() {
+    let resultId = "#r_" + this.getAttribute("i");
+    if (!hasUserSelectedText) {
+      d3.select(resultId).style("opacity", "0");
+    }
+  }
+
+  function getMouseoverText(index, isHardcoded) {
+    return (isHardcoded) ? "Click here to select this belief." : mouseoverText[index];
+  }
+
+  function handleOnClick() {
+    if (!hasUserSelectedText) {
+      let i = this.getAttribute("i");
+      hasUserSelectedText = true;
+      d3.select("#r_" + i).style("opacity", "1");
+      d3.select("#r_" + i).text(getMouseoverText(i, false));
+
+      d3.selectAll(".option").style("cursor", "initial");
+    }
+  }
+
+  // run animations once
+  $: animationAlreadyRan = false;
+  $: delayInterval = !animationAlreadyRan ? 600 : 0;
+
+  afterUpdate(() => {
+    document.addEventListener('scroll', function() {
+    if (document.getElementById("page_"+index).getBoundingClientRect().bottom - 20 <= window.innerHeight) {
+        animationAlreadyRan = true;
       }
-    }
-
-    function handleMouseOut() {
-      let resultId = "#r_" + this.getAttribute("i");
-      if (!hasUserSelectedText) {
-        d3.select(resultId).style("opacity", "0");
-      }
-    }
-
-    function getMouseoverText(index, isHardcoded) {
-      return (isHardcoded) ? "Click here to select this belief." : mouseoverText[index];
-    }
-
-    function handleOnClick() {
-      if (!hasUserSelectedText) {
-        let i = this.getAttribute("i");
-        hasUserSelectedText = true;
-        d3.select("#r_" + i).style("opacity", "1");
-        d3.select("#r_" + i).text(getMouseoverText(i, false));
-
-        d3.selectAll(".option").style("cursor", "initial");
-      }
-    }
+    });
+  });
 
 </script>
 
@@ -69,7 +82,7 @@
         on:click={handleOnClick}
         on:mouseover={handleMouseOver}
         on:mouseout={handleMouseOut}
-        transition:fade={{ delay: 600*(index+1) }}>
+        in:fade={{ delay: delayInterval*(index+1) }}>
         {beliefText[index]}
       </p>
       <p id={"r_" + index} class="result">{getMouseoverText(index, true)}</p>
