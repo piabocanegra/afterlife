@@ -50,7 +50,7 @@
 		<section><IntroPage index={2} paragraph1={intro1} paragraph2={intro2}/></section>
 		<section><IntroPage index={3} paragraph1={intro3} paragraph2={intro4}/></section>
 		<section><SelectBeliefVis index={4} currIndex={index+1}/></section>
-		<section><ReligionLineVis index={5}/></section>
+		<section><ReligionLineVis index={5} currIndex={index+1}/></section>
 
 		<section><HeavenHellFunFactVis index={6}/></section>
 		<section><WelcomeToHellFunFactVis index={7}/></section>

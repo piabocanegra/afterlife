@@ -1,9 +1,12 @@
 <script>
+  import { fade, draw } from 'svelte/transition';
   import { scaleLinear } from 'd3-scale';
+  import { afterUpdate } from 'svelte';
   import NavigationArrow from '../components/NavigationArrow.svelte';
   import DefinitionBubble from '../components/MiniDefinitionBubble.svelte';
 
   export let index;
+  export let currIndex;
   let delayInterval = 650;
   let imageSize = 70;
   let graphTooltipText = "";
@@ -56,11 +59,24 @@
     let tooltip = document.getElementById("graph_tooltip");
     tooltip.style.visibility = "hidden";
   }
+
+  // run animations once
+  $: animationAlreadyRan = false;
+  $: delayInterval = !animationAlreadyRan ? 650 : 0;
+
+  afterUpdate(() => {
+  document.addEventListener('scroll', function() {
+    if (document.getElementById("page_"+index).getBoundingClientRect().bottom - 20 <= window.innerHeight) {
+        animationAlreadyRan = true;
+      }
+    });
+  });
 </script>
 
 <div class="page" id={"page_"+index}>
   <h1>Who believes in heaven and hell?</h1>
     <svg width=800 height=500>
+      {#if currIndex >= index}
       <text id="topTooltip" x=20 y=10>% who say they believe in</text>
       <text id="topTooltip" x=20 y=25>heaven and hell...</text>
 
@@ -86,15 +102,18 @@
 
       <line x1=50 x2=780 y1=340 y2=340 stroke="black"/>
 
-      <text class="tooltip" id="bold_tooltip" x={390} y=35>Belief in heaven and hell is less common</text>
-      <text class="tooltip" id="bold_tooltip" x={390} y=50>among religiously unaffiliated Americans</text>
-      <path d="M 380 38 H 280 V 80"/>
+      <g in:fade={{delay: delayInterval}}>
+        <text class="tooltip" id="bold_tooltip" x={390} y=35>Belief in heaven and hell is less common</text>
+        <text class="tooltip" id="bold_tooltip" x={390} y=50>among religiously unaffiliated Americans</text>
+      </g>
+      <path in:draw={{delay: delayInterval, duration: 1500}} d="M 380 38 H 280 V 80"/>
 
       <!-- set tooltips -->
       <!-- svelte-ignore a11y-mouse-events-have-key-events -->
       <rect id="hover" x={50} y={yScale(120)} width={60} height={yScale(0)-yScale(120)} on:mousemove={handleMouseOver1} on:mouseout={handleMouseOut}/>
       <!-- svelte-ignore a11y-mouse-events-have-key-events -->
       <rect id="hover" x={110} y={yScale(110)} width={60} height={yScale(0)-yScale(110)} on:mousemove={handleMouseOver2} on:mouseout={handleMouseOut}/>
+      {/if}
     </svg>
     <div id="graph_tooltip">{@html graphTooltipText}</div>
 
