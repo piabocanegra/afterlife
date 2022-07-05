@@ -24,16 +24,21 @@
   function handleMouseOver() {
     let resultId = "#b_" + this.getAttribute("i");
     let lastOpacity = d3.select("#op_3").style("opacity");
+    let hoverId = "#op_" + this.getAttribute("i");
 
     if (currIndex >= index && lastOpacity == 1 && !hasUserSelectedText) {
       d3.select(resultId).style("opacity", "100");
+      d3.select(hoverId).style("font-weight", 400);
     }
   }
 
   function handleMouseOut() {
     let resultId = "#b_" + this.getAttribute("i");
+    let hoverId = "#op_" + this.getAttribute("i");
+
     if (!hasUserSelectedText) {
       d3.select(resultId).style("opacity", "0");
+      d3.select(hoverId).style("font-weight", 300);
     }
   }
 
@@ -102,13 +107,15 @@ h1 {
 
 p {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 14pt;
   color: #9B795F;
 }
 
 .result {
   opacity: 0;
-  color: #c95033
+  color: #c95033;
+  font-weight: 400;
 }
 
 .option_god {

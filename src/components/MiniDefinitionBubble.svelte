@@ -50,12 +50,14 @@
   }
 
   text {
-    font-size: 14px;
+    font-size: 12pt;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
     text-anchor: middle;
   }
 
   rect {
-    stroke-width: 1px;
+    stroke-width: 0.5px;
     stroke: black;
     fill: none;
   }

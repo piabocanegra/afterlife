@@ -26,7 +26,7 @@
 	let count;
 
 	// chapter titles
-	let heavenChapter = "But, who is in heaven?";
+	let heavenChapter = "But who is in heaven?";
 	let earthChapter = "Let's visit the afterlife!";
 
 	// intro paragraph text

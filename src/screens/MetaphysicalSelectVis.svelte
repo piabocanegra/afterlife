@@ -110,6 +110,7 @@
     font-size: 14pt;
     font-family: 'Source Sans Pro', sans-serif;
     color: #9B795F;
+    font-weight: 300;
   }
 
   option, select {
@@ -130,6 +131,10 @@
     bottom: -14%;
     margin-left: -150px;
     width: 300px;
+  }
+
+  #button_text {
+    font-weight: 400;
   }
 
 </style>

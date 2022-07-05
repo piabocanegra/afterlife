@@ -39,6 +39,7 @@
     font-size: 14pt;
     font-family: 'Source Sans Pro', sans-serif;
     color: #9B795F;
+    font-weight: 300;
   }
 
   #credits {

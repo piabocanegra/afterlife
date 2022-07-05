@@ -76,7 +76,7 @@
 
   h1 {
     font-family: 'Source Serif Pro', serif;
-    max-width: 63%;
+    max-width: 80%;
     color: #9B795F;
   }
 
@@ -87,7 +87,7 @@
   }
 
   #bold {
-    font-weight: bold;
+    font-family: 'Source Serif Pro', serif;
     font-size: 12pt;
   }
 
@@ -102,6 +102,7 @@
     text-anchor: start;
     font-size: 12pt;
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
   }
 
   line {

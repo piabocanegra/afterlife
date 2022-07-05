@@ -28,16 +28,21 @@
   function handleMouseOver() {
     let resultId = "#r_" + this.getAttribute("i");
     let lastOpacity = d3.select("#o_5").style("opacity");
+    let hoverId = "#o_" + this.getAttribute("i");
 
     if (currIndex >= index && lastOpacity == 1 && !hasUserSelectedText) {
       d3.select(resultId).style("opacity", "100");
+      d3.select(hoverId).style("font-weight", 400);
     }
   }
 
   function handleMouseOut() {
     let resultId = "#r_" + this.getAttribute("i");
+    let hoverId = "#o_" + this.getAttribute("i");
+
     if (!hasUserSelectedText) {
       d3.select(resultId).style("opacity", "0");
+      d3.select(hoverId).style("font-weight", 200);
     }
   }
 
@@ -104,12 +109,14 @@
 
   p {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
+    font-weight: 200;
+    font-size: 14pt;
   }
 
   .result {
     opacity: 0;
-    color: #c95033
+    color: #c95033;
+    font-weight: 400;
   }
 
   .option {

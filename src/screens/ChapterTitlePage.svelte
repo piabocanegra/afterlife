@@ -16,7 +16,6 @@
 
 <style>
   h2 {
-    font-weight: 400;
     color: #9B795F;
   }
 
@@ -34,8 +33,9 @@
   }
 
   p {
-    font-family: 'Source Serif Pro', serif;
-    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 300;
+    font-size: 14pt;
     color: #9B795F;
   }
 </style>

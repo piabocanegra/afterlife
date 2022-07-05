@@ -43,9 +43,10 @@
     transform: translate(-50%, -50%);
     background-color: white;
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
     color: #9B795F
   }
-  
+
   img {
     height: 100vh;
     width: 100%;

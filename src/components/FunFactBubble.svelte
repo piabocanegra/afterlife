@@ -65,7 +65,7 @@
 <style>
   div#tooltip {
     color: #9B795F;
-    font-size: 16px;
+    font-size: 12pt;
     position: absolute;
     z-index: 10;
     white-space: pre-line;
@@ -78,6 +78,7 @@
     left: var(--tooltipLeft);
     transform: var(--tooltipTranslate);
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
   }
 
   img {

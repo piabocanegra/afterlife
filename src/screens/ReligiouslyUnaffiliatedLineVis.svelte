@@ -123,10 +123,10 @@
   #rectText {
     text-anchor: start;
     font-size: 12pt;
+    font-weight: 300;
   }
 
   #bold {
-    font-weight: bold;
     font-size: 12pt;
     font-family: 'Source Serif Pro', serif;
   }

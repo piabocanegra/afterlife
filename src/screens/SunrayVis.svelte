@@ -64,6 +64,7 @@
   h1 {
     font-family: 'Source Serif Pro', serif;
     color: #9B795F;
+    max-width: 70%;
   }
 
   text {
@@ -86,7 +87,6 @@
   }
 
   #bold {
-    font-weight: bold;
     font-size: 12pt;
     font-family: 'Source Serif Pro', serif;
   }

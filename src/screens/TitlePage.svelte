@@ -13,14 +13,12 @@
 </div>
 
 <style>
-  h1 {
-    font-weight: 400;
-  }
   div {
     text-align: center;
     position: relative;
     background-color: #DDC3B1;
   }
+
   #angels {
     position: absolute;
     bottom: 0%;
@@ -35,6 +33,7 @@
 
   p {
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
   }
 
   #sun {

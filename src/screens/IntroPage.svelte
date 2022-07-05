@@ -24,6 +24,7 @@
 
   p {
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
     font-size: 18pt;
   }
 </style>

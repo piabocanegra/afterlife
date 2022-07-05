@@ -65,8 +65,8 @@
       </g>
 
       <g in:fade={{delay: delayInterval*8}}>
-        <text class="tooltip" x={50+170*3} y=35>There is more agreement on what heaven</text>
-        <text class="tooltip" x={50+170*3} y=50>looks like (compared to hell)!</text>
+        <text class="tooltip" id="bold_tooltip" x={50+170*3} y=35>There is more agreement on what heaven</text>
+        <text class="tooltip" id="bold_tooltip" x={50+170*3} y=50>looks like (compared to hell)!</text>
       </g>
       <path in:draw={{delay: delayInterval*8, duration: 1500}} d="M 550 38 H 480 V 80"/>
 
@@ -94,13 +94,14 @@
   }
 
   #bold {
-    font-weight: bold;
+    font-family: 'Source Serif Pro', serif;
     font-size: 12pt;
   }
 
   .tooltip {
     text-anchor: start;
     font-size: 12pt;
+    font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif;
   }
 
@@ -122,6 +123,10 @@
 
   #bold_font {
     font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  #bold_tooltip {
+    font-weight: 400;
   }
 
 </style>

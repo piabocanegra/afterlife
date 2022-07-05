@@ -26,6 +26,7 @@
     width: 50px;
     height: 50px;
   }
+  
   div {
     left: 50%;
     margin-left: -25px;

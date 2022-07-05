@@ -153,6 +153,7 @@
 
   #subtitle {
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
     font-size: 12pt;
   }
 
@@ -162,7 +163,7 @@
   }
 
   #bold {
-    font-weight: bold;
+    font-family: 'Source Serif Pro', serif;
     font-size: 12pt;
   }
 
@@ -173,6 +174,7 @@
 
   #bold_font {
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
   }
 
 
