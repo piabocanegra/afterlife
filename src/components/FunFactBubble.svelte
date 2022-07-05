@@ -63,30 +63,6 @@
 {/if}
 
 <style>
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-  }
-
-  /* @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLightItalic.otf") format('otf');
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLightRegular.otf") format('otf');
-    font-weight: bold; */
-  /* } */
-/* 
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskRegularItalic.otf") format('otf');
-    font-style: italic;
-    font-weight: bold;
-  } */
-
   div#tooltip {
     color: #9B795F;
     font-size: 16px;
@@ -101,7 +77,7 @@
     top: var(--tooltipTop);
     left: var(--tooltipLeft);
     transform: var(--tooltipTranslate);
-    font-family: "Founders Grotesk Light";
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   img {

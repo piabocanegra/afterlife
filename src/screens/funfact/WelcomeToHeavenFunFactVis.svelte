@@ -17,6 +17,7 @@
     text-align: center;
     position: relative;
   }
+
   h3 {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -28,25 +29,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    font-family: Concorde;
+    font-family: 'Source Serif Pro', serif;
     color: #9B795F
   }
+
   img {
     height: 100vh;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
-  }
-
-  @font-face {
-  font-family: "Concorde";
-  src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
   }
 
 </style>

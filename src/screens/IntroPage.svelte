@@ -22,18 +22,8 @@
     background-color: #DDC3B1;
   }
 
-  @font-face {
-    font-family: "Concorde";
-    src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-  }
-
   p {
-    font-family: Founders Grotesk Light;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18pt;
   }
 </style>

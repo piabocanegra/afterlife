@@ -96,28 +96,19 @@
     padding: 10px;
   }
 
-  @font-face {
-    font-family: "Concorde";
-    src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-  }
-
   select {
     border: 3px solid #9B795F;
     background-color: none;
   }
 
   h1 {
-    font-family: Concorde;
+    font-family: 'Source Serif Pro', serif;
     color: #9B795F;
   }
 
   p {
     font-size: 14pt;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #9B795F;
   }
 
@@ -125,7 +116,7 @@
     color: #9B795F;
     font-size: 12pt;
     background-color: #313B33;
-    font-family: "Founders Grotesk Light";
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   img {

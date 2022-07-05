@@ -3,7 +3,6 @@
   import NavigationArrow from '../components/NavigationArrow.svelte';
   import DefinitionBubble from '../components/MiniDefinitionBubble.svelte';
 
-  export let currIndex;
   export let index;
   let delayInterval = 650;
   let imageSize = 70;
@@ -103,29 +102,14 @@
     position: relative;
   }
 
-  @font-face {
-    font-family: "Concorde";
-    src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Regular";
-    src: url("/fonts/FoundersGroteskRegular.otf") format('otf');
-  }
-
   h1 {
-    font-family: Concorde;
+    font-family: 'Source Serif Pro', serif;
   }
 
   text {
     font-size: 12pt;
     text-anchor: middle;
-    font-family: "Founders Grotesk Regular"
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   #topTooltip {
@@ -133,7 +117,7 @@
     font-size: 12pt;
     font-style: italic;
     color: black;
-    font-family: "Founders Grotesk Light"
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   #rectText {
@@ -144,7 +128,7 @@
   #bold {
     font-weight: bold;
     font-size: 12pt;
-    font-family: "Concorde";
+    font-family: 'Source Serif Pro', serif;
   }
 
   line {
@@ -180,11 +164,11 @@
     text-align: left;
     max-width: 250px;
     padding: 15px;
-    font-family: "Founders Grotesk Light";
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   #bold_font {
-    font-family: "Founders Grotesk Regular";
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
 

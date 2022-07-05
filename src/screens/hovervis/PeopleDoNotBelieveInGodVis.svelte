@@ -95,23 +95,13 @@ div {
   background-color: #FFF4EC;
 }
 
-@font-face {
-font-family: "Concorde";
-src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-}
-
-@font-face {
-  font-family: "Founders Grotesk Light";
-  src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-}
-
 h1 {
-  font-family: Concorde;
+  font-family: 'Source Serif Pro', serif;
   color: #9B795F;
 }
 
 p {
-  font-family: Founders Grotesk Light;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
   color: #9B795F;
 }

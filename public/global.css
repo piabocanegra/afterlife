@@ -8,20 +8,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-@font-face {
-	font-family: "Concorde", sans-serif;
-	src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-}
-
-@font-face {
-  font-family: "Founders", serif;
-  src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-}
-
-* {
-	font-family: 'Concorde', sans-serif;
-}
-
 body { 
 	margin: 0;
 }

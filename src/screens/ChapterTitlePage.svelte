@@ -27,24 +27,14 @@
     background-color: #FFF4EC;
   }
 
-  @font-face {
-    font-family: "Concorde";
-    src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-  }
-
   h2 {
-    font-family: Concorde;
+    font-family: 'Source Serif Pro', serif;
     margin: 0px;
     color: #9B795F;
   }
 
   p {
-    font-family: Founders Grotesk Light;
+    font-family: 'Source Serif Pro', serif;
     font-size: 20px;
     color: #9B795F;
   }

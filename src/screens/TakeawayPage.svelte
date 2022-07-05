@@ -20,38 +20,29 @@
     position: relative;
     background-color: #313B33;
   }
+
   div#page_padding {
     max-width: 1200px;
     margin: auto;
   }
 
-  @font-face {
-    font-family: "Concorde";
-    src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-  }
-
   h1, h5 {
-    font-family: Concorde;
+    font-family: 'Source Serif Pro', serif;
     color: #9B795F;
   }
 
   h1 {
-  text-align: center;
+    text-align: center;
   }
 
   p {
-    font-family: Founders Grotesk Light;
     font-size: 14pt;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #9B795F;
   }
 
   #credits {
-  font-size: 10pt;
-  font-family: Founders Grotesk Light;
+    font-size: 12pt;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 </style>

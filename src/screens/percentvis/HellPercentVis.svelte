@@ -77,23 +77,8 @@
     background-color: #1E1E1E;
   }
 
-  @font-face {
-  font-family: "Concorde";
-  src: url("/fonts/ConcordeRegular.ttf") format('ttf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Light";
-    src: url("/fonts/FoundersGroteskLight.otf") format('otf');
-  }
-
-  @font-face {
-    font-family: "Founders Grotesk Regular";
-    src: url("/fonts/FoundersGroteskRegular.otf") format('otf');
-  }
-
   h1 {
-    font-family: Concorde;
+    font-family: 'Source Serif Pro', serif;
     color: #9B795F;
   }
 
@@ -113,14 +98,14 @@
     text-anchor: start;
     font-size: 12pt;
     font-style: italic;
-    font-family: "Founders Grotesk Light";
+    font-family: 'Source Sans Pro', sans-serif;
     color: #9B795F;
   }
 
   #bottomTooltip {
     text-anchor: start;
     font-size: 12pt;
-    font-family: "Founders Grotesk Light";
+    font-family: 'Source Sans Pro', sans-serif;
     color: #9B795F;
   }
 
@@ -130,7 +115,7 @@
   }
 
   #bold_font {
-    font-family: "Founders Grotesk Regular";
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
 </style>
