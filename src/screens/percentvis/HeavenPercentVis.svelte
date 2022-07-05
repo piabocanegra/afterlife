@@ -60,8 +60,7 @@
       <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
 
       <g in:fade={{delay: delayInterval*7}}>
-        <text class="tooltip" x=20 y=430>**Survey participants had the option to</text>
-        <text class="tooltip" x=20 y=445>select several characteristics</text>
+        <text class="tooltip" x=20 y=430>**Survey participants had the option to select several characteristics</text>
       </g>
 
       <g in:fade={{delay: delayInterval*8}}>
@@ -100,7 +99,7 @@
 
   .tooltip {
     text-anchor: start;
-    font-size: 12pt;
+    font-size: 10pt;
     font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif;
   }
@@ -127,6 +126,7 @@
 
   #bold_tooltip {
     font-weight: 400;
+    font-size: 12pt;
   }
 
 </style>

@@ -59,8 +59,7 @@
       <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
 
       <g in:fade={{delay: delayInterval*7}}>
-        <text id="bottomTooltip" x=20 y=410>**Survey participants had the option to</text>
-        <text id="bottomTooltip" x=20 y=425>select several characteristics</text>
+        <text id="bottomTooltip" x=20 y=410>**Survey participants had the option to select several characteristics</text>
       </g>
     </svg>
   {/if}
@@ -100,7 +99,7 @@
 
   #bottomTooltip {
     text-anchor: start;
-    font-size: 12pt;
+    font-size: 10pt;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
   }
