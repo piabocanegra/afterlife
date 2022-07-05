@@ -86,6 +86,11 @@
 
       <line x1=50 x2=780 y1=340 y2=340 stroke="black"/>
 
+      <text class="tooltip" id="bold_tooltip" x={390} y=35>Belief in heaven and hell is less common</text>
+      <text class="tooltip" id="bold_tooltip" x={390} y=50>among religiously unaffiliated Americans</text>
+      <path d="M 380 38 H 280 V 80"/>
+
+      <!-- set tooltips -->
       <!-- svelte-ignore a11y-mouse-events-have-key-events -->
       <rect id="hover" x={50} y={yScale(120)} width={60} height={yScale(0)-yScale(120)} on:mousemove={handleMouseOver1} on:mouseout={handleMouseOut}/>
       <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -171,5 +176,15 @@
     font-family: 'Source Sans Pro', sans-serif;
   }
 
+  #bold_tooltip {
+    font-weight: 400;
+    font-size: 12pt;
+    text-anchor: start;
+  }
+
+  path {
+    fill: none;
+    stroke: black;
+  }
 
 </style>
