@@ -30,29 +30,33 @@
     ["Atheist", ""],
   ];
 
-  let tooltipText = [
+  let definitionText = [
     ["A person who believes in", "Jesus Christ and follows", "his teachings"],
     [""],
     ["A person who believes", "that nothing is known or", "can be known of the", "existence or nature of God"],
     ["A person who doesn't", "believe in the existence", "of God(s)"]
   ];
 
-  function handleMouseOver1(e) {
+  let tooltipText = [
+    "% of Christians who <br/>believe in heaven: 92%", 
+    "% of Christians who <br/>believe in hell: 79%",
+    "% of people who do not identify <br/>with any particular religion <br/>believe in heaven: 50%", 
+    "% of people who do not identify <br/>with any particular religion <br/>believe in hell: 39%",
+    "% of Agnostics who <br/>believe in heaven: 26%", 
+    "% of Agnostics who <br/>believe in hell: 14%",
+    "% of Atheists who <br/>believe in heaven: 3%", 
+    "% of Atheists who <br/>believe in hell: 1%",
+  ]
+
+  function handleMouseOver(e) {
     let tooltip = document.getElementById("graph_tooltip");
     tooltip.style.visibility = "visible";
     tooltip.style.left = (e.clientX+15) + "px";
     tooltip.style.top = (e.clientY-40) + "px";
 
-    graphTooltipText = "% of Christians who <br/>believe in heaven: 92%";
-  }
+    let index = this.getAttribute("index");
 
-  function handleMouseOver2(e) {
-    let tooltip = document.getElementById("graph_tooltip");
-    tooltip.style.visibility = "visible";
-    tooltip.style.left = (e.clientX+15) + "px";
-    tooltip.style.top = (e.clientY-40) + "px";
-
-    graphTooltipText = "% of Christians who <br/>believe in hell: 79%";
+    graphTooltipText = tooltipText[index];
   }
 
   function handleMouseOut() {
@@ -96,8 +100,13 @@
         <text id="bold_font" x={200*(i+1)-100} y=385>{labelList[i][1]}</text>
 
         {#if i != 1}
-        <DefinitionBubble position = {[200*(i+1)-100+35, 355]} isOffsetted={true} text = {tooltipText[i]}/>
+        <DefinitionBubble position = {[200*(i+1)-100+35, 355]} isOffsetted={true} text = {definitionText[i]}/>
         {/if}
+
+        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+        <rect id="hover" index={i*2} x={200*(i+1)-120-30} y={yScale(percentList[i][0])-imageSize} width={60} height={yScale(0)-yScale(percentList[i][0])+imageSize} on:mousemove={handleMouseOver} on:mouseout={handleMouseOut}/>
+        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+        <rect id="hover" index={i*2+1} x={200*(i+1)+50-120-30} y={yScale(percentList[i][1])-imageSize} width={60} height={yScale(0)-yScale(percentList[i][1])+imageSize} on:mousemove={handleMouseOver} on:mouseout={handleMouseOut}/>
       {/each}
 
       <line x1=50 x2=780 y1=340 y2=340 stroke="black"/>
@@ -108,12 +117,7 @@
       </g>
       <path in:draw={{delay: delayInterval, duration: 1500}} d="M 380 38 H 280 V 80"/>
 
-      <!-- set tooltips -->
-      <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-      <rect id="hover" x={50} y={yScale(120)} width={60} height={yScale(0)-yScale(120)} on:mousemove={handleMouseOver1} on:mouseout={handleMouseOut}/>
-      <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-      <rect id="hover" x={110} y={yScale(110)} width={60} height={yScale(0)-yScale(110)} on:mousemove={handleMouseOver2} on:mouseout={handleMouseOut}/>
-      {/if}
+     {/if}
     </svg>
     <div id="graph_tooltip">{@html graphTooltipText}</div>
 
