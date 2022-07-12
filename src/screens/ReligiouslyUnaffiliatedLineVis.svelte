@@ -31,7 +31,7 @@
   ];
 
   let tooltipText = [
-    ["A person who believes in", "Jesus Christ and follows his", "teachings"],
+    ["A person who believes in", "Jesus Christ and follows", "his teachings"],
     [""],
     ["A person who believes", "that nothing is known or", "can be known of the", "existence or nature of God"],
     ["A person who doesn't", "believe in the existence", "of God(s)"]
