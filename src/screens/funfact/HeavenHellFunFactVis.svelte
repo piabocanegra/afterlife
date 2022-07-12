@@ -7,7 +7,7 @@
 
 <div class="page" id={"page_"+index}>
   <img src="/images/late_penitents_celestial_rose.jpg" alt="late penitents and celestial rose"/>
-  <h3>So what does heaven and hell look like?</h3>
+  <h1>So what does heaven and hell look like?</h1>
   <p>Let's find out!</p>
   <FunFactBubble bubbleId="1"/>
   <FunFactBubble bubbleId="2"/>
@@ -20,8 +20,9 @@
     position: relative;
   }
 
-  h3 {
+  h1 {
     max-width: 30%;
+    padding: 0.5em;
     position: absolute;
     top: 50%;
     left: 50%;
