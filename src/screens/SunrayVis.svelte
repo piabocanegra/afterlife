@@ -29,7 +29,7 @@
   <h1>Do Christians believe multiple religions lead to eternal life in heaven?</h1>
   {#if currIndex >= index}
     <svg width=800 height=450>
-      <text id="topTooltip" x=20 y=20>% of US Christians who say...</text>
+      <text id="topTooltip" x=20 y=20>% of US Christians who say**...</text>
 
       <text id="bold" x=250 y={yScale(58)-75}>58%</text>
       <image x={250-imageSize*0.45} y={yScale(58)-imageSize/2} width={imageSize} height={imageSize} href="../images/gold-sun.svg"/>
@@ -47,7 +47,7 @@
       <text x=550 y=370>true faith.</text>
       <line in:draw={{duration: duration}} x1=550 x2=550 y2={yScale(0)} y1={yScale(31)+imageSize*0.2}/>
 
-      <text id="noteTooltip" x=20 y=410>*This graph doesn't include results from Christians who don't believe in heaven or didn't have an answer.</text>
+      <text id="noteTooltip" x=20 y=410>**This graph doesn't include results from Christians who don't believe in heaven or didn't have an answer.</text>
     </svg>
   {/if}
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>
