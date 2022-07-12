@@ -35,9 +35,6 @@
 	let intro3 = "Pew Research Center surveyed 6,485 American adults in September 2021 about the afterlife, specifically their views on heaven, hell, reincarnation, fate, prayer, and other metaphysical matters."
 	let intro4 = "This study focuses on Christians and religiously unaffiliated individuals. 66% of the sample were Christians, split between Protestants and Catholics which are the two main denominations of Christianity.";
 
-	// disable scrolling with mouse
-	window.addEventListener("wheel", e => e.preventDefault(), { passive:false })
-
 </script>
 
 <main>
@@ -93,5 +90,10 @@
 		min-height: 100vh;
 		max-height: 100vh;
 		background-color: #DDC3B1;
+	}
+
+	section {
+		scroll-snap-align: start;
+    scroll-snap-stop: always;
 	}
 </style>

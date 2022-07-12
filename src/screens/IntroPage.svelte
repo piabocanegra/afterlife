@@ -19,7 +19,7 @@
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #DDC3B1;
+    background-color: #DDC3B1;    
   }
 
   p {
