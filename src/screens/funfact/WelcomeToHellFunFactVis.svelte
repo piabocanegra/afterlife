@@ -7,7 +7,7 @@
 
 <div class="page" id={"page_"+index}>
   <img src="/images/satan.jpeg" alt="satan"/>
-  <h3>Welcome to hell!</h3>
+  <h1>Welcome to hell!</h1>
   <FunFactBubble bubbleId="3"/>
   <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="2"/>
 </div>
@@ -18,12 +18,9 @@
     position: relative;
   }
   
-  h3 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 75px;
-    padding-right: 75px;
-    max-width: 30%;
+  h1 {
+    padding: 0.5em;
+    max-width: 35%;
     position: absolute;
     top: 15%;
     left: 50%;

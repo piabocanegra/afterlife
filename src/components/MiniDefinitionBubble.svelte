@@ -37,7 +37,7 @@
 <image x={x} y={y} width=20 height=20 on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} href="/images/definition.svg" />
 
 {#if tooltipVisibility}
-  <rect x={getTooltipXPos(x, isOffsetted)} y={y+30} width=190 height={getRectPadding(tooltipText.length)} rx=5 ry=5/>
+  <rect x={getTooltipXPos(x, isOffsetted)} y={y+30} width=190 height={getRectPadding(tooltipText.length)} rx=7 ry=7/>
   {#each tooltipText as txt, i}
     <text x={getTextXPos(x, isOffsetted)} y={y+50+i*15}>{txt}</text>
   {/each}
@@ -51,14 +51,15 @@
 
   text {
     font-size: 12pt;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;
     text-anchor: middle;
   }
 
   rect {
     stroke-width: 0.5px;
-    stroke: black;
-    fill: none;
+    fill: white;
+    stroke: #9B795F;
   }
+  
 </style>
