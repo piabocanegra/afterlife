@@ -56,7 +56,7 @@
     }
     
     h1 {
-      font-size: 24pt;
+      font-size: 20pt;
       max-width: 95%;
     }
 

@@ -42,7 +42,7 @@
   /* phone screens */
   @media screen and (max-width: 480px) {
     h2 {
-      font-size: 20pt;
+      font-size: 18pt;
     }
     
     p {

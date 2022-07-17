@@ -40,14 +40,10 @@
 
   /* phone screens */
   @media screen and (max-width: 480px) {
-  h1 {
-    font-size: 24pt;
-    max-width: 100%;
+    h1 {
+      font-size: 20pt;
+      max-width: 100%;
+    }
   }
-  
-  p {
-    font-size: 12pt;
-  }
-}
 
 </style>

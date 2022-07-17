@@ -129,4 +129,12 @@
     font-size: 12pt;
   }
 
+  /* phone screens */
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 20pt;
+      max-width: 95%;
+    }
+  }
+
 </style>
