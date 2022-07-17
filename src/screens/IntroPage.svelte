@@ -27,4 +27,15 @@
     font-weight: 400;
     font-size: 18pt;
   }
+
+  /* phone screens */
+  @media screen and (max-width: 480px) {
+    div {
+      padding-top: 100px;
+    }
+    p {
+      font-size: 14pt;
+      padding: 15px;
+    }
+  }
 </style>

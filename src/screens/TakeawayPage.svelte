@@ -47,4 +47,25 @@
     font-family: 'Source Sans Pro', sans-serif;
     color: #9B795F;
   }
+
+  /* phone screens */
+  @media screen and (max-width: 480px) {
+    div#page_padding {
+      padding: 20px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 24pt;
+      max-width: 95%;
+    }
+
+    h5 {
+      font-size: 16pt;
+    }
+    
+    p {
+      font-size: 12pt;
+    }
+  }
 </style>

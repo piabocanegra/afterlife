@@ -38,4 +38,15 @@
     font-size: 14pt;
     color: #9B795F;
   }
+
+  /* phone screens */
+  @media screen and (max-width: 480px) {
+    h2 {
+      font-size: 20pt;
+    }
+    
+    p {
+      font-size: 12pt;
+    }
+  }
 </style>

@@ -15,3 +15,13 @@ body {
 ::-webkit-scrollbar {
 	display: none;
 }
+
+/* phone screens */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24pt;
+  }
+	p {
+		font-size: 14pt;
+	}
+}
