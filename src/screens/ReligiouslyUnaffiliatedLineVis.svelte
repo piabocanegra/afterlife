@@ -191,6 +191,7 @@
     border-radius: 7px;
     text-align: left;
     max-width: 250px;
+    visibility: hidden;
     padding: 15px;
     font-family: 'Source Sans Pro', sans-serif;
   }
