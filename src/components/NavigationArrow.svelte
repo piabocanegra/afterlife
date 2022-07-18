@@ -13,10 +13,14 @@
 
   let src = imgSrc[arrowType];
   let bottomPerfect = (overrideY != null) ? overrideY : "5%";
+
+  function removeScrollbar() {
+    window.scrollTo(0, 1);
+  }
 </script>
 
 <div style="bottom: {bottomPerfect}">
-  <a href={link}>
+  <a href={link} onclick={removeScrollbar}>
     <img src={src} alt="arrow">
   </a>
 </div>
@@ -27,6 +31,10 @@
     height: 50px;
   }
   
+  a {
+    margin: auto 0;
+  }
+
   div {
     left: 50%;
     margin-left: -25px;
