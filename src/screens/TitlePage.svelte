@@ -9,7 +9,7 @@
   <p>A look into what 6,000+ U.S. adults think about the afterlife</p>
   <img id="sun" src="/images/white-sun.svg" alt="white sun"/>
   <img id="angels" src="/images/angels.png" alt="angels"/>
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="3"/>
+  <NavigationArrow link={"#page_"+(index+1)} arrowType="3" overrideY="35%"/>
 </div>
 
 <style>

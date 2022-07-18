@@ -63,7 +63,7 @@
       </g>
     </svg>
   {/if}
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>
+  <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
 </div>
 
 <style>

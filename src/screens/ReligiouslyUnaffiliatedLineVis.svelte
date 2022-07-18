@@ -121,7 +121,7 @@
     </svg>
     <div id="graph_tooltip">{@html graphTooltipText}</div>
 
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="1"/>
+  <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
 </div>
 
 <style>

@@ -7,11 +7,11 @@
 </script>
 
 <div class="page" id={"page_"+index}>
-  <h2>{chapterTitle}</h2>
+  <h2 style="padding-top: 250px;">{chapterTitle}</h2>
   {#if showSubtitles}
     <p>(that's not heaven or hell)</p>
   {/if}
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="4"/>
+  <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
 </div>
 
 <style>
@@ -20,7 +20,6 @@
   }
 
   div {
-    padding-top: 250px;
     text-align: center;
     position: relative;
     background-color: #FFF4EC;

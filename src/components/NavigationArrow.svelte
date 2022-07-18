@@ -1,8 +1,7 @@
 <script>
   export let link;
-  export let isAtBottom;
   export let arrowType;
-  let bottomPercent = isAtBottom ? "5%" : "35%";
+  export let overrideY;
 
   let imgSrc = {
     "1": "/images/chevron-black-nofill.svg",
@@ -13,9 +12,10 @@
   // TODO: move scrolling logic to this class to hide link
 
   let src = imgSrc[arrowType];
+  let bottomPerfect = (overrideY != null) ? overrideY : "5%";
 </script>
 
-<div style="bottom: {bottomPercent}">
+<div style="bottom: {bottomPerfect}">
   <a href={link}>
     <img src={src} alt="arrow">
   </a>

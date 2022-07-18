@@ -7,14 +7,13 @@
 </script>
 
 <div class="page" id={"page_"+index}>
-  <p>{paragraph1}</p>
+  <p style="padding-top:150px">{paragraph1}</p>
   <p>{paragraph2}</p>
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={false} arrowType="1"/>
+  <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
 </div>
 
 <style>
   div {
-    padding-top: 150px;
     text-align: center;
     position: relative;
     max-width: 1000px;

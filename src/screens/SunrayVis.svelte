@@ -50,7 +50,7 @@
       <text id="noteTooltip" x=20 y=410>**This graph doesn't include results from Christians who don't believe in heaven or didn't have an answer.</text>
     </svg>
   {/if}
-  <NavigationArrow link={"#page_"+(index+1)} isAtBottom={true} arrowType="4"/>
+  <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
 </div>
 
 <style>
