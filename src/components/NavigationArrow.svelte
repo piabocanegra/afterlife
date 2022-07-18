@@ -12,15 +12,12 @@
   // TODO: move scrolling logic to this class to hide link
 
   let src = imgSrc[arrowType];
-  let bottomPerfect = (overrideY != null) ? overrideY : "5%";
-
-  function removeScrollbar() {
-    window.scrollTo(0, 1);
-  }
+  let defaultPercent = (window.screen.width <= 480) ? "10%" : "5%";
+  let bottomPercent = (overrideY != null) ? overrideY : defaultPercent;
 </script>
 
-<div style="bottom: {bottomPerfect}">
-  <a href={link} onclick={removeScrollbar}>
+<div style="bottom: {bottomPercent}">
+  <a href={link}>
     <img src={src} alt="arrow">
   </a>
 </div>
