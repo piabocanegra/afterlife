@@ -3,7 +3,7 @@
 
   // map of ids to fixed positions of fun fact bubbles
   let funFactPositionMap = {
-    "1": [80, 90],
+    "1": [40, 85],
     "2": [10, 8],
     "3": [65, 30],
     "4": [70, 55]
@@ -11,16 +11,16 @@
 
   // map of tooltip offsets
   let offsetMap = {
-    "1": [5, -5],
+    "1": [-10, -13],
     "2": [0, 6],
     "3": [8, 8],
     "4": [10, 12]
   }
   // map of tooltip offsets
   let offsetMobileMap = {
-    "1": [-10, -20],
-    "2": [12, 20],
-    "3": [8, 15],
+    "1": [-12, -20],
+    "2": [10, 20],
+    "3": [9, 15],
     "4": [-10, -12]
   }
   // map of ids to hardcoded text for fun facts
