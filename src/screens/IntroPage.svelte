@@ -43,7 +43,7 @@
       align-content: space-around;
     }
     #padding {
-      padding-top: 0px;
+      padding-top:-50px;
     }
     p {
       font-size: 12pt;
