@@ -9,6 +9,7 @@
 <div class="page" id={"page_"+index}>
   <p id="padding">{paragraph1}</p>
   <p>{paragraph2}</p>
+  <p></p>
   <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
 </div>
 
@@ -43,7 +44,7 @@
       align-content: space-around;
     }
     #padding {
-      padding-top:-50px;
+      padding-top: 0px;
     }
     p {
       font-size: 12pt;
