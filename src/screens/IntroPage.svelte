@@ -7,7 +7,7 @@
 </script>
 
 <div class="page" id={"page_"+index}>
-  <p style="padding-top:150px">{paragraph1}</p>
+  <p id="padding">{paragraph1}</p>
   <p>{paragraph2}</p>
   <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
 </div>
@@ -27,15 +27,23 @@
     font-size: 18pt;
   }
 
+  #padding {
+    padding-top:150px
+  }
+
   /* phone screens */
   @media screen and (max-width: 480px) {
     div {
-      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      flex-direction: column;
+      align-content: space-around;
     }
-    p {
-      font-size: 14pt;
-      padding-left: 2em;
-      padding-right: 2em;
+    #padding {
+      padding-top: 0px;
     }
   }
 </style>
