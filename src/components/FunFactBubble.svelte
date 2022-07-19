@@ -1,5 +1,6 @@
 <script>
   export let bubbleId;
+
   // map of ids to fixed positions of fun fact bubbles
   let funFactPositionMap = {
     "1": [80, 90],
@@ -14,6 +15,13 @@
     "2": [0, 6],
     "3": [8, 8],
     "4": [10, 12]
+  }
+  // map of tooltip offsets
+  let offsetMobileMap = {
+    "1": [-10, -20],
+    "2": [12, 20],
+    "3": [8, 15],
+    "4": [-10, -12]
   }
   // map of ids to hardcoded text for fun facts
   let funFactTextMap = {
@@ -36,8 +44,9 @@
   let tooltipVisibility = false;
 
   function handleMouseOver() {
-    let topMargin = offsetMap[bubbleId][0];
-    let leftMargin = offsetMap[bubbleId][1];
+    let isMobile = (window.screen.width <= 480);
+    let topMargin = isMobile ? offsetMobileMap[bubbleId][0] : offsetMap[bubbleId][0];
+    let leftMargin = isMobile ? offsetMobileMap[bubbleId][1] : offsetMap[bubbleId][1];
     tooltipTop = funFactPositionMap[bubbleId][0] + topMargin + "%";
     tooltipLeft = funFactPositionMap[bubbleId][1] + leftMargin + "%";
     tooltipTranslate = "translate(-"+ tooltipTop + ", -" + tooltipLeft + ")";
@@ -88,5 +97,13 @@
     transform: var(--translate);
     width: 40px;
     height: 40px;
+  }
+
+  /* phone screens */
+  @media screen and (max-width: 480px) {
+    div#tooltip {
+      max-width: 300px;
+      font-size: 10pt;
+    }
   }
 </style>
