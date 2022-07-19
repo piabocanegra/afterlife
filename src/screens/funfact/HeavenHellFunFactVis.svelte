@@ -64,7 +64,7 @@
     }
 
     p {
-      top: 78%;
+      top: 77%;
       font-size: 12pt;
     }
   }
