@@ -49,7 +49,11 @@
   @media screen and (max-width: 480px) {
     h1 {
       font-size: 20pt;
-      max-width: 95%;
+      max-width: 85%;
+    }
+    p {
+      font-size: 12pt;
+      padding: 3em;
     }
   }
 

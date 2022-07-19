@@ -29,10 +29,13 @@
 
   /* phone screens */
   @media screen and (max-width: 480px) {
+    div {
+      margin-top: 100px;
+    }
     p {
       font-size: 14pt;
-      padding: 15px;
-      padding-top: 100px;
+      padding-left: 2em;
+      padding-right: 2em;
     }
   }
 </style>
