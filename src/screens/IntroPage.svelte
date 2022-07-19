@@ -45,5 +45,10 @@
     #padding {
       padding-top: 0px;
     }
+    p {
+      font-size: 12pt;
+      padding-left: 2em;
+      padding-right: 2em;
+    }
   }
 </style>
