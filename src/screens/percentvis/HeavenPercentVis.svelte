@@ -36,40 +36,69 @@
       }
     });
   });
+
+  let isMobile = (window.screen.width <= 480);
+  let w = 350/4;
+  let imageSize = 100;
+  let mobilePos = [[w-(125/2), 75], [w*3-(125/2), 75], [w-(125/2), 75+imageSize+50], [w*3-(125/2), 75+imageSize+50], [w*2-(125/2), 75+imageSize*2+100]];
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div class="page" id={"page_"+index}>
   <h1>You are in heaven.</h1>
   {#if currIndex >= index}
-    <svg width=1000 height=450>
-      <g in:fade={{delay: delayInterval*7}}>
-        <text class="tooltip" id="topTooltip" x=20 y=20>Out of the US adults who believe in heaven, they</text>
-        <text class="tooltip" id="topTooltip" x=20 y=35>(%) said that heaven is where you are**...</text>
-      </g>
-
-      {#each [0, 1, 2, 3, 4] as i}
-        <g in:fade={{delay: delayInterval*(i+1)}}>
-          <text id="bold" x={170*(i+1)-25} y=110>{percentList[i]}</text>
-          <image x={170*(i+1)-25-85} y={220-85} width=170 height=170 href={imageList[i]}/>
-          <text id="bold_font" x={170*(i+1)-25} y=350>{labelList[i][0]}</text>
-          <text id="bold_font" x={170*(i+1)-25} y=370>{labelList[i][1]}</text>
+    {#if isMobile}
+      <!-- mobile svg -->
+      <svg width=350 height=500>
+        <g in:fade={{delay: delayInterval*7}}>
+          <text class="tooltip" id="topTooltip" x=20 y=20>Out of the US adults who believe in heaven, they</text>
+          <text class="tooltip" id="topTooltip" x=20 y=35>(%) said that heaven is where you are**...</text>
         </g>
-      {/each}
 
-      <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
+        {#each [0, 1, 2, 3, 4] as i}
+          <g in:fade={{delay: delayInterval*(i+1)}}>
+            <text id="bold" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]-10}>{percentList[i]}</text>
+            <image x={mobilePos[i][0]} y={mobilePos[i][1]} width={imageSize} height={imageSize} href={imageList[i]}/>
+            <text id="bold_font" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]+imageSize+10}>{labelList[i][0]}</text>
+            <text id="bold_font" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]+imageSize+25}>{labelList[i][1]}</text>
+          </g>
+        {/each}
 
-      <g in:fade={{delay: delayInterval*7}}>
-        <text class="tooltip" x=20 y=430>**Survey participants had the option to select several characteristics</text>
-      </g>
+      </svg>
+    {:else}
+      <!-- desktop svg -->
+      <svg width=1000 height=450>
+        <g in:fade={{delay: delayInterval*7}}>
+          <text class="tooltip" id="topTooltip" x=20 y=20>Out of the US adults who believe in heaven, they</text>
+          <text class="tooltip" id="topTooltip" x=20 y=35>(%) said that heaven is where you are**...</text>
+        </g>
 
-      <g in:fade={{delay: delayInterval*8}}>
-        <text class="tooltip" id="bold_tooltip" x={50+170*3} y=35>There is more agreement on what heaven</text>
-        <text class="tooltip" id="bold_tooltip" x={50+170*3} y=50>looks like (compared to hell)!</text>
-      </g>
-      <path in:draw={{delay: delayInterval*8, duration: 1500}} d="M 550 38 H 480 V 80"/>
+        {#each [0, 1, 2, 3, 4] as i}
+          <g in:fade={{delay: delayInterval*(i+1)}}>
+            <text id="bold" x={170*(i+1)-25} y=110>{percentList[i]}</text>
+            <image x={170*(i+1)-25-85} y={220-85} width=170 height=170 href={imageList[i]}/>
+            <text id="bold_font" x={170*(i+1)-25} y=350>{labelList[i][0]}</text>
+            <text id="bold_font" x={170*(i+1)-25} y=370>{labelList[i][1]}</text>
+          </g>
+        {/each}
 
-    </svg>
+        <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=50 x2=920 y1=310 y2=310 stroke="black"/>
+
+        <g in:fade={{delay: delayInterval*7}}>
+          <text class="tooltip" x=20 y=430>**Survey participants had the option to select several characteristics</text>
+        </g>
+
+        <g in:fade={{delay: delayInterval*8}}>
+          <text class="tooltip" id="bold_tooltip" x={50+170*3} y=35>There is more agreement on what heaven</text>
+          <text class="tooltip" id="bold_tooltip" x={50+170*3} y=50>looks like (compared to hell)!</text>
+        </g>
+        <path in:draw={{delay: delayInterval*8, duration: 1500}} d="M 550 38 H 480 V 80"/>
+
+      </svg>
+
+    {/if}
+
+
   {/if}
   <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
 </div>
@@ -136,5 +165,4 @@
       max-width: 95%;
     }
   }
-
 </style>
