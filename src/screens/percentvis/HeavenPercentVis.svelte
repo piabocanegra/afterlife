@@ -38,9 +38,9 @@
   });
 
   let isMobile = (window.screen.width <= 480);
-  let w = 350/4;
-  let imageSize = 100;
-  let mobilePos = [[w-(125/2), 75], [w*3-(125/2), 75], [w-(125/2), 75+imageSize+50], [w*3-(125/2), 75+imageSize+50], [w*2-(125/2), 75+imageSize*2+100]];
+  let w = (350/4)+10;
+  let imageSize = 80;
+  let mobilePos = [[w-(125/2), 75], [w*3-(125/2), 75], [w-(125/2), 75+imageSize+75], [w*3-(125/2), 75+imageSize+75], [w*2-(125/2), 75+imageSize*2+150]];
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -49,20 +49,26 @@
   {#if currIndex >= index}
     {#if isMobile}
       <!-- mobile svg -->
-      <svg width=350 height=500>
+      <svg width=350 height=550>
         <g in:fade={{delay: delayInterval*7}}>
-          <text class="tooltip" id="topTooltip" x=20 y=20>Out of the US adults who believe in heaven, they</text>
-          <text class="tooltip" id="topTooltip" x=20 y=35>(%) said that heaven is where you are**...</text>
+          <text class="tooltip" id="topTooltip" x=5 y=13>Out of the US adults who believe in heaven, they</text>
+          <text class="tooltip" id="topTooltip" x=5 y=28>(%) said that heaven is where you are**...</text>
         </g>
 
         {#each [0, 1, 2, 3, 4] as i}
           <g in:fade={{delay: delayInterval*(i+1)}}>
             <text id="bold" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]-10}>{percentList[i]}</text>
             <image x={mobilePos[i][0]} y={mobilePos[i][1]} width={imageSize} height={imageSize} href={imageList[i]}/>
-            <text id="bold_font" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]+imageSize+10}>{labelList[i][0]}</text>
-            <text id="bold_font" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]+imageSize+25}>{labelList[i][1]}</text>
+            <text id="bold_font" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]+imageSize+15}>{labelList[i][0]}</text>
+            <text id="bold_font" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]+imageSize+30}>{labelList[i][1]}</text>
           </g>
         {/each}
+
+        <g in:fade={{delay: delayInterval*7}}>
+          <text class="tooltip" x=5 y=530>**Survey participants had the option to select</text>
+          <text class="tooltip" x=5 y=540>several characteristics</text>
+
+        </g>
 
       </svg>
     {:else}
@@ -95,12 +101,14 @@
         <path in:draw={{delay: delayInterval*8, duration: 1500}} d="M 550 38 H 480 V 80"/>
 
       </svg>
-
     {/if}
 
-
   {/if}
-  <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
+  {#if isMobile}
+    <NavigationArrow link={"#page_"+(index+1)} overrideY="1%" arrowType="4"/>
+  {:else}
+    <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
+  {/if}
 </div>
 
 <style>
