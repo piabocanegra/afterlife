@@ -68,7 +68,6 @@
           <text class="tooltip" x=5 y=530>**Survey participants had the option to select</text>
           <text class="tooltip" x=5 y=540>several characteristics</text>
         </g>
-
       </svg>
     {:else}
       <!-- desktop svg -->
