@@ -67,7 +67,6 @@
         <g in:fade={{delay: delayInterval*7}}>
           <text class="tooltip" x=5 y=530>**Survey participants had the option to select</text>
           <text class="tooltip" x=5 y=540>several characteristics</text>
-
         </g>
 
       </svg>
