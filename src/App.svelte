@@ -16,7 +16,9 @@
 	import Takeaways from './screens/TakeawayPage.svelte';
 	import MetaphysicalSelectVis from './screens/MetaphysicalSelectVis.svelte';
 	import NonBelieversLineVis from './screens/NonbelieversLineVis.svelte';
-	import ProgressBar from './components/ProgressBar.svelte';
+	import ProgressBarDesktop from './components/ProgressBarDesktop.svelte';
+	import ProgressBarMobile from './components/ProgressBarMobile.svelte';
+
 
 	// variables for tracking scrolling progress
 	let top = 0;
@@ -35,6 +37,7 @@
 	let intro3 = "Pew Research Center surveyed 6,485 American adults in September 2021 about the afterlife, specifically their views on heaven, hell, reincarnation, fate, prayer, and other metaphysical matters."
 	let intro4 = "This study focuses on Christians and religiously unaffiliated individuals. 66% of the sample were Christians, split between Protestants and Catholics which are the two main denominations of Christianity.";
 
+  let isMobile = (window.screen.width <= 480);
 </script>
 
 <main>
@@ -65,7 +68,12 @@
 		<section><AfterlifePercentVis index={16} currIndex={index+1}/></section>
 		<section><MetaphysicalSelectVis index={17}/></section>
 		<section><Takeaways index={18}/></section>
-		<ProgressBar total={18} index={index}/>
+
+		{#if isMobile}
+			<ProgressBarMobile total={18} index={index}/>
+		{:else}
+			<ProgressBarDesktop total={18} index={index}/>
+		{/if}
 	</div>
 </Scroller>
 </main>
