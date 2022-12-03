@@ -47,6 +47,8 @@
     }
   }
 
+  let isMobile = (window.screen.width <= 480);
+
 </script>
 
 <div class="page" id={"page_"+index}>
@@ -72,7 +74,9 @@
     {/if}
     <p id="button_text">{buttonText}</p>
   </div>
-  <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
+
+  <NavigationArrow link={"#page_"+(index+1)} overrideY="1%" arrowType="4"/>
+
 </div>
 
 <style>
@@ -142,6 +146,16 @@
     h1 {
       font-size: 20pt;
       max-width: 95%;
+    }
+    p {
+      font-size: 12pt;
+    }
+    #button {
+      bottom: -12%;
+    }
+    #button_text {
+      font-weight: 400;
+      margin-top: 40px;
     }
   }
 
