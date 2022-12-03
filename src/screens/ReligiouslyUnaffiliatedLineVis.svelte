@@ -15,6 +15,10 @@
 		.domain([0, 100])
 		.range([340, 100]);
 
+  $: yMobileScale = scaleLinear()
+		.domain([0, 100])
+		.range([120,300]);
+
   // hardcoded values
   let percentList = [
     [92, 79],
@@ -75,53 +79,96 @@
       }
     });
   });
+
+  let isMobile = (window.screen.width <= 480);
+
 </script>
 
 <div class="page" id={"page_"+index}>
   <h1>Who believes in heaven and hell?</h1>
-    <svg width=800 height=500>
-      {#if currIndex >= index}
-      <text id="topTooltip" x=20 y=10>% who say they believe in</text>
-      <text id="topTooltip" x=20 y=25>heaven and hell...</text>
+  {#if currIndex >= index}
+    {#if isMobile}
+      <svg width=350 height=550>
 
-      <rect x={200} y={yScale(100)} height={yScale(0)-yScale(100)} width={200*2.9}/>
-      <text id="rectText" x={200+5} y={yScale(100)+15}>RELIGIOUSLY UNAFFILIATED</text>
+        <text id="topTooltip" x=20 y=10>% who say they believe in</text>
+        <text id="topTooltip" x=20 y=25>heaven and hell...</text>
 
-      {#each [0, 1, 2, 3] as i}
-        <text id="bold" x={200*(i+1)-120} y={yScale(percentList[i][0])-55}>{percentList[i][0] + "%"}</text>
-        <text id="bold" x={200*(i+1)+50-120} y={yScale(percentList[i][1])-55}>{percentList[i][1] + "%"}</text>
+        <line x1=110 x2=110 y1=50 y2=480 stroke="black"/>
 
-        <image x={200*(i+1)-120-imageSize/2} y={yScale(percentList[i][0])-55} width={imageSize} height={imageSize} href="/images/heaven.svg"/>
-        <image x={200*(i+1)+50-120-imageSize/2} y={yScale(percentList[i][1])-55} width={imageSize} height={imageSize} href="/images/hell.svg"/>
-        <line id="yellow" x1={200*(i+1)-120-4} x2={200*(i+1)-120-4} y2={yScale(0)} y1={yScale(percentList[i][0])}/>
-        <line id="red" x1={200*(i+1)+50-120-0.5} x2={200*(i+1)+50-120-0.5} y2={yScale(0)} y1={yScale(percentList[i][1])}/>
+        <rect x={110} y={150} height={325} width={190}/>
+        <text id="rectText" x={115} y={465}>RELIGIOUSLY UNAFFILIATED</text>
 
-        <text id="bold_font" x={200*(i+1)-100} y=370>{labelList[i][0]}</text>
-        <text id="bold_font" x={200*(i+1)-100} y=385>{labelList[i][1]}</text>
+        {#each [0, 1, 2, 3] as i}
 
-        {#if i != 1}
-        <DefinitionBubble position = {[200*(i+1)-100+35, 355]} isOffsetted={true} text = {definitionText[i]}/>
-        {/if}
+          <text id="bold_font" x={25} y={100*(i+1)}>{labelList[i][0]}</text>
+          <text id="bold_font" x={25} y={100*(i+1)+15}>{labelList[i][1]}</text>
 
-        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-        <rect id="hover" index={i*2} x={200*(i+1)-120-30} y={yScale(percentList[i][0])-imageSize} width={60} height={yScale(0)-yScale(percentList[i][0])+imageSize} on:mousemove={handleMouseOver} on:mouseout={handleMouseOut}/>
-        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-        <rect id="hover" index={i*2+1} x={200*(i+1)+50-120-30} y={yScale(percentList[i][1])-imageSize} width={60} height={yScale(0)-yScale(percentList[i][1])+imageSize} on:mousemove={handleMouseOver} on:mouseout={handleMouseOut}/>
-      {/each}
+          <line id="yellow" x2={110} x1={yMobileScale(percentList[i][0])} y2={100*(i+1)-20} y1={100*(i+1)-20}/>
+          <line id="red" x2={110} x1={yMobileScale(percentList[i][1])} y2={100*(i+1)+15} y1={100*(i+1)+15}/>
 
-      <line x1=50 x2=780 y1=340 y2=340 stroke="black"/>
+          <text id="bold" y={100*(i+1)-20+5} x={yMobileScale(percentList[i][0])+25}>{percentList[i][0] + "%"}</text>
+          <text id="bold" y={100*(i+1)+15+5} x={yMobileScale(percentList[i][1])+25}>{percentList[i][1] + "%"}</text>
+          {#if i != 1}
+            <DefinitionBubble position = {[0, 100*(i+1)-35/2+2]} isOffsetted={true} isMobile={true} text = {definitionText[i]}/>
+          {/if}
+        {/each}
 
-      <g in:fade={{delay: delayInterval}}>
-        <text class="tooltip" id="bold_tooltip" x={390} y=35>Belief in heaven and hell is less common</text>
-        <text class="tooltip" id="bold_tooltip" x={390} y=50>among religiously unaffiliated Americans</text>
-      </g>
-      <path in:draw={{delay: delayInterval, duration: 1500}} d="M 380 38 H 280 V 80"/>
+        <g in:fade={{delay: delayInterval}}>
+          <text class="tooltip" id="bold_tooltip" x={115} y=500>Belief in heaven and hell is</text>
+          <text class="tooltip" id="bold_tooltip" x={115} y={500+15}>less common among religiously</text>
+          <text class="tooltip" id="bold_tooltip" x={115} y={500+30}>unaffiliated Americans</text>
+        </g>
 
-     {/if}
-    </svg>
-    <div id="graph_tooltip">{@html graphTooltipText}</div>
+      </svg>
+    {:else}
+      <svg width=800 height=500>
+        
+        <text id="topTooltip" x=20 y=10>% who say they believe in</text>
+        <text id="topTooltip" x=20 y=25>heaven and hell...</text>
 
-  <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
+        <rect x={200} y={yScale(100)} height={yScale(0)-yScale(100)} width={200*2.9}/>
+        <text id="rectText" x={200+5} y={yScale(100)+15}>RELIGIOUSLY UNAFFILIATED</text>
+
+        {#each [0, 1, 2, 3] as i}
+          <text id="bold" x={200*(i+1)-120} y={yScale(percentList[i][0])-55}>{percentList[i][0] + "%"}</text>
+          <text id="bold" x={200*(i+1)+50-120} y={yScale(percentList[i][1])-55}>{percentList[i][1] + "%"}</text>
+
+          <image x={200*(i+1)-120-imageSize/2} y={yScale(percentList[i][0])-55} width={imageSize} height={imageSize} href="/images/heaven.svg"/>
+          <image x={200*(i+1)+50-120-imageSize/2} y={yScale(percentList[i][1])-55} width={imageSize} height={imageSize} href="/images/hell.svg"/>
+          <line id="yellow" x1={200*(i+1)-120-4} x2={200*(i+1)-120-4} y2={yScale(0)} y1={yScale(percentList[i][0])}/>
+          <line id="red" x1={200*(i+1)+50-120-0.5} x2={200*(i+1)+50-120-0.5} y2={yScale(0)} y1={yScale(percentList[i][1])}/>
+
+          <text id="bold_font" x={200*(i+1)-100} y=370>{labelList[i][0]}</text>
+          <text id="bold_font" x={200*(i+1)-100} y=385>{labelList[i][1]}</text>
+
+          {#if i != 1}
+            <DefinitionBubble position = {[200*(i+1)-100+35, 355]} isOffsetted={true} text = {definitionText[i]}/>
+          {/if}
+
+          <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+          <rect id="hover" index={i*2} x={200*(i+1)-120-30} y={yScale(percentList[i][0])-imageSize} width={60} height={yScale(0)-yScale(percentList[i][0])+imageSize} on:mousemove={handleMouseOver} on:mouseout={handleMouseOut}/>
+          <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+          <rect id="hover" index={i*2+1} x={200*(i+1)+50-120-30} y={yScale(percentList[i][1])-imageSize} width={60} height={yScale(0)-yScale(percentList[i][1])+imageSize} on:mousemove={handleMouseOver} on:mouseout={handleMouseOut}/>
+        {/each}
+
+        <line x1=50 x2=780 y1=340 y2=340 stroke="black"/>
+
+        <g in:fade={{delay: delayInterval}}>
+          <text class="tooltip" id="bold_tooltip" x={390} y=35>Belief in heaven and hell is less common</text>
+          <text class="tooltip" id="bold_tooltip" x={390} y=50>among religiously unaffiliated Americans</text>
+        </g>
+        <path in:draw={{delay: delayInterval, duration: 1500}} d="M 380 38 H 280 V 80"/>
+      </svg>
+    {/if}
+  {/if}
+    
+  <div id="graph_tooltip">{@html graphTooltipText}</div>
+
+  {#if isMobile}
+    <NavigationArrow link={"#page_"+(index+1)} overrideY="1%" arrowType="1"/>
+  {:else}
+    <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
+  {/if}
 </div>
 
 <style>
@@ -216,6 +263,9 @@
     h1 {
       font-size: 20pt;
       max-width: 95%;
+    }
+    #bold_font {
+      text-anchor: start;
     }
   }
 

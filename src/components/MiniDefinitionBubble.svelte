@@ -2,6 +2,7 @@
   export let position;
   export let text;
   export let isOffsetted;
+  export let isMobile = false; 
 
   // variables for image bubble
   let x = position[0];
@@ -19,11 +20,13 @@
     tooltipVisibility = false;
   }
 
-  function getTooltipXPos(x, isOffsetted) {
+  function getTooltipXPos(x, isOffsetted, isMobile) {
+    if (isMobile) return x+25;
     return (isOffsetted) ? x-125 : x-93;
   }
 
-  function getTextXPos(x, isOffsetted) {
+  function getTextXPos(x, isOffsetted, isMobile) {
+    if (isMobile) return x+120;
     return (isOffsetted) ? x-30 : x;
   }
 
@@ -37,12 +40,11 @@
 <image x={x} y={y} width=20 height=20 on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} href="/images/definition.svg" />
 
 {#if tooltipVisibility}
-  <rect x={getTooltipXPos(x, isOffsetted)} y={y+30} width=190 height={getRectPadding(tooltipText.length)} rx=7 ry=7/>
+  <rect x={getTooltipXPos(x, isOffsetted, isMobile)} y={y+30} width=190 height={getRectPadding(tooltipText.length)} rx=7 ry=7/>
   {#each tooltipText as txt, i}
-    <text x={getTextXPos(x, isOffsetted)} y={y+50+i*15}>{txt}</text>
+    <text x={getTextXPos(x, isOffsetted, isMobile)} y={y+50+i*15}>{txt}</text>
   {/each}
 {/if}
-
 
 <style>
   image {
