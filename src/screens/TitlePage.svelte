@@ -47,6 +47,9 @@
 
   /* phone screens */
   @media screen and (max-width: 480px) {
+    div {
+      overflow-x: hidden;
+    }
     h1 {
       font-size: 20pt;
       max-width: 85%;

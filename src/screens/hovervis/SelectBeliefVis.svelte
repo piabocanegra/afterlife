@@ -73,6 +73,8 @@
     });
   });
 
+  let isMobile = (window.screen.width <= 480);
+
 </script>
 
 
@@ -93,7 +95,11 @@
       <p id={"r_" + index} class="result">{getMouseoverText(index, true)}</p>
     {/each}
 
-    <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
+    {#if isMobile}
+      <NavigationArrow link={"#page_"+(index+1)} overrideY="1%" arrowType="1"/>
+    {:else}
+      <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
+    {/if}
   {/if}
 </div>
 
@@ -131,6 +137,8 @@
     }
     p {
       font-size: 14pt;
+      margin-left: 15px;
+      margin-right: 15px;
     }
   }
 
