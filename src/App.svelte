@@ -26,6 +26,7 @@
 	let bottom = 1;
 	let index;
 	let count;
+	let offset;
 
 	// chapter titles
 	let heavenChapter = "But who is in heaven?";
@@ -41,7 +42,7 @@
 </script>
 
 <main>
-<Scroller top={top} bottom={bottom} threshold={threshold} bind:index bind:count>
+<Scroller top={top} bottom={bottom} threshold={threshold} bind:index bind:count bind:offset>
 	<div slot="background"></div>
 
 	<div slot="foreground">
@@ -59,7 +60,7 @@
 		<section><WelcomeToHeavenFunFactVis index={9}/></section>
 		<section><HeavenPercentVis index={10} currIndex={index+1}/></section>
 
-		<section><ChapterTitlePage chapterTitle={heavenChapter} index={11}></ChapterTitlePage></section>
+		<section><ChapterTitlePage chapterTitle={heavenChapter} index={11}/></section>
 		<section><PeopleDoNotBelieveInGodVis index={12} currIndex={index+1}/></section>
 		<section><NonBelieversLineVis index={13} currIndex={index+1}/></section>
 		<section><SunrayVis currIndex={index+1} index={14}/></section>
@@ -70,9 +71,9 @@
 		<section><Takeaways index={18}/></section>
 
 		{#if isMobile}
-			<ProgressBarMobile total={18} index={index}/>
+			<ProgressBarMobile total={18} index={index} offset={offset}/>
 		{:else}
-			<ProgressBarDesktop total={18} index={index}/>
+			<ProgressBarDesktop total={18} index={index} offset={offset}/>
 		{/if}
 	</div>
 </Scroller>

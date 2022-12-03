@@ -1,7 +1,7 @@
 <script>
   export let link;
   export let arrowType;
-  export let overrideY;
+  export let overrideY = null;
 
   let imgSrc = {
     "1": "/images/chevron-black-nofill.svg",

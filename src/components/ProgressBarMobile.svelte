@@ -1,8 +1,11 @@
 <script>
   export let index;
   export let total;
+  export let offset;
 
   let numberList = [...Array(total).keys()];
+  
+  console.log(total)
 </script>
 
 <div>

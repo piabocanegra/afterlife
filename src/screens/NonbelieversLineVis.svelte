@@ -71,54 +71,69 @@
       }
     });
   });
+
+  let isMobile = (window.screen.width <= 480);
+
 </script>
 
 <div class="page" id={"page_"+index}>
   <h1>Who believes non-believers can go to heaven?</h1>
   {#if currIndex >= index}
-    <svg width=1000 height=500>
-      <g in:fade={{delay: delayInterval*(10)}}>
-        <text id="tooltipItalic" x=20 y=12>% who say people who do not believe in God can go to heaven...</text>
-      </g>
+    {#if isMobile}
+      <svg width=350 height=550>
 
-      {#each [0, 1, 2, 3, 4, 5, 6, 7] as i}
-        <g in:fade={{delay: delayInterval*(i+1)}}>
-          <text id="bold" x={getXPos(i)} y={yScale(percentList[i])-60}>{percentList[i] + "%"}</text>
-
-          <image x={getXPos(i)-imageSize/2} y={yScale(percentList[i])-55} width={imageSize} height={imageSize} href={imageList[i]}/>
-          <line x1={getXPos(i)+0.25} x2={getXPos(i)+0.25} y2={yScale(0)} y1={yScale(percentList[i])}/>
-
-          <text id="bold_font" x={getXPos(i)} y={yScale(-7)}>{labelList[i]}</text>
-
-          {#if i < 2}
-            <DefinitionBubble position = {[getXPos(i)-10, yScale(-13)]} isOffsetted={false} text = {tooltipText[i]}/>
-          {/if}
+      </svg>
+    {:else}
+      <svg width=1000 height=500>
+        <g in:fade={{delay: delayInterval*(10)}}>
+          <text id="tooltipItalic" x=20 y=12>% who say people who do not believe in God can go to heaven...</text>
         </g>
-      {/each}
 
-      <g in:fade={{delay: delayInterval*(9)}}>
-        <text id="subtitle" x={(getXPos(0)+getXPos(1))/2} y=130>RELIGION</text>
-        <text id="subtitle" x={(getXPos(2)+getXPos(5))/2} y=130>AGE</text>
-        <text id="subtitle" x={(getXPos(6)+getXPos(7))/2} y=130>POLITICAL</text>
-        <text id="subtitle" x={(getXPos(6)+getXPos(7))/2} y=150>ORIENTATION</text>
-      </g>
+        {#each [0, 1, 2, 3, 4, 5, 6, 7] as i}
+          <g in:fade={{delay: delayInterval*(i+1)}}>
+            <text id="bold" x={getXPos(i)} y={yScale(percentList[i])-60}>{percentList[i] + "%"}</text>
 
-      <g in:fade={{delay: delayInterval*(10)}}>
-        <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=40>Catholics are 2x as likely as</text>
-        <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=55>Protestants to say that non-believers</text>
-        <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=70>can go to heaven</text>
-        <line x1={(getXPos(0)+getXPos(1))/2} x2={(getXPos(0)+getXPos(1))/2} y1=80 y2=110/>
+            <image x={getXPos(i)-imageSize/2} y={yScale(percentList[i])-55} width={imageSize} height={imageSize} href={imageList[i]}/>
+            <line x1={getXPos(i)+0.25} x2={getXPos(i)+0.25} y2={yScale(0)} y1={yScale(percentList[i])}/>
 
-        <text id="tooltip" x={(getXPos(3)+getXPos(7))/2} y=50>There is not much variation across different</text>
-        <text id="tooltip" x={(getXPos(3)+getXPos(7))/2} y=65>age groups and political orientations</text>
-        <line x1={(getXPos(2)+getXPos(5))/2} x2={(getXPos(2)+getXPos(5))/2} y1=100 y2=110/>
-        <line x1={(getXPos(7)+getXPos(6))/2} x2={(getXPos(6)+getXPos(7))/2} y1=100 y2=110/>
-        <line x1={(getXPos(7)+getXPos(3))/2} x2={(getXPos(3)+getXPos(7))/2} y1=80 y2=100/>
-        <line x1={(getXPos(2)+getXPos(5))/2} x2={(getXPos(6)+getXPos(7))/2} y1=100 y2=100/>
-      </g>
-    </svg>
+            <text id="bold_font" x={getXPos(i)} y={yScale(-7)}>{labelList[i]}</text>
+
+            {#if i < 2}
+              <DefinitionBubble position = {[getXPos(i)-10, yScale(-13)]} isOffsetted={false} text = {tooltipText[i]}/>
+            {/if}
+          </g>
+        {/each}
+
+        <g in:fade={{delay: delayInterval*(9)}}>
+          <text id="subtitle" x={(getXPos(0)+getXPos(1))/2} y=130>RELIGION</text>
+          <text id="subtitle" x={(getXPos(2)+getXPos(5))/2} y=130>AGE</text>
+          <text id="subtitle" x={(getXPos(6)+getXPos(7))/2} y=130>POLITICAL</text>
+          <text id="subtitle" x={(getXPos(6)+getXPos(7))/2} y=150>ORIENTATION</text>
+        </g>
+
+        <g in:fade={{delay: delayInterval*(10)}}>
+          <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=40>Catholics are 2x as likely as</text>
+          <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=55>Protestants to say that non-believers</text>
+          <text id="tooltip" x={(getXPos(0)+getXPos(1))/2} y=70>can go to heaven</text>
+          <line x1={(getXPos(0)+getXPos(1))/2} x2={(getXPos(0)+getXPos(1))/2} y1=80 y2=110/>
+
+          <text id="tooltip" x={(getXPos(3)+getXPos(7))/2} y=50>There is not much variation across different</text>
+          <text id="tooltip" x={(getXPos(3)+getXPos(7))/2} y=65>age groups and political orientations</text>
+          <line x1={(getXPos(2)+getXPos(5))/2} x2={(getXPos(2)+getXPos(5))/2} y1=100 y2=110/>
+          <line x1={(getXPos(7)+getXPos(6))/2} x2={(getXPos(6)+getXPos(7))/2} y1=100 y2=110/>
+          <line x1={(getXPos(7)+getXPos(3))/2} x2={(getXPos(3)+getXPos(7))/2} y1=80 y2=100/>
+          <line x1={(getXPos(2)+getXPos(5))/2} x2={(getXPos(6)+getXPos(7))/2} y1=100 y2=100/>
+        </g>
+      </svg>
+    {/if}
+    
   {/if}
-  <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
+
+  {#if isMobile}
+    <NavigationArrow link={"#page_"+(index+1)} overrideY="1%" arrowType="4"/>
+  {:else}
+    <NavigationArrow link={"#page_"+(index+1)} arrowType="4"/>
+  {/if}
 </div>
 
 <style>

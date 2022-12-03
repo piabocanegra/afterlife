@@ -55,6 +55,14 @@
       font-size: 14pt;
       padding: 3em;
     }
+    #angels {
+      position: absolute;
+      bottom: 0%;
+      left: 10%;
+      max-width: 300px;
+      margin: 0px;
+      text-align: center;
+    }
   }
 
 </style>

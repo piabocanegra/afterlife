@@ -1,6 +1,7 @@
 <script>
   export let index;
   export let total;
+  export let offset;
 
   let numberList = [...Array(total).keys()];
 </script>
@@ -9,7 +10,7 @@
   <svg width=50 height=450>
     {#each numberList as i}
     <a href={"#page_"+(i+1)}>
-      {#if index == i}
+      {#if index == i && offset > 0.1}
         <circle cx={25} cy={10+25*i} r={9} style="--bgColor: #AF9583"/>
       {:else}
         <circle cx={25} cy={10+25*i} r={5} style="--bgColor: #C7AF9E"/>
