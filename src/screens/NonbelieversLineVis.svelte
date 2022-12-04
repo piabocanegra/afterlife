@@ -11,10 +11,14 @@
   let imageSize = 70;
 
   let gapBtwLines = 75;
+  let mobileGapBtwLines = 40;
 
   $: yScale = scaleLinear()
 		.domain([0, 100])
 		.range([370, 140]);
+  $: yMobileScale = scaleLinear()
+		.domain([0, 100])
+		.range([85, 300]);
 
   // hardcoded values
   let percentList = [
@@ -57,7 +61,7 @@
     } else if (index > 1) {
       extraGap = gapBtwLines;
     }
-    return 75+gapBtwLines*(index+1)+extraGap;
+    return (isMobile) ? 25+mobileGapBtwLines*(index+1)+extraGap : 75+gapBtwLines*(index+1)+extraGap;
   }
 
   // run animations once
@@ -81,7 +85,29 @@
   {#if currIndex >= index}
     {#if isMobile}
       <svg width=350 height=550>
+        <g in:fade={{delay: delayInterval*(10)}}>
+          <text id="tooltipItalic" x=20 y=12>% who say people who do not believe</text>
+          <text id="tooltipItalic" x=20 y={12+15}>in God can go to heaven...</text>
+        </g>
 
+        <line x1=85 x2=85 y1=50 y2=525 stroke="black"/>
+
+        {#each [0, 1, 2, 3, 4, 5, 6, 7] as i}
+          <g in:fade={{delay: delayInterval*(i+1)}}>
+            <text id="bold" x={yMobileScale(percentList[i])+25} y={getXPos(i)+15} >{percentList[i] + "%"}</text>
+
+            <line x1={yMobileScale(0)} x2={yMobileScale(percentList[i])} y2={getXPos(i)+10} y1={getXPos(i)+10}/>
+
+            <text id="bold_font" x={75} y={getXPos(i)+10}>{labelList[i]}</text>
+          </g>
+        {/each}
+
+        <g in:fade={{delay: delayInterval*(9)}}>
+          <text id="subtitle" y={getXPos(0)-15} x=75>RELIGION</text>
+          <text id="subtitle" y={getXPos(2)-15} x=75>AGE</text>
+          <text id="subtitle" y={getXPos(6)-30} x=75>POLITICAL</text>
+          <text id="subtitle" y={getXPos(6)-15} x=75>ORIENTATION</text>
+        </g>
       </svg>
     {:else}
       <svg width=1000 height=500>
@@ -98,9 +124,9 @@
 
             <text id="bold_font" x={getXPos(i)} y={yScale(-7)}>{labelList[i]}</text>
 
-            {#if i < 2}
+            <!-- {#if i < 2}
               <DefinitionBubble position = {[getXPos(i)-10, yScale(-13)]} isOffsetted={false} text = {tooltipText[i]}/>
-            {/if}
+            {/if} -->
           </g>
         {/each}
 
@@ -126,7 +152,6 @@
         </g>
       </svg>
     {/if}
-    
   {/if}
 
   {#if isMobile}
@@ -197,6 +222,14 @@
     h1 {
       font-size: 20pt;
       max-width: 95%;
+    }
+    #bold_font {
+      text-anchor: end;
+    }
+    #subtitle {
+      text-anchor: end;
+      font-size: 10pt;
+
     }
   }
 
