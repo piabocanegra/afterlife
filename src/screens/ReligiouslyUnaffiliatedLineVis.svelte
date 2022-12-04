@@ -90,16 +90,20 @@
     {#if isMobile}
       <svg width=350 height=550>
 
-        <text id="topTooltip" x=20 y=10>% who say they believe in</text>
-        <text id="topTooltip" x=20 y=25>heaven and hell...</text>
+        <g in:fade={{delay: delayInterval*7}}>
+          <text id="topTooltip" x=20 y=10>% who say they believe in</text>
+          <text id="topTooltip" x=20 y=25>heaven and hell...</text>
+        </g>
+        
+        <line in:draw={{delay: delayInterval*4, duration: 2000}} x1=110 x2=110 y1=50 y2=480 stroke="black"/>
 
-        <line x1=110 x2=110 y1=50 y2=480 stroke="black"/>
-
-        <rect x={110} y={150} height={325} width={190}/>
-        <text id="rectText" x={115} y={465}>RELIGIOUSLY UNAFFILIATED</text>
+        <g in:fade={{delay: delayInterval*6}}>
+          <rect x={110} y={150} height={325} width={190}/>
+          <text id="rectText" x={115} y={465}>RELIGIOUSLY UNAFFILIATED</text>
+        </g>
 
         {#each [0, 1, 2, 3] as i}
-
+        <g in:fade={{delay: delayInterval*(i+1)}}>
           <text id="bold_font" x={25} y={100*(i+1)}>{labelList[i][0]}</text>
           <text id="bold_font" x={25} y={100*(i+1)+15}>{labelList[i][1]}</text>
 
@@ -111,9 +115,10 @@
           {#if i != 1}
             <DefinitionBubble position = {[0, 100*(i+1)-35/2+2]} isOffsetted={true} isMobile={true} text = {definitionText[i]}/>
           {/if}
+        </g>
         {/each}
 
-        <g in:fade={{delay: delayInterval}}>
+        <g in:fade={{delay: delayInterval*7}}>
           <text class="tooltip" id="bold_tooltip" x={115} y=500>Belief in heaven and hell is</text>
           <text class="tooltip" id="bold_tooltip" x={115} y={500+15}>less common among religiously</text>
           <text class="tooltip" id="bold_tooltip" x={115} y={500+30}>unaffiliated Americans</text>
@@ -122,9 +127,10 @@
       </svg>
     {:else}
       <svg width=800 height=500>
-        
-        <text id="topTooltip" x=20 y=10>% who say they believe in</text>
-        <text id="topTooltip" x=20 y=25>heaven and hell...</text>
+        <g in:fade={{delay: delayInterval}}>
+          <text id="topTooltip" x=20 y=10>% who say they believe in</text>
+          <text id="topTooltip" x=20 y=25>heaven and hell...</text>
+        </g>
 
         <rect x={200} y={yScale(100)} height={yScale(0)-yScale(100)} width={200*2.9}/>
         <text id="rectText" x={200+5} y={yScale(100)+15}>RELIGIOUSLY UNAFFILIATED</text>
@@ -266,6 +272,9 @@
     }
     #bold_font {
       text-anchor: start;
+    }
+    #bold_tooltip {
+      font-size: 10pt;
     }
   }
 
