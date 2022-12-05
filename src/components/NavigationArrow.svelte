@@ -1,4 +1,6 @@
 <script>
+  import { polyfill, scrollIntoView } from "seamless-scroll-polyfill";
+
   export let link;
   export let arrowType;
   export let overrideY = null;
@@ -9,7 +11,6 @@
     "3": "/images/chevron-black-border.svg",
     "4": "/images/chevron-gold-nofill.svg"
   }
-  // TODO: move scrolling logic to this class to hide link
 
   let src = imgSrc[arrowType];
   let defaultPercent = (window.screen.width <= 480) ? "10%" : "5%";
@@ -18,7 +19,12 @@
   function scrollToElement() {
     const el = document.querySelector("#"+link);
     if (el) {
-      el.scrollIntoView(true);
+      polyfill();
+      scrollIntoView(el, {
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
     }
   }
 
