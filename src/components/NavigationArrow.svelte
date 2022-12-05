@@ -14,12 +14,20 @@
   let src = imgSrc[arrowType];
   let defaultPercent = (window.screen.width <= 480) ? "10%" : "5%";
   let bottomPercent = (overrideY != null) ? overrideY : defaultPercent;
+
+  function scrollToElement() {
+    const el = document.querySelector("#"+link);
+    if (el) {
+      el.scrollIntoView(true);
+    }
+  }
+
 </script>
 
 <div style="bottom: {bottomPercent}">
-  <a href={link}>
+  <button type="button" id={"arrow_"+link} on:click={scrollToElement}>
     <img src={src} alt="arrow">
-  </a>
+  </button>
 </div>
 
 <style>
@@ -27,14 +35,13 @@
     width: 50px;
     height: 50px;
   }
-  
-  a {
-    margin: auto 0;
+  button {
+    background: none;
+    border: none;
   }
-
   div {
-    left: 50%;
-    margin-left: -25px;
     position: absolute;
+    left: 50%;
+    margin-left: -30px;
   }
 </style>

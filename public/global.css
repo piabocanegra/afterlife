@@ -6,6 +6,7 @@ html {
 	font-size: 30px;
 	background: #DDC3B1;
 	scroll-snap-type: y mandatory;
+	-webkit-scroll-snap-type: y mandatory;
 }
 
 body {

@@ -9,7 +9,7 @@
   <img src="/images/respondent_souls.jpg" alt="respondent souls"/>
   <h1>Welcome to heaven!</h1>
   <FunFactBubble bubbleId="4"/>
-  <NavigationArrow link={"#page_"+(index+1)} arrowType="2"/>
+  <NavigationArrow link={"page_"+(index+1)} arrowType="2"/>
 </div>
 
 <style>

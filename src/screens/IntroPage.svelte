@@ -10,7 +10,7 @@
   <p id="padding">{paragraph1}</p>
   <p>{paragraph2}</p>
   <p></p>
-  <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
+  <NavigationArrow link={"page_"+(index+1)} arrowType="1"/>
 </div>
 
 <style>

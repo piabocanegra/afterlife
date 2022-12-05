@@ -96,9 +96,9 @@
     {/each}
 
     {#if isMobile}
-      <NavigationArrow link={"#page_"+(index+1)} overrideY="1%" arrowType="1"/>
+      <NavigationArrow link={"page_"+(index+1)} overrideY="1%" arrowType="1"/>
     {:else}
-      <NavigationArrow link={"#page_"+(index+1)} arrowType="1"/>
+      <NavigationArrow link={"page_"+(index+1)} arrowType="1"/>
     {/if}
   {/if}
 </div>

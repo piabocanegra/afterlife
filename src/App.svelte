@@ -22,7 +22,7 @@
 
 	// variables for tracking scrolling progress
 	let top = 0;
-	let threshold = 0.5;
+	let threshold = 0.6;
 	let bottom = 1;
 	let index;
 	let count;
