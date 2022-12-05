@@ -28,9 +28,14 @@
     }
   }
 
+  let isSafari = navigator.userAgent.match(/Macintosh/i);
+  
 </script>
 
 <div style="bottom: {bottomPercent}">
+  {#if (isSafari && arrowType !== "3")}
+    <p>Scroll</p>
+  {/if}
   <button type="button" id={"arrow_"+link} on:click={scrollToElement}>
     <img src={src} alt="arrow">
   </button>
@@ -44,10 +49,16 @@
   button {
     background: none;
     border: none;
+    cursor: pointer;
   }
   div {
     position: absolute;
     left: 50%;
     margin-left: -30px;
+  }
+  p {
+    font-size: 10pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: -15px;
   }
 </style>
