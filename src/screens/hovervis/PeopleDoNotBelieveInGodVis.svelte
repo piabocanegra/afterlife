@@ -140,6 +140,9 @@ p {
 	p {
 		font-size: 14pt;
 	}
+  #instruction {
+    font-size: 12pt;
+  }
 }
 
 </style>
