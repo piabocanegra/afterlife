@@ -95,11 +95,11 @@
           <text id="topTooltip" x=20 y=25>heaven and hell...</text>
         </g>
         
-        <line in:draw={{delay: delayInterval*4, duration: 2000}} x1=110 x2=110 y1=50 y2=480 stroke="black"/>
+        <line in:draw={{delay: delayInterval*4, duration: 2000}} x1=110 x2=110 y1=50 y2=460 stroke="black"/>
 
         <g in:fade={{delay: delayInterval*6}}>
-          <rect x={110} y={150} height={325} width={190}/>
-          <text id="rectText" x={115} y={465}>RELIGIOUSLY UNAFFILIATED</text>
+          <rect x={110} y={130} height={315} width={190}/>
+          <text id="rectText" x={115} y={150}>RELIGIOUSLY UNAFFILIATED</text>
         </g>
 
         {#each [0, 1, 2, 3] as i}
@@ -119,9 +119,9 @@
         {/each}
 
         <g in:fade={{delay: delayInterval*7}}>
-          <text class="tooltip" id="bold_tooltip" x={115} y=500>Belief in heaven and hell is</text>
-          <text class="tooltip" id="bold_tooltip" x={115} y={500+15}>less common among religiously</text>
-          <text class="tooltip" id="bold_tooltip" x={115} y={500+30}>unaffiliated Americans</text>
+          <text class="tooltip" id="bold_tooltip" x={115} y=465>Belief in heaven and hell is</text>
+          <text class="tooltip" id="bold_tooltip" x={115} y={465+15}>less common among religiously</text>
+          <text class="tooltip" id="bold_tooltip" x={115} y={465+30}>unaffiliated Americans</text>
         </g>
 
       </svg>
