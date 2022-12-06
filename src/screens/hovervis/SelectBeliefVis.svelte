@@ -119,6 +119,7 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
     font-size: 14pt;
+    margin: 10px;
   }
 
   #instruction {

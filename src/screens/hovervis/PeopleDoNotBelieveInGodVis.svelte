@@ -112,6 +112,7 @@ p {
   font-weight: 300;
   font-size: 14pt;
   color: #9B795F;
+  margin: 10px;
 }
 
 #instruction {
