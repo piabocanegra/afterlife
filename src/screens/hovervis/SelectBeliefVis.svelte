@@ -81,6 +81,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div class="page" id={"page_"+index}>
   <h1>I believe in...</h1>
+  <p id="instruction">(Select an option and find out how you compare to U.S. adults.)</p>
   {#if currIndex >= index}
     {#each [0, 1, 2, 3, 4, 5] as index}
       <p i={index}
@@ -111,12 +112,20 @@
 
   h1 {
     font-family: 'Source Serif Pro', serif;
+    padding-bottom: 0em;
   }
 
   p {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
     font-size: 14pt;
+  }
+
+  #instruction {
+    padding-bottom: 1em;
+    font-weight: 400;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .result {

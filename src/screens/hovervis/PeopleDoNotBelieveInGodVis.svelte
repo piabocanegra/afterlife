@@ -75,6 +75,7 @@
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div class="page" id={"page_"+index}>
 <h1>People who do not believe in God...</h1>
+<p id="instruction">(Select an option and find out how you compare to U.S. adults.)</p>
 {#if currIndex >= index}
   {#each [0, 1, 2, 3] as index}
     <p i={index}
@@ -103,6 +104,7 @@ div {
 h1 {
   font-family: 'Source Serif Pro', serif;
   color: #9B795F;
+  padding-bottom: 0em;
 }
 
 p {
@@ -111,6 +113,13 @@ p {
   font-size: 14pt;
   color: #9B795F;
 }
+
+#instruction {
+    padding-bottom: 1em;
+    font-weight: 400;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 
 .result {
   opacity: 0;
