@@ -40,9 +40,9 @@
 <image x={x} y={y} width=20 height=20 on:mouseover={handleMouseOver} on:mouseout={handleMouseOut} href="/images/definition.svg" />
 
 {#if tooltipVisibility}
-  <rect x={getTooltipXPos(x, isOffsetted, isMobile)} y={y+30} width=190 height={getRectPadding(tooltipText.length)} rx=7 ry=7/>
+  <rect x={getTooltipXPos(x, isOffsetted, isMobile)} y={(isMobile) ? y-60 : y+30} width=190 height={getRectPadding(tooltipText.length)} rx=7 ry=7/>
   {#each tooltipText as txt, i}
-    <text x={getTextXPos(x, isOffsetted, isMobile)} y={y+50+i*15}>{txt}</text>
+    <text x={getTextXPos(x, isOffsetted, isMobile)} y={(isMobile) ? y-40+i*15 : y+50+i*15}>{txt}</text>
   {/each}
 {/if}
 
