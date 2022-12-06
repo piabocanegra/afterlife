@@ -108,6 +108,7 @@
   h1 {
     font-family: 'Source Serif Pro', serif;
     color: #9B795F;
+    padding-bottom: 0em;
   }
 
   p {
@@ -155,7 +156,7 @@
     }
     #button_text {
       font-weight: 400;
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 

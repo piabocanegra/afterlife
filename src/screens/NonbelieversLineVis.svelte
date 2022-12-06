@@ -56,12 +56,15 @@
 
   function getXPos(index) {
     let extraGap = 0;
+    let extraMobileGap = 0;
     if (index > 5) {
       extraGap = gapBtwLines*2;
+      extraMobileGap = mobileGapBtwLines*2;
     } else if (index > 1) {
       extraGap = gapBtwLines;
+      extraMobileGap = mobileGapBtwLines;
     }
-    return (isMobile) ? 25+mobileGapBtwLines*(index+1)+extraGap : 75+gapBtwLines*(index+1)+extraGap;
+    return (isMobile) ? 25+mobileGapBtwLines*(index+1)+extraMobileGap : 75+gapBtwLines*(index+1)+extraGap;
   }
 
   // run animations once
@@ -90,7 +93,7 @@
           <text id="tooltipItalic" x=20 y={12+15}>in God can go to heaven...</text>
         </g>
         
-        <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=85 x2=85 y1=50 y2=525 stroke="black"/>
+        <line in:draw={{delay: delayInterval*6, duration: 2000}} x1=85 x2=85 y1=50 y2=465 stroke="black"/>
 
         <g in:fade={{delay: delayInterval*(10)}}>
           <text id="tooltip" x={110} y={getXPos(1)+50}>Catholics are 2x as likely as Protestants</text>
