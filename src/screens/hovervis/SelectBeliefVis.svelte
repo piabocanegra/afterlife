@@ -145,9 +145,12 @@
       max-width: 100%;
     }
     p {
-      font-size: 14pt;
+      font-size: 12pt;
       margin-left: 15px;
       margin-right: 15px;
+    }
+    #instruction {
+      font-size: 10pt;
     }
   }
 

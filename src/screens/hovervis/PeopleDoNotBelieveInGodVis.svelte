@@ -138,10 +138,10 @@ p {
     max-width: 100%;
   }
 	p {
-		font-size: 14pt;
+		font-size: 12pt;
 	}
   #instruction {
-    font-size: 12pt;
+    font-size: 10pt;
   }
 }
 
