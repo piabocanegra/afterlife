@@ -38,6 +38,7 @@
   {#if (isSafari && !hideText)}
     <p style="color: {textColor}">Scroll</p>
   {/if}
+  <p>{navigator.userAgent}</p>
   <button type="button" id={"arrow_"+link} on:click={scrollToElement}>
     <img src={src} alt="arrow">
   </button>
