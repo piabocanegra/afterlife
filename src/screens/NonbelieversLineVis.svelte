@@ -172,9 +172,9 @@
   {/if}
 
   {#if isMobile}
-    <NavigationArrow link={"page_"+(index+1)} overrideY="1%" arrowType="4"/>
+    <NavigationArrow link={"page_"+(index+1)} overrideY="1%" arrowType="4" textColor="#9B795F"/>
   {:else}
-    <NavigationArrow link={"page_"+(index+1)} arrowType="4"/>
+    <NavigationArrow link={"page_"+(index+1)} arrowType="4" textColor="#9B795F"/>
   {/if}
 </div>
 
@@ -188,6 +188,7 @@
   h1 {
     font-family: 'Source Serif Pro', serif;
     color: #9B795F;
+    max-width: 65%;
   }
 
   text {

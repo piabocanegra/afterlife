@@ -4,6 +4,8 @@
   export let link;
   export let arrowType;
   export let overrideY = null;
+  export let hideText = false;
+  export let textColor = "#000000";
 
   let imgSrc = {
     "1": "/images/chevron-black-nofill.svg",
@@ -33,8 +35,8 @@
 </script>
 
 <div style="bottom: {bottomPercent}">
-  {#if (isSafari && arrowType !== "3")}
-    <p>Scroll</p>
+  {#if (isSafari && !hideText)}
+    <p style="color: {textColor}">Scroll</p>
   {/if}
   <button type="button" id={"arrow_"+link} on:click={scrollToElement}>
     <img src={src} alt="arrow">

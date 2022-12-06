@@ -11,7 +11,7 @@
   <p>Let's find out!</p>
   <FunFactBubble bubbleId="1"/>
   <FunFactBubble bubbleId="2"/>
-  <NavigationArrow link={"page_"+(index+1)} arrowType="2"/>
+  <NavigationArrow link={"page_"+(index+1)} arrowType="2" hideText={true}/>
 </div>
 
 <style>

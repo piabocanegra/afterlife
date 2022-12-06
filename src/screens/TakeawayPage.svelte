@@ -24,6 +24,8 @@
   div#page_padding {
     max-width: 1200px;
     margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   h1, h5 {

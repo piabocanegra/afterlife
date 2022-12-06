@@ -9,7 +9,7 @@
   <img src="/images/satan.jpeg" alt="satan"/>
   <h1>Welcome to hell!</h1>
   <FunFactBubble bubbleId="3"/>
-  <NavigationArrow link={"page_"+(index+1)} arrowType="2"/>
+  <NavigationArrow link={"page_"+(index+1)} arrowType="2" hideText={true}/>
 </div>
 
 <style>

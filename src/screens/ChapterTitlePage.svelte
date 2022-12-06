@@ -11,7 +11,7 @@
   {#if showSubtitles}
     <p>(that's not heaven or hell)</p>
   {/if}
-  <NavigationArrow link={"page_"+(index+1)} arrowType="4"/>
+  <NavigationArrow link={"page_"+(index+1)} arrowType="4" textColor="#9B795F"/>
 </div>
 
 <style>

@@ -75,7 +75,7 @@
     <p id="button_text">{buttonText}</p>
   </div>
 
-  <NavigationArrow link={"page_"+(index+1)} overrideY="1%" arrowType="4"/>
+  <NavigationArrow link={"page_"+(index+1)} overrideY="1%" arrowType="4" hideText={true}/>
 
 </div>
 
