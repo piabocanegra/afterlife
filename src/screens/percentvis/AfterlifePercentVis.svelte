@@ -60,7 +60,6 @@
             <text id="bold" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]-10}>{percentList[i]}</text>
             <image x={mobilePos[i][0]} y={mobilePos[i][1]} width={imageSize} height={imageSize} href={imageList[i]}/>
             <text id="bold_font" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]+imageSize+15}>{labelList[i][0]}</text>
-            <text id="bold_font" x={mobilePos[i][0]+imageSize/2} y={mobilePos[i][1]+imageSize+30}>{labelList[i][1]}</text>
           </g>
         {/each}
 
