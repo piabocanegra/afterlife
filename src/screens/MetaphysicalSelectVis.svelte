@@ -69,7 +69,7 @@
     {/each}
 
     <!-- Button or result text -->
-    {#if showButton && !isMobile}
+    {#if showButton}
       <img id="button" src="../images/button.svg" alt="button img" on:click={handleOnclick}/>
     {/if}
     <p id="button_text">{buttonText}</p>
@@ -156,7 +156,7 @@
     }
     #button_text {
       font-weight: 400;
-      margin-top: 15px;
+      margin-top: 25px;
     }
   }
 
