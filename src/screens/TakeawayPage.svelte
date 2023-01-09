@@ -10,7 +10,9 @@
     <h5>And what happens?</h5>
     <p>There is more agreement on what heaven is like compared to hell. Among people who do not believe in heaven and hell but do believe in the afterlife, there is not much consensus on what it's like.</p>
     <br>
+    <p id="credits">This project has been featured in Big Think. View it <a href="https://bigthink.com/thinking/heaven-hell-afterlife-belief-americans-poll/">here</a>.</p>
     <p id="credits"><i>Credits: <a href="https://www.piaboc.me/">Pia Bocanegra</a>, <a href="https://les-huang.netlify.app/">Lesley Huang</a></i></p>
+
   </div>
 </div>
 
